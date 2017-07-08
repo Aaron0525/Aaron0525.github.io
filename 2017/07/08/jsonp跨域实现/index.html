@@ -13,23 +13,31 @@
     
     
     
-    <title>tetris | 途中人的博客 | IT技术分享！</title>
+    <title>jsonp跨域实现 | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="你好啊！">
+    <meta name="keywords" content="JavaScript,Jsonp,HTML5,CORS">
+    <meta name="description" content="同源策略在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。这一策略对于JavaScript代码能够访问的页面内容做了很重要的限制，即JavaScript只能访问与包含它的文档在同一域下的内容。（图片来自MDN）  JSONP在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上用标签引入&amp;lt;">
+<meta name="keywords" content="JavaScript,Jsonp,HTML5,CORS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tetris">
-<meta property="og:url" content="http://yoursite.com/2017/07/07/tetris/index.html">
+<meta property="og:title" content="jsonp跨域实现">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/jsonp跨域实现/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="你好啊！">
-<meta property="og:updated_time" content="2017-07-08T00:42:08.743Z">
+<meta property="og:description" content="同源策略在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。这一策略对于JavaScript代码能够访问的页面内容做了很重要的限制，即JavaScript只能访问与包含它的文档在同一域下的内容。（图片来自MDN）  JSONP在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上用标签引入&amp;lt;">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507170944865?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507182922130?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507182807316?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507191945153?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507203413041?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170507211511202?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-07-08T12:27:59.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tetris">
-<meta name="twitter:description" content="你好啊！">
+<meta name="twitter:title" content="jsonp跨域实现">
+<meta name="twitter:description" content="同源策略在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。这一策略对于JavaScript代码能够访问的页面内容做了很重要的限制，即JavaScript只能访问与包含它的文档在同一域下的内容。（图片来自MDN）  JSONP在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上用标签引入&amp;lt;">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170507170944865?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -113,7 +121,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">tetris</div>
+        <div class="flex-col header-title ellipsis">jsonp跨域实现</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,11 +143,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">tetris</h1>
+        <h1 class="title">jsonp跨域实现</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-07-07T13:23:44.000Z" itemprop="datePublished" class="page-time">
-  2017-07-07
+                <time datetime="2017-07-08T10:57:30.000Z" itemprop="datePublished" class="page-time">
+  2017-07-08
 </time>
 
 
@@ -158,17 +166,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#你好啊！"><span class="post-toc-number">1.</span> <span class="post-toc-text">你好啊！</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#同源策略"><span class="post-toc-number">1.</span> <span class="post-toc-text">同源策略</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">2.</span> <span class="post-toc-text">JSONP</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#window-name"><span class="post-toc-number">3.</span> <span class="post-toc-text">window.name</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML5中新引进的window-postMessage方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">HTML5中新引进的window.postMessage方法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#跨域资源共享（CORS）"><span class="post-toc-number">5.</span> <span class="post-toc-text">跨域资源共享（CORS）</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-tetris"
+<article id="post-jsonp跨域实现"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">tetris</h1>
+        <h1 class="post-card-title">jsonp跨域实现</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-07-07 21:23:44" datetime="2017-07-07T13:23:44.000Z"  itemprop="datePublished">2017-07-07</time>
+            <time class="post-time" title="2017-07-08 18:57:30" datetime="2017-07-08T10:57:30.000Z"  itemprop="datePublished">2017-07-08</time>
 
             
 
@@ -181,19 +189,57 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="你好啊！"><a href="#你好啊！" class="headerlink" title="你好啊！"></a>你好啊！</h2>
+            <h1 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h1><p>在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。这一策略对于JavaScript代码能够访问的页面内容做了很重要的限制，即JavaScript只能访问与包含它的文档在同一域下的内容。（图片来自MDN）</p>
+<p><img src="http://img.blog.csdn.net/20170507170944865?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<h1 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h1><p>在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上用标签引入<code>&lt;script&gt;</code>不同域上的js脚本文件却是可以的，jsonp正是利用这个特性来实现的。</p>
+<li>jsonp的客户端实现</li>
+
+<p>tocat服务器上有个remote.js（这里用tocat，web项目演示）</p>
+<p><img src="http://img.blog.csdn.net/20170507182922130?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p><code>alert(&quot;跨域成功&quot;);</code><br>　　<li>本地index.html文件</li></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;title&gt;跨域资源&lt;/title&gt;</div><div class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;</div><div class="line">/* 完成跨域 */</div><div class="line">&lt;script src=&quot;http://localhost:8080/web/js/remote.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170507182807316?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>　　很明显，显示跨域成功</p>
+<li>接下来我们在本地index.html定义callback函数 ，然后远程tomcat.js传入回调数据</li>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;跨域资源&lt;/title&gt;</div><div class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;</div><div class="line">    /* 完成跨域 */</div><div class="line">     &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">         window.onload = function() &#123;</div><div class="line">         var callback = function(data) &#123;</div><div class="line">            alert(&quot;跨域调用远程tomcat.js成功: &quot; + data.name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">    &lt;script src=&quot;http://localhost:8080/web/js/tomcat.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>远程服务器：</p>
+<p>tomcat.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">callback(&#123;&quot;name&quot;:&quot;kk&quot;&#125;);</div></pre></td></tr></table></figure>
+<p>到此，跨域基本实现，但是这里有个问题，<i style="color:red">远程站点怎么知道要调用哪个callback呢？</i></p>
+<p>所以就有了jsonp的核心：服务端提供的callback是动态生成的， 本地只要动态传一个callback给服务端，服务端就知道该调用哪个了</p>
+<p>像这样：<br>客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;跨域资源&lt;/title&gt;</div><div class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        var callback = function(data) &#123;</div><div class="line">            alert(&quot;跨域调用远程成功: &quot; + data.name);</div><div class="line">        &#125;</div><div class="line">        var url = &quot;http://localhost:8080/web/js/helloServlet?userid=1&amp;callback=callback&quot;;</div><div class="line">        // 创建script标签，设置其属性</div><div class="line">        var script = document.createElement(&apos;script&apos;);</div><div class="line">        script.setAttribute(&apos;src&apos;, url);</div><div class="line">        // 把script标签加入head，此时调用开始</div><div class="line">        document.getElementsByTagName(&apos;head&apos;)[0].appendChild(script);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>服务端：（这里选用java解释）<br>// 从客户端获取参数userid和callback<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PrintWriter out =response.getWriter();</div></pre></td></tr></table></figure></p>
+<p>// 根据userid查找到的数据存储为json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">out.println(callback+&quot;(&quot;+json+&quot;)&quot;);</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170507191945153?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>jsonp的执行全过程就是这么回事了（个人理解）</p>
+<li>现在再来看JQuery中的实现，我们最经常用的$.ajax，似乎通透了不少，也就是这么回事<br></li>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">$(function() &#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            async: false,</div><div class="line">            url: http, //跨域url地址</div><div class="line">            type: &quot;GET&quot;,</div><div class="line">            dataType: &apos;jsonp&apos;,</div><div class="line">            jsonp: &apos;jsoncallback&apos;,</div><div class="line">            data: &#123;</div><div class="line">                &quot;userid&quot;: &quot;1&quot;</div><div class="line">            &#125;,</div><div class="line">            timeout: 5000,</div><div class="line">            beforeSend: function() &#123;</div><div class="line">                //jsonp 方式此方法不被触发.原因可能是dataType如果指定为jsonp的话,就已经不是ajax事件了</div><div class="line">            &#125;,</div><div class="line">            success: function(json) &#123; //客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数</div><div class="line"></div><div class="line">            &#125;</div><div class="line"></div><div class="line">            error: function(xhr) &#123;</div><div class="line">                //jsonp 方式此方法不被触发.原因是:dataType如果指定为jsonp的话,就已经不是ajax事件了</div><div class="line">                //请求出错处理</div><div class="line">                alert(&quot;请求出错(请检查相关度网络状况.)&quot;);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p>这里发现，$.ajax和ajax并不是一回事啊,ajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加<code>&lt;script&gt;</code>标签来调用服务器提供的js脚本。</p>
+<h1 id="window-name"><a href="#window-name" class="headerlink" title="window.name"></a>window.name</h1><p>注意，window.name的值只能是字符串的形式，这个字符串的大小最大能允许2M左右甚至更大的一个容量，具体取决于不同的浏览器，但一般是够用了。<br>实例：<br>假设有三个页面：<br><a href="http://a.com/a.html" target="_blank" rel="external">http://a.com/a.html</a>  //渴望获得数据的页面<br><a href="http://a.com/b.html" target="_blank" rel="external">http://a.com/b.html</a>  //a的兄弟页面，充当中间人角色<br><a href="http://b.com/data.html" target="_blank" rel="external">http://b.com/data.html</a> //不同源的数据页</p>
+<li><a href="http://a.com/a.html,监听iframe的onload事件，在此事件中设置这个iframe的src指向本地域的代理页面http://a.com/b.html（代理文件和应用页面在同一域下，所以可以相互通信）" target="_blank" rel="external">http://a.com/a.html,监听iframe的onload事件，在此事件中设置这个iframe的src指向本地域的代理页面http://a.com/b.html（代理文件和应用页面在同一域下，所以可以相互通信）</a><br>动态创建iframe</li>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">var state = 0,</div><div class="line">    iframe = document.createElement(&apos;iframe&apos;);</div><div class="line"></div><div class="line">// 通过iframe的src与data.html通信</div><div class="line">iframe.src = &apos;http://b.com/data.html&apos;;</div><div class="line"></div><div class="line">//监听onload</div><div class="line">if (iframe.attachEvent) &#123;</div><div class="line">    iframe.attachEvent(&apos;onload&apos;, loadfn);</div><div class="line">&#125; else &#123;</div><div class="line">    iframe.onload = loadfn;</div><div class="line"></div><div class="line">var loadfn = function() &#123;</div><div class="line">        if (state === 0) &#123;</div><div class="line">            state = 1;</div><div class="line">            iframe.contentWindow.location = &quot;http://a.com/b.html&quot;; // 设置的代理页面</div><div class="line">        &#125;</div><div class="line">        else if (state === 1) &#123;</div><div class="line">            var data = iframe.contentWindow.name; // 读取数据</div><div class="line">            alert(data); //弹出&apos;data.html!&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div><div class="line">  ● http://b.com/data.html</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    window.name = &apos;data.html&apos;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>这样就可以成功解决了，理一下思路，应该是这样:<br>充当中间人的iframe想要获取到data.html的通过window.name设置的数据，只需要把这个iframe的src设为www.cnblogs.com/data.html就行了。然后a.html想要得到iframe所获取到的数据，也就是想要得到iframe的window.name的值，还必须把这个iframe的src设成跟a.html页面同一个域才行</p>
+<p>图示：<br><img src="http://img.blog.csdn.net/20170507203413041?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<h1 id="HTML5中新引进的window-postMessage方法"><a href="#HTML5中新引进的window-postMessage方法" class="headerlink" title="HTML5中新引进的window.postMessage方法"></a>HTML5中新引进的window.postMessage方法</h1><p>在HTML5中新增了postMessage方法，postMessage可以实现跨文档消息传输（Cross Document Messaging），Internet Explorer 8, Firefox 3, Opera 9, Chrome 3和 Safari 4都支持postMessage。<br>实现：<br>发送信息的页面<a href="http://a.com/a.html" target="_blank" rel="external">http://a.com/a.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;客户端&lt;/title&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        window.frames[0].postMessage(&apos;data&apos;, &apos;http://b.com/data.html&apos;);</div><div class="line">        //postMessage接收两个参数，第一个数据，第二个字符串参数，指明目标窗口的源，具体看MDN</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;iframe id=&quot;child&quot; src=&quot;http://b.com/data.html&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div><div class="line">接收信息的页面http://b.com/data.html</div><div class="line">// 通过监听message事件获取数据</div><div class="line">window.addEventListener(&apos;message&apos;,function(e)&#123;</div><div class="line">                var e =e||event;</div><div class="line">                alert(e.data);</div><div class="line">            &#125;,false);</div></pre></td></tr></table></figure></p>
+<p>图示：<br><img src="http://img.blog.csdn.net/20170507211511202?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG9wZV9JdA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<h1 id="跨域资源共享（CORS）"><a href="#跨域资源共享（CORS）" class="headerlink" title="跨域资源共享（CORS）"></a>跨域资源共享（CORS）</h1><p>CORS是一个W3C标准，全称是”跨域资源共享”（Cross-origin resource sharing）。</p>
+<p>它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。<br>　　整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。<br>因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。具体原理参见MDN</p>
+
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-08T00:42:08.743Z" itemprop="dateUpdated">2017-07-08 08:42:08</time>
+    最后更新时间：<time datetime="2017-07-08T12:27:59.910Z" itemprop="dateUpdated">2017-07-08 20:27:59</time>
 </span><br>
 
 
         
-        原文链接：<a href="/2017/07/07/tetris/" target="_blank" rel="external">http://yoursite.com/2017/07/07/tetris/</a>
+        原文链接：<a href="/2017/07/08/jsonp跨域实现/" target="_blank" rel="external">http://yoursite.com/2017/07/08/jsonp跨域实现/</a>
         
     </div>
     <footer>
@@ -213,6 +259,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CORS/">CORS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jsonp/">Jsonp</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -221,7 +269,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/07/07/tetris/&title=《tetris》 — 途中人的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/07/08/jsonp跨域实现/&title=《jsonp跨域实现》 — 途中人的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -231,22 +279,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/07/07/tetris/&title=《tetris》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/07/08/jsonp跨域实现/&title=《jsonp跨域实现》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/07/tetris/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/08/jsonp跨域实现/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《tetris》 — 途中人的博客&url=http://yoursite.com/2017/07/07/tetris/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jsonp跨域实现》 — 途中人的博客&url=http://yoursite.com/2017/07/08/jsonp跨域实现/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/07/tetris/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/08/jsonp跨域实现/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -409,7 +457,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/07/07/tetris/&title=《tetris》 — 途中人的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/07/08/jsonp跨域实现/&title=《jsonp跨域实现》 — 途中人的博客&pic=http://yoursite.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -419,22 +467,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/07/07/tetris/&title=《tetris》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/07/08/jsonp跨域实现/&title=《jsonp跨域实现》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/07/tetris/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/08/jsonp跨域实现/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《tetris》 — 途中人的博客&url=http://yoursite.com/2017/07/07/tetris/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jsonp跨域实现》 — 途中人的博客&url=http://yoursite.com/2017/07/08/jsonp跨域实现/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/07/tetris/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/08/jsonp跨域实现/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -445,7 +493,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aS27DMAwFwNz/0inQdSM/kpbiAqOVYSPRaEOIn9crXu/ftX6/fl6/uXnh4uKOue/lWnM/ff30JjnSJwMuLu55bhKkEtY6qCX0i//HxcV9GLd3A6leiXBxcf8Xt3eA5GKEi4v7TG6S/CTpSp4sbc/VcHFxB9xJ0LnreWN9FxcXt8h9F1evZXLb7ri4uEe4eSNkXfJYX1aSXQpHxcXF3cxN0oze+2pTNlLh4uJ+idsLVZOveVMWFxf3DLeXluQHqI5ZJAMfuLi4u7nVH/cuPb0k6g8JLi7uQe6OMkevVVPuBuPi4m7g9soZveRnUijBxcU9yc1Hr5Kgllx9Li4x6wsWLi7uEW7eaq0GozyQ4eLiPo07GbPIxziqg1wXnR9cXNzN3GqPZZLS9Ho7F0MYuLi4G7hJ4MgDWXX0qjqugYuLe5J715a3TX9Ue8K4uLgbuPnKw1BePL1tXgwXF/cmbjWg9IYzJi2WUccYFxd3wJ0Er+pIR7Vle1HFwcXF3cztFS+qjdVR8oOLi/tIbrJxfrnJj/2ab4yLi/tV7gQUlVdwcXEPcgvNznHCUy2FNHM1XFzcAfeucYrqUfOyCy4u7kHuDyP05x6gH6pKAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQW7DMAwF0dz/0i7QVRa1Op9UipoarQI3kf20YGmSrxde1/daX3m/fvf99+vXcr0+sWTIkPFYBtku3Tp9rPV9EVWGDBkHMNZBlnzeFQnJ/jJkyJBxt936ZrXH4vvIkCFDRhpw1y+rafJH7itDhgwZJHVLHzFNFsmRbXgXlyFDxgMZaWPgLz9/sL8hQ4aMhzCu0uofQa0NcPtbGTJkjGaQtI+MU3B2Ld1EgViGDBnHMEj5jJfYOvus9/wl4MqQIWMcg3+pc4WH4w1lNRkyZAxi8KBG0rg0+SOJJtpHhgwZoxnpSATZmpfSOi/JMmTIOIfBB7BSEg/T6V9v+xsyZMg4gLHr1TQtiq2PEh2QDBkyjmSkAbEWfDs1wh86GzJkyBjKSFO9TlAmxTjeCkVjYTJkyBjE4MX99Du1FHB9lyASy5AhYxCDj1bUmgRp0CzuLEOGjKGM/vAETyJ5GI1fZWXIkDGasTcU8kNJf1vMc2XIkDGOkRb6eRtg3QDY0MKUIUPGAYx0JKIDqIVvFHBlyJBxDCMdleBNzU5ZLSi6yZAhYygjDa97E0E+EJaOjsmQIWMG4wpXrcbF87diiJchQ8ZoBl+dm3Uak7zMJ0OGjNmMNKUj58EDdD98y5Ah4xwGD3y1YJoeRDx4IUOGDBmNV9NOmyGgypAhQwYeGkvbCR98z5YhQ8Y4RjpywR89bTYUByxkyJAxmtEJyruSyLSpufl/iwwZMv4v4wvmDmqYf6CojgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
