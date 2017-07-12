@@ -13,7 +13,7 @@
     
     
     
-    <title>途中人的博客 | IT技术分享！</title>
+    <title>Tags: ajax | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -22,7 +22,7 @@
     <meta name="keywords" content="undefined">
     <meta property="og:type" content="website">
 <meta property="og:title" content="途中人的博客">
-<meta property="og:url" content="http://upyang.com/index.html">
+<meta property="og:url" content="http://upyang.com/tags/ajax/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="途中人的博客">
@@ -56,14 +56,14 @@
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
+            <li class="waves-block waves-effect active">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
@@ -109,7 +109,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">途中人的博客</div>
+        <div class="flex-col header-title ellipsis">Tags: ajax</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -128,38 +128,66 @@
         
     </div>
 </header>
-<header class="content-header index-header">
+<header class="content-header tags-header">
 
     <div class="container fade-scale">
-        <h1 class="title">途中人的博客</h1>
+        <h1 class="title">Tags: ajax</h1>
         <h5 class="subtitle">
-            
-                IT技术分享！
             
         </h5>
     </div>
 
     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/tags/ajax/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light active">ajax</a>
+
+        
+
+            <a href="/tags/JavaScript/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">JavaScript</a>
+
+        
+
+            <a href="/tags/Jsonp/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Jsonp</a>
+
+        
+
+            <a href="/tags/HTML5/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">HTML5</a>
+
+        
+
+            <a href="/tags/CORS/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">CORS</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
 
 
 </header>
 
-<div class="container body-wrap">
-
-    <ul class="post-list">
+<div class="container body-wrap fade">
     
-        <li class="post-list-item fade">
-            <article id="post-ajax"
-  class="article-card article-type-post" itemprop="blogPost">
+            <div class="waterfall">
+          
 
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
     <div class="post-meta">
-        <time class="post-time" title="2017-07-12 10:02:20" datetime="2017-07-12T02:02:20.000Z"  itemprop="datePublished">2017-07-12</time>
+      <time class="post-time" title="2017-07-12 10:02:20" datetime="2017-07-12T02:02:20.000Z"  itemprop="datePublished">2017-07-12</time>
 
-        
+      
 
 
     </div>
-
     
 
 
@@ -171,23 +199,6 @@
 
 
 
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Ajax简介
-ajax = 异步 JavaScript 和 XML。
-ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
-注意：ajax不支持跨域请求
-
-工作原理
-ajax的技术核心是 X...
-    
-
-        <a href="/2017/07/12/ajax/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
     
     <div class="post-footer">
         
@@ -195,102 +206,15 @@ ajax的技术核心是 X...
 
     </div>
     
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-jsonp跨域实现"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-07-08 18:57:30" datetime="2017-07-08T10:57:30.000Z"  itemprop="datePublished">2017-07-08</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/08/jsonp跨域实现/">jsonp跨域实现</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        同源策略在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。这一策略对于JavaScript代码能够访问的页面内容做了很重要的限制，即JavaScript只能访问与包含它的文档在同一域下的内容。（图片来自MDN）
-
-JSONP在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上用标签引入&...
-    
-
-        <a href="/2017/07/08/jsonp跨域实现/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CORS/">CORS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jsonp/">Jsonp</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-hello-world"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-07-07 16:00:29" datetime="2017-07-07T08:00:29.363Z"  itemprop="datePublished">2017-07-07</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/07/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-    
-
-        <a href="/2017/07/07/hello-world/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-
+  </article>
 </div>
+
+        
+            </div>
+        
+    
+</div>
+
 
         <!-- <footer class="footer">
     <div class="top">
@@ -366,7 +290,7 @@ Qu...
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/&title=途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/tags/ajax/&title=途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -376,22 +300,22 @@ Qu...
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/&title=途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/tags/ajax/&title=途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/tags/ajax/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=途中人的博客&url=http://upyang.com/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=途中人的博客&url=http://upyang.com/tags/ajax/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/tags/ajax/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -402,7 +326,7 @@ Qu...
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABWklEQVR42u3a3QqDMAxAYd//pR3sajCtJ4n7ITm9GmO2nwPTmHTb8Nifg39+/eb9+9uGLFmNWPtyVH5zRl/PI0vWZBYJCutHnQQIspYsWbL49lwJELJkybqLxZNjWbJkcRZJiPlVX83lZclqwfpEIYkEhR/Ut2TJ+kvWHhzrYJGb82AVWbKGsfhrZz18kGhwESZkyWrN4mlxpYW5nifwbi1LVlMWf4yjC/ObOd2qZckazyLlnnuLR7JkzWTxpghvdoYDQTSPliWrHSt3sIBAeRBBSbMsWa1ZaCcPHh2IPu8HRFmyBrMqm2s0Rb64bVmyhrFyJaHAm3HqjIEsWdNY9QMHvGUSmEeWrGGsSspbuQ3eTJUlaw6LTx1dsvR/yJI1kpXrbpA2TK60JEuWLE6JJr7JNqcsWbJwUOABApV6ZckayeJJc2VTD8QEWbKGsXIX5Iq5pWqWLFk9WQ8k31TsSNl4SAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvklEQVR42u3aS27DMAwFwNz/0i5QdNdaeaQ+cYHRKrAcebQhRFKvVzyu73H35Pds8vxudsHAxcWd5l7DUeWO/ztef2zAxcU9zx2HoWQbq955Y8PFxX0YdxzUkmCXr4mLi/tfuNWDTo+Oi4v7HG6S/Iyfrwpzy3I1XFzcCW61YLrj98b6Li4ubpF7FUc1/K367s+auLi4R7hJotI7rFTXydMhXFzck9xq2bRaWJk5yeDi4p7nVtOSZDYpeeRh9E2VFxcXdwM3CWTVwuiq9moz7uLi4k5wewErASXNkuRA80cVBxcXdzO3Gfla1ymS98tpDy4u7jZugqu+kwS+qbYrLi7uEW7eGuk1VNaGRVxc3H3c5MNrGyq9K564uLif5eYXpOa3VC6v4OLiHuHOpzTVHkd+CexNwRQXF3cbNylYzAS1XvnjNrTh4uIe5FaLlavKpuVv4eLiHuTmI1m0F6SibeDi4h7h9vqY1Sd5iaSXXOHi4u7g7i6PJrOFAIeLi3uQW217JBuej6C4uLjP5/ZSmnyrERoXF/fB3LwNkwfHaJO4uLgHuckxZbzQTMq0pSyCi4v7sILpTEsVFxf3o9wvOhWpQIQ0SAQAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
