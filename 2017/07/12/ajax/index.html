@@ -13,7 +13,7 @@
     
     
     
-    <title>通俗易懂Ajax实例讲解(一) | 途中人的博客 | IT技术分享！</title>
+    <title>原生js实现Ajax实例讲解(一) | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -23,7 +23,7 @@
     <meta name="description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
 <meta name="keywords" content="ajax,XMLHttpRequest,jsonp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通俗易懂Ajax实例讲解(一)">
+<meta property="og:title" content="原生js实现Ajax实例讲解(一)">
 <meta property="og:url" content="http://upyang.com/2017/07/12/ajax/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
@@ -32,9 +32,9 @@
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/4894833.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/22625927.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/1123101.jpg">
-<meta property="og:updated_time" content="2017-07-12T14:44:35.253Z">
+<meta property="og:updated_time" content="2017-07-13T11:04:19.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通俗易懂Ajax实例讲解(一)">
+<meta name="twitter:title" content="原生js实现Ajax实例讲解(一)">
 <meta name="twitter:description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
 <meta name="twitter:image" content="http://www.runoob.com/images/ajax.gif">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">通俗易懂Ajax实例讲解(一)</div>
+        <div class="flex-col header-title ellipsis">原生js实现Ajax实例讲解(一)</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,7 +142,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">通俗易懂Ajax实例讲解(一)</h1>
+        <h1 class="title">原生js实现Ajax实例讲解(一)</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-07-12T02:02:20.000Z" itemprop="datePublished" class="page-time">
@@ -173,7 +173,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">通俗易懂Ajax实例讲解(一)</h1>
+        <h1 class="post-card-title">原生js实现Ajax实例讲解(一)</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-07-12 10:02:20" datetime="2017-07-12T02:02:20.000Z"  itemprop="datePublished">2017-07-12</time>
 
@@ -199,7 +199,7 @@
 <li>图示：</li>
 </ul>
 <p><img src="http://www.runoob.com/images/ajax.gif"></p>
-<h2 id="ajax与jsonp"><a href="#ajax与jsonp" class="headerlink" title="ajax与jsonp"></a>ajax与jsonp</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>从实现方式上来讲，ajax是通过创建XMLHttpRequest来获取同源(什么是同源，可以q去看我的另一片文章<a href="http://www.upyang.com/2017/07/08/jsonp%E8%B7%A8%E5%9F%9F%E5%AE%9E%E7%8E%B0/" target="_blank" rel="external">jsonp跨域实现</a>  的数据。而jsonp是通过<code>&lt;script&gt;</code>标签来团挑用服务器提供的js脚本。</p>
+<h2 id="ajax与jsonp"><a href="#ajax与jsonp" class="headerlink" title="ajax与jsonp"></a>ajax与jsonp</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>从实现方式上来讲，ajax是通过创建XMLHttpRequest来获取<a href="http://www.upyang.com/2017/07/08/jsonp%E8%B7%A8%E5%9F%9F%E5%AE%9E%E7%8E%B0/" target="_blank" rel="external">同源</a>的数据。而jsonp是通过<code>&lt;script&gt;</code>标签来调用服务器提供的js脚本。</p>
 <h3 id="jsonp产生原因"><a href="#jsonp产生原因" class="headerlink" title="jsonp产生原因"></a>jsonp产生原因</h3><p>　1. Ajax直接请求普通文件存在跨域无权限访问的问题（静态页、动态页、web服务、wcf只要是跨域请求一律不准）<br>　2. web的页面上调用js文件是不受跨域的影响（凡拥有src属性的标签都拥有跨域能力script img iframe）<br>　3. 可以判断 现在想通过纯web端(ActiveX控件、服务端代理、H5之Websocket等方式不算)跨域访问数据就只有一种可能，就是在远程服务器上设法把数据装进js格式的文件里，供客户度调用和进一步处理；<br>　4. json的纯字符数格式可以简洁的描述复杂数据还被js原生支持<br>　5. web客户端通过与调用脚本一样的方式来调用跨域服务器上动态生成的js格式文件(后缀.json)，服务器之所以要动态生成json文件目的把客户端需要的数据装入进去<br>　6. 客户端在对json文件调用成功后获得自己所需的数据剩下的就按照自己需求进行处理和展现，这种获取远程数据的方式非常像ajax其实并一样<br>　7. 为了方便客户端使用数据逐渐形成非正式传输协议jsonp</p>
 <ul>
 <li><p>其实，说到ajax就会面临两个不可避免的问题，<i style="color:red">一是以何种格式来减缓数据；二是如何解决跨域问题。</i>目前来说，所被推崇的方案是JSON作数据交换，JSONP来解决跨域问题。</p>
@@ -208,7 +208,7 @@
 </li>
 </ul>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
-<li>题目：注册时，会要求输入用户名和密码，同时要验证用户名是否已经存在</li>
+<li>题目：注册时，会要求输入用户名和密码，同时要验证用户名是否合法。</li>
 <li>实现功能，用户在输入用户名后，需要给出提醒该名称是否已经存在。<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -249,7 +249,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-12T14:44:35.253Z" itemprop="dateUpdated">2017-07-12 22:44:35</time>
+    最后更新时间：<time datetime="2017-07-13T11:04:19.901Z" itemprop="dateUpdated">2017-07-13 19:04:19</time>
 </span><br>
 
 
@@ -284,7 +284,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -294,7 +294,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -304,7 +304,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -334,7 +334,7 @@
     <div class="waves-block waves-effect prev">
       <a href="/2017/07/12/ajax2/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">通俗易懂Ajax实例讲解(二)</h4>
+        <h4 class="title">原生js实现Ajax实例讲解(二)</h4>
       </a>
     </div>
   
@@ -479,7 +479,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -489,7 +489,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -499,7 +499,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通俗易懂Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>

@@ -13,7 +13,7 @@
     
     
     
-    <title>通俗易懂Ajax实例讲解(二) | 途中人的博客 | IT技术分享！</title>
+    <title>原生js实现Ajax实例讲解(二) | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -23,13 +23,13 @@
     <meta name="description" content="导语Ajax的核心技术是XMLHttpRequest对象,它可以在不向服务器提交整个页面的情况下，实现局部更新网页。通过这个对象，Ajax可以像桌面应用程序那样只与服务器进行数据层的交换，而不必每次都刷新界面，也不必每次将数据处理的工作都交给服务器来做。这样既减轻了服务器负担又提高了响应速度，还缩短了用户的等待时间。通常一个Ajax的实现过程有五步，下面我们以以上篇博客中的小实例为例来逐步学习。">
 <meta name="keywords" content="ajax,XMLHttpRequest,jsonp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通俗易懂Ajax实例讲解(二)">
+<meta property="og:title" content="原生js实现Ajax实例讲解(二)">
 <meta property="og:url" content="http://upyang.com/2017/07/12/ajax2/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="导语Ajax的核心技术是XMLHttpRequest对象,它可以在不向服务器提交整个页面的情况下，实现局部更新网页。通过这个对象，Ajax可以像桌面应用程序那样只与服务器进行数据层的交换，而不必每次都刷新界面，也不必每次将数据处理的工作都交给服务器来做。这样既减轻了服务器负担又提高了响应速度，还缩短了用户的等待时间。通常一个Ajax的实现过程有五步，下面我们以以上篇博客中的小实例为例来逐步学习。">
-<meta property="og:updated_time" content="2017-07-12T14:38:25.231Z">
+<meta property="og:updated_time" content="2017-07-13T11:04:18.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通俗易懂Ajax实例讲解(二)">
+<meta name="twitter:title" content="原生js实现Ajax实例讲解(二)">
 <meta name="twitter:description" content="导语Ajax的核心技术是XMLHttpRequest对象,它可以在不向服务器提交整个页面的情况下，实现局部更新网页。通过这个对象，Ajax可以像桌面应用程序那样只与服务器进行数据层的交换，而不必每次都刷新界面，也不必每次将数据处理的工作都交给服务器来做。这样既减轻了服务器负担又提高了响应速度，还缩短了用户的等待时间。通常一个Ajax的实现过程有五步，下面我们以以上篇博客中的小实例为例来逐步学习。">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
@@ -114,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">通俗易懂Ajax实例讲解(二)</div>
+        <div class="flex-col header-title ellipsis">原生js实现Ajax实例讲解(二)</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,7 +136,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">通俗易懂Ajax实例讲解(二)</h1>
+        <h1 class="title">原生js实现Ajax实例讲解(二)</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-07-12T14:30:38.000Z" itemprop="datePublished" class="page-time">
@@ -167,7 +167,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">通俗易懂Ajax实例讲解(二)</h1>
+        <h1 class="post-card-title">原生js实现Ajax实例讲解(二)</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-07-12 22:30:38" datetime="2017-07-12T14:30:38.000Z"  itemprop="datePublished">2017-07-12</time>
 
@@ -205,7 +205,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-12T14:38:25.231Z" itemprop="dateUpdated">2017-07-12 22:38:25</time>
+    最后更新时间：<time datetime="2017-07-13T11:04:18.739Z" itemprop="dateUpdated">2017-07-13 19:04:18</time>
 </span><br>
 
 
@@ -240,7 +240,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax2/&title=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax2/&title=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -250,7 +250,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax2/&title=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax2/&title=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -260,7 +260,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax2/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax2/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -292,7 +292,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2017/07/12/ajax/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">通俗易懂Ajax实例讲解(一)</h4>
+        <h4 class="title">原生js实现Ajax实例讲解(一)</h4>
       </a>
     </div>
   
@@ -428,7 +428,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax2/&title=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax2/&title=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -438,7 +438,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax2/&title=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax2/&title=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -448,7 +448,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通俗易懂Ajax实例讲解(二)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax2/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(二)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax2/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
