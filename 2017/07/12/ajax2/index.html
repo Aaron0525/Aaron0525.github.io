@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://upyang.com/2017/07/12/ajax2/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="导语Ajax的核心技术是XMLHttpRequest对象,它可以在不向服务器提交整个页面的情况下，实现局部更新网页。通过这个对象，Ajax可以像桌面应用程序那样只与服务器进行数据层的交换，而不必每次都刷新界面，也不必每次将数据处理的工作都交给服务器来做。这样既减轻了服务器负担又提高了响应速度，还缩短了用户的等待时间。通常一个Ajax的实现过程有五步，下面我们以以上篇博客中的小实例为例来逐步学习。">
-<meta property="og:updated_time" content="2017-07-14T15:39:44.483Z">
+<meta property="og:updated_time" content="2017-07-14T15:44:11.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生js实现Ajax实例讲解(二)">
 <meta name="twitter:description" content="导语Ajax的核心技术是XMLHttpRequest对象,它可以在不向服务器提交整个页面的情况下，实现局部更新网页。通过这个对象，Ajax可以像桌面应用程序那样只与服务器进行数据层的交换，而不必每次都刷新界面，也不必每次将数据处理的工作都交给服务器来做。这样既减轻了服务器负担又提高了响应速度，还缩短了用户的等待时间。通常一个Ajax的实现过程有五步，下面我们以以上篇博客中的小实例为例来逐步学习。">
@@ -187,7 +187,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//创建XMLHttpRequest对象，调用前面定义好的函数</div><div class="line">    creatXMLHTTP();</div><div class="line">    if (xhr!=null)</div><div class="line">    &#123;</div><div class="line">        //创建响应XMLHttpRequest对象状态变化的函数</div><div class="line"></div><div class="line">        //创建http请求</div><div class="line"></div><div class="line">        //发送http请求</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        alert(&quot;您的浏览器不支持XMLHTTP&quot;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <h3 id="注册回调函数"><a href="#注册回调函数" class="headerlink" title="注册回调函数"></a>注册回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//创建响应XMLHttpRequest对象状态变化的函数</div><div class="line">    xhr.onreadystatechange = httpStateChange;</div></pre></td></tr></table></figure>
 <p>在异步调用时，XMLHttpRequest对象有几个不同的状态，这些状态表示了异步调用的过程。<br>0：未初始化状态，刚创建完一个XMLHttpRequest对象；<br>1：初始化状态，即XMLHttpRequest对象已经获得了要将数据发送到哪个服务器上、以什么方式发送等信息；<br>2：发送状态，XMLHttpRequest开始发送数据；<br>3：数据传送状态，此时XMLHttpRequest正在接受从服务器端返回的数据，但是数据还没有传送完毕；<br>4：完成状态：此时XMLHttpRequest对象已经将从服务器端返回的数据接受完毕。<br>使用XMLHttpRequest对象的onreadystatechange属性，可以设置响应XMLHttpRequest对象状态变化的函数。设置回调函数时，不要在函数名后而加括号。加括号表示将回调函数的返回值注册给onreadystatechange属性。</p>
-<h3 id="open方法设置和服务器端交互的信息"><a href="#open方法设置和服务器端交互的信息" class="headerlink" title="open方法设置和服务器端交互的信息"></a>open方法设置和服务器端交互的信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//发送http请求</div><div class="line">//创建http请求</div><div class="line">    xhr.open(&quot;get&quot;,&quot;Readme.txt&quot;, true);</div></pre></td></tr></table></figure>
+<h3 id="open方法设置和服务器端交互的信息"><a href="#open方法设置和服务器端交互的信息" class="headerlink" title="open方法设置和服务器端交互的信息"></a>open方法设置和服务器端交互的信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//创建http请求</div><div class="line">    xhr.open(&quot;get&quot;,&quot;Readme.txt&quot;, true);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>请求根目录下存储用户名为Readme的txt文件</p>
+</blockquote>
 <p>XMLHttpRequest的open(method,URL,flag,name,password)方法用来初始化对象,后三个参数是可选的。<br>method：指定用什么方式向服务器发送http请求，参数值可以是get，post，head，put和delete五种。<br>URL：指定服务器的URL，也就是用户处理和返回数据的程序的URL。该URL可以是绝对地址，也可以是相对地址。<br>flag：指定提交http请求的方式，true指异步方式，为默认值；false指同步方式。<br>name和password：如果服务器需要验证，这两个参数用来提交用户名和密码。</p>
 <h3 id="设置发送的数据与服务器端开始交互。"><a href="#设置发送的数据与服务器端开始交互。" class="headerlink" title="设置发送的数据与服务器端开始交互。"></a>设置发送的数据与服务器端开始交互。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//发送http请求</div><div class="line">    xhr.send(null);</div></pre></td></tr></table></figure>
 <p>发送http请求使用XMLHttpRequest的send(data)方法，data参数就是传递给open()方法中URL参数所指定的文件的参数。若果要传递多个参数，用”&amp;”来分隔，不需要传递参数写”null”。</p>
@@ -205,7 +208,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-14T15:39:44.483Z" itemprop="dateUpdated">2017-07-14 23:39:44</time>
+    最后更新时间：<time datetime="2017-07-14T15:44:11.191Z" itemprop="dateUpdated">2017-07-14 23:44:11</time>
 </span><br>
 
 
