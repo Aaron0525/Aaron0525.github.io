@@ -60,7 +60,7 @@
     <link href="http://upyang.com/2017/07/12/ajax/"/>
     <id>http://upyang.com/2017/07/12/ajax/</id>
     <published>2017-07-12T02:02:20.000Z</published>
-    <updated>2017-07-13T11:04:19.901Z</updated>
+    <updated>2017-07-14T08:19:07.402Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Ajax简介"><a href="#Ajax简介" class="headerlink" title="Ajax简介"></a>Ajax简介</h2><ul>
 <li>ajax = 异步 JavaScript 和 XML。</li>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<p>详细讲解请看下一章<a href="http://www.upyang.com/2017/07/12/ajax/" target="_blank" rel="external">通俗易懂Ajax实例讲解(二)</a></p>
+<p>详细代码讲解请看下一章<a href="http://www.upyang.com/2017/07/12/ajax/" target="_blank" rel="external">通俗易懂Ajax实例讲解(二)</a></p>
 ]]></content>
     
     <summary type="html">
