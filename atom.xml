@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-07-16T14:43:11.553Z</updated>
+  <updated>2017-07-21T15:32:36.073Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue学习</title>
+    <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://upyang.com/2017/07/21/Vue学习/</id>
+    <published>2017-07-21T15:28:51.000Z</published>
+    <updated>2017-07-21T15:32:36.073Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vue简介"><a href="#vue简介" class="headerlink" title="vue简介"></a>vue简介</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;vue简介&quot;&gt;&lt;a href=&quot;#vue简介&quot; class=&quot;headerlink&quot; title=&quot;vue简介&quot;&gt;&lt;/a&gt;vue简介&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
+    
+      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>原生js实现Ajax实例讲解(二)</title>
