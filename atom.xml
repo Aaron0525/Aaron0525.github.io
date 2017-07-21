@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-07-21T15:32:36.073Z</updated>
+  <updated>2017-07-21T15:36:36.795Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,13 +20,15 @@
     <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
     <id>http://upyang.com/2017/07/21/Vue学习/</id>
     <published>2017-07-21T15:28:51.000Z</published>
-    <updated>2017-07-21T15:32:36.073Z</updated>
+    <updated>2017-07-21T15:36:36.795Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="vue简介"><a href="#vue简介" class="headerlink" title="vue简介"></a>vue简介</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h2><p>　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有自己动手实践</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;vue简介&quot;&gt;&lt;a href=&quot;#vue简介&quot; class=&quot;headerlink&quot; title=&quot;vue简介&quot;&gt;&lt;/a&gt;vue简介&lt;/h2&gt;
+      &lt;h2 id=&quot;导语&quot;&gt;&lt;a href=&quot;#导语&quot; class=&quot;headerlink&quot; title=&quot;导语&quot;&gt;&lt;/a&gt;导语&lt;/h2&gt;&lt;p&gt;　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有自己动手实践&lt;/p&gt;
+
     
     </summary>
     
