@@ -20,17 +20,19 @@
     
     
     <meta name="keywords" content="Vue2.0,ES6">
-    <meta name="description" content="前言　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有动手实践自己的项目，这次借着自己模仿掘金App的同时系统的去体验一下之前学过的知识，写下这篇博客，记录实践中遇到的各种问题以及解决的方法。">
+    <meta name="description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
 <meta name="keywords" content="Vue2.0,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习">
 <meta property="og:url" content="http://upyang.com/2017/07/21/Vue学习/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="前言　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有动手实践自己的项目，这次借着自己模仿掘金App的同时系统的去体验一下之前学过的知识，写下这篇博客，记录实践中遇到的各种问题以及解决的方法。">
-<meta property="og:updated_time" content="2017-07-21T15:39:31.515Z">
+<meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
+<meta property="og:updated_time" content="2017-07-22T14:14:23.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
-<meta name="twitter:description" content="前言　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有动手实践自己的项目，这次借着自己模仿掘金App的同时系统的去体验一下之前学过的知识，写下这篇博客，记录实践中遇到的各种问题以及解决的方法。">
+<meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
+<meta name="twitter:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -159,7 +161,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">需求分析</span></a></li></ol>
         </nav>
     </aside>
     
@@ -182,7 +184,14 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间在学习Vue2.0的相关知识，之前一直断断续续的有看过相关的视频教学，但是一直没有动手实践自己的项目，这次借着自己模仿掘金App的同时系统的去体验一下之前学过的知识，写下这篇博客，记录实践中遇到的各种问题以及解决的方法。</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>可以看到掘金App主要分为四个大页面，</p>
 
         </div>
 
@@ -190,7 +199,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-21T15:39:31.515Z" itemprop="dateUpdated">2017-07-21 23:39:31</time>
+    最后更新时间：<time datetime="2017-07-22T14:14:23.836Z" itemprop="dateUpdated">2017-07-22 22:14:23</time>
 </span><br>
 
 
