@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://upyang.com/2017/07/21/Vue学习/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
-<meta property="og:updated_time" content="2017-07-22T14:51:31.712Z">
+<meta property="og:updated_time" content="2017-07-22T15:28:47.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
 <meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
@@ -194,17 +194,18 @@
 <ul>
 <li>Vue创建项目命令：<blockquote>
 <p>Vue init webpack juejin<br>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
+<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><p><img src="" alt=""><br>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
 </blockquote>
 </li>
 </ul>
---></p>
+<h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2>--></p>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-22T14:51:31.712Z" itemprop="dateUpdated">2017-07-22 22:51:31</time>
+    最后更新时间：<time datetime="2017-07-22T15:28:47.696Z" itemprop="dateUpdated">2017-07-22 23:28:47</time>
 </span><br>
 
 
