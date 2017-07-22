@@ -27,12 +27,10 @@
 <meta property="og:url" content="http://upyang.com/2017/07/21/Vue学习/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
-<meta property="og:updated_time" content="2017-07-22T14:14:23.836Z">
+<meta property="og:updated_time" content="2017-07-22T14:51:31.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
 <meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
-<meta name="twitter:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -185,21 +183,28 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。</p>
-<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：<br><figure class="image-bubble">
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：<br><!-- <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
-            </figure><br>可以看到掘金App主要分为四个大页面，</p>
-
+            </figure> –&gt;<br>可以看到掘金App主要分为四个大页面，底部有一个主要的tab切换，其中首页主要是新闻列表，顶部也带有一个tab切换，tab切换在Vue中可以用vue-router轻易的实现，这里主要的问题是有两个tab切换，可以配置嵌套路由。</p>
+<h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>这里基本的node、git、vue-cli脚手架的安装就不一一介绍了，网上有很多相关的教程。直接从构建项目开始。</p>
+<ul>
+<li>Vue创建项目命令：<blockquote>
+<p>Vue init webpack juejin<br>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
+</blockquote>
+</li>
+</ul>
+--></p>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-22T14:14:23.836Z" itemprop="dateUpdated">2017-07-22 22:14:23</time>
+    最后更新时间：<time datetime="2017-07-22T14:51:31.712Z" itemprop="dateUpdated">2017-07-22 22:51:31</time>
 </span><br>
 
 
