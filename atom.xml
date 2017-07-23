@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-07-23T06:56:57.343Z</updated>
+  <updated>2017-07-23T08:18:55.329Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
     <id>http://upyang.com/2017/07/21/Vue学习/</id>
     <published>2017-07-21T15:28:51.000Z</published>
-    <updated>2017-07-23T06:56:57.343Z</updated>
+    <updated>2017-07-23T08:18:55.329Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。</p>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：</p>
-<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg" width="300" height="500" style="float: left;margin-right: 30px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg" width="300" height="500" style="margin-right: 30px;border: 1px solid #817777;"></p>
+<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;border: 1px solid #E8E1E1;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;border: 1px solid #E8E1E1;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg" width="300" height="500" style="float: left;margin-right: 30px;border: 1px solid #E8E1E1;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg" width="300" height="500" style="margin-right: 30px;border: 1px solid #E8E1E1;"></p>
 <p> 通过观察分析，总结出以下几点：</p>
 <ul>
 <li>首页，底部和顶部分别有tab切换，在Vue中可以通过配置嵌套路由来实现。</li>
@@ -125,8 +125,16 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
 <blockquote>
 <p>注意：检查路由是否配置成功不仅仅要看是否能正常切换，还需要观察地址栏路径变化，是否符合逻辑。<br>底部点击切换时，<a href="http://localhost:8080/#/[home,find,infor,my]四个地址之间切换。" target="_blank" rel="external">http://localhost:8080/#/[home,find,infor,my]四个地址之间切换。</a><br>点击顶部路由时，<a href="http://localhost:8080/#/home/[homepage,frontend,product,design,afterend]五个地址之间切换。" target="_blank" rel="external">http://localhost:8080/#/home/[homepage,frontend,product,design,afterend]五个地址之间切换。</a></p>
 </blockquote>
-<h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>###</p>
-<h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
+<h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><p>轮播图对于前端工程师来说十分常见，以往的轮播图数据都是写死的，不能变化，这次希望模仿出来的掘金App更加真实，所以做了一个数据可变的的轮播图。很遗憾，掘金App上的轮播图数据暂时没有想到好的办法去拿到，chrome网页版掘金切换到手机模式依旧没有轮播图数据。这里选用的是QQ音乐首页轮播图数据，究竟怎么拿到数据并显示呢？</p>
+<h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>安装好jsonp依赖后，需要对jsonp进行简单的封装，</p>
+<p>###</p>
+<h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><ul>
+<li>在点击新闻列表后,会出现新闻详情页面，新闻详情页面是一个单独的子组件模板,里面的作者、图像、文章banner图、文章标题等一系列数据是需要在点击新闻列表后将数据传递过来并绑定在结构上的。</li>
+</ul>
+<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;border: 1px solid #E8E1E1;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/62531253.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;border: 1px solid #E8E1E1;"></p>
+<h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><p>App很多地方会有点击后出现一个新的页面的操作，如果不做动画看起来会感觉差点什么，Vue中也提供了了过渡动画的API，官网教程：<a href="https://cn.vuejs.org/v2/guide/transitions.html。" target="_blank" rel="external">https://cn.vuejs.org/v2/guide/transitions.html。</a></p>
+<p>在点击新闻列表后，会从右至左出来新闻详情页面，实现也十分简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;transition name=&quot;move&quot;&gt;</div><div class="line">    &lt;div v-show=&quot;showFlag&quot; class=&quot;listdetail&quot;&gt;</div><div class="line">        &lt;!-- 组件内容--&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/transition&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;style&gt;</div><div class="line">  .move-enter-active, .move-leave-active &#123;</div><div class="line">      transition: all 0.2s linear;</div><div class="line">  &#125;</div><div class="line">  .move-enter, .move-leave-active &#123;</div><div class="line">    transform: translate3d(100%, 0, 0);</div><div class="line">  &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
     
     <summary type="html">
     
