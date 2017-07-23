@@ -33,7 +33,14 @@
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/77103498.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/4776956.jpg">
-<meta property="og:updated_time" content="2017-07-23T05:09:28.643Z">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/33192057.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/82258197.jpg">
+<meta property="og:image" content="http://www.iconfont.cn/">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/43259474.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/23822432.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/59387298.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/82175984.jpg">
+<meta property="og:updated_time" content="2017-07-23T06:08:15.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
 <meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   通过观察分析，总结出以下几点：  首页，底部和顶部分别有">
@@ -166,7 +173,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">需求分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目构建"><span class="post-toc-number">3.</span> <span class="post-toc-text">项目构建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">项目目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#嵌套路由配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">嵌套路由配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#发现页轮播图"><span class="post-toc-number">6.</span> <span class="post-toc-text">发现页轮播图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jsonp封装"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">jsonp封装</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父组件向子组件传递数据"><span class="post-toc-number">7.</span> <span class="post-toc-text">父组件向子组件传递数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父子组件数据双向绑定"><span class="post-toc-number">8.</span> <span class="post-toc-text">父子组件数据双向绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue中transition过度动画"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vue中transition过度动画</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h5调用摄像头"><span class="post-toc-number">10.</span> <span class="post-toc-text">h5调用摄像头</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">11.</span> <span class="post-toc-text">总结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">需求分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目构建"><span class="post-toc-number">3.</span> <span class="post-toc-text">项目构建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">项目目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#目录介绍"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">目录介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#package-json配置依赖"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">package.json配置依赖</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件路径配置"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">文件路径配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入字体图标"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">引入字体图标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Express获取data-json数据的路由配置"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">Express获取data.json数据的路由配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#嵌套路由配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">嵌套路由配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#发现页轮播图"><span class="post-toc-number">6.</span> <span class="post-toc-text">发现页轮播图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jsonp封装"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">jsonp封装</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父组件向子组件传递数据"><span class="post-toc-number">7.</span> <span class="post-toc-text">父组件向子组件传递数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父子组件数据双向绑定"><span class="post-toc-number">8.</span> <span class="post-toc-text">父子组件数据双向绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue中transition过度动画"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vue中transition过度动画</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h5调用摄像头"><span class="post-toc-number">10.</span> <span class="post-toc-text">h5调用摄像头</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">11.</span> <span class="post-toc-text">总结</span></a></li></ol>
         </nav>
     </aside>
     
@@ -197,7 +204,7 @@
 <li>首页，底部和顶部分别有tab切换，在Vue中可以通过配置嵌套路由来实现。</li>
 <li>发现页，顶部有一个轮播图，数据要求实时跟新。因为之前有在做<a href="http://localhost:4000/categories/" target="_blank" rel="external">Vue-music</a>时有做过一个数据实时跟新的轮播图,这里直接引用过来，后面也会具体去讲怎么实现。沸点栏，有一个左右可以滑动的新闻栏。</li>
 <li>消息、我的信息页面基本上都是数据交互，其中我的信息里面会包含一个h5调用摄像头、相册的功能。</li>
-<li>项目中用到的字体图标采用阿里的iconfont,一些无法搜索到的图片，用FW切出来。</li>
+<li>项目中用到的字体图标采用阿里的iconfont,一些无法搜索到的图片，用firework切图工具切出来。</li>
 </ul>
 <h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>这里基本的node、git的安装就不一一介绍了，网上有很多相关的教程。选用webpack、vue-cli脚手架来快速搭建我们的项目骨架。</p>
 <ul>
@@ -221,15 +228,71 @@
                     <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/4776956.jpg" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
-            </figure></li>
+            </figure>
+<h3 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h3></li>
 <li>api: 存放jsonp请求轮播图数据的js文件</li>
 <li>base: 存放项目的基础组件，例如：轮播图组件(slider)、新闻列表组件(newslist)、新闻详情listdetail)、搜索组件(search)、修改个人信息组件(modify)等.</li>
-<li>common: 存放基础image、js、stylus、字体图标等文件。</li>
+<li>common: 存放fonts、image、js、stylus文件。</li>
 <li>components: 存放项目的主要组件</li>
 <li>router: 路由配置文件</li>
-<li>需要注意的是，根目录下多了一个data.json的文件，因为要模拟从后端获取数据并绑定到组件上</li>
+<li>需要注意的是，因为想要模拟从后端获取数据并绑定到组件上，而不是把数据写死在结构上，所以这里在根目录新建了一个data.json的文件，里面写好了项目需要用到的数据。<h3 id="package-json配置依赖"><a href="#package-json配置依赖" class="headerlink" title="package.json配置依赖"></a>package.json配置依赖</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/33192057.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+</li>
 </ul>
-<p>，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
+<p>node_modules文件目录下查看到以上的依赖包，说明安装成功了。注意：因为项目用到的reset重置样式文件(copy来的)是stylus格式，所以还需要在devDependencies中配置stylus和stylus-loader依赖。</p>
+<h3 id="文件路径配置"><a href="#文件路径配置" class="headerlink" title="文件路径配置"></a>文件路径配置</h3><p>项目中会经常引入各种文件，为了引用方便会进行以下配置，觉得没必要的可以忽略。</p>
+<ul>
+<li>打开build目录下的webpack.base.conf.js文件，在resolve下进行以下配置<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/82258197.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></li>
+<li>这样的好处是引用某个文件的时候不用每次都带上一堆的前缀。<h3 id="引入字体图标"><a href="#引入字体图标" class="headerlink" title="引入字体图标"></a>引入字体图标</h3>前面说到本项目用的是阿里的<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.iconfont.cn/" alt="iconfont" title="">
+                </div>
+                <div class="image-caption">iconfont</div>
+            </figure>字体图标库，选择好所要用到的图标之后下载到本地，将其中除了3个html演示文件以外的其他7个文件拷贝到common/fonts目录下，然后将iconfont.css文件里的内容拷贝到common/stylus/icon.styl中,首先要修改的是引用路径，其他根据需要自行修改字体图标的基本样式。<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/43259474.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/23822432.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></li>
+<li>测试字体图标是否引用成功：根目录main.js下 import ‘./common/stylus/icon.styl’，然后在组件中引用一个字体图标，用浏览器查看是否引用成功。<h3 id="Express获取data-json数据的路由配置"><a href="#Express获取data-json数据的路由配置" class="headerlink" title="Express获取data.json数据的路由配置"></a>Express获取data.json数据的路由配置</h3>data.json文件数据结构如下：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/59387298.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/82175984.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+npm run dev重启服务器，浏览器访问localhost:8080/api/infor,若能看到如data.json/infor里面的数据说明已经配置成功了。</li>
+</ul>
 <h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2><h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>###</p>
 <h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
         </div>
@@ -238,7 +301,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-23T05:09:28.643Z" itemprop="dateUpdated">2017-07-23 13:09:28</time>
+    最后更新时间：<time datetime="2017-07-23T06:08:15.343Z" itemprop="dateUpdated">2017-07-23 14:08:15</time>
 </span><br>
 
 
