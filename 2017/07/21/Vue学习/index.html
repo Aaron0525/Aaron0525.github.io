@@ -20,17 +20,23 @@
     
     
     <meta name="keywords" content="Vue2.0,ES6">
-    <meta name="description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
+    <meta name="description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
 <meta name="keywords" content="Vue2.0,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习">
 <meta property="og:url" content="http://upyang.com/2017/07/21/Vue学习/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
-<meta property="og:updated_time" content="2017-07-23T02:52:36.451Z">
+<meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/36869688.jpg">
+<meta property="og:updated_time" content="2017-07-23T03:28:03.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
-<meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。 需求分析首先直观的看下掘金App的基本页面构成：">
+<meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
+<meta name="twitter:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -159,7 +165,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">需求分析</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">需求分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目构建"><span class="post-toc-number">3.</span> <span class="post-toc-text">项目构建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">项目目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#嵌套路由配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">嵌套路由配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#发现页轮播图"><span class="post-toc-number">6.</span> <span class="post-toc-text">发现页轮播图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jsonp封装"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">jsonp封装</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父组件向子组件传递数据"><span class="post-toc-number">7.</span> <span class="post-toc-text">父组件向子组件传递数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#父子组件数据双向绑定"><span class="post-toc-number">8.</span> <span class="post-toc-text">父子组件数据双向绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue中transition过度动画"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vue中transition过度动画</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h5调用摄像头"><span class="post-toc-number">10.</span> <span class="post-toc-text">h5调用摄像头</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">11.</span> <span class="post-toc-text">总结</span></a></li></ol>
         </nav>
     </aside>
     
@@ -182,18 +188,20 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。</p>
-<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：<br><!-- <figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure> –&gt;<br>可以看到掘金App主要分为四个大页面，底部有一个主要的tab切换，其中首页主要是新闻列表，顶部也带有一个tab切换，tab切换在Vue中可以用vue-router轻易的实现，这里主要的问题是有两个tab切换，可以配置嵌套路由。</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：</p>
+<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg" width="300" height="500" style="float: left;margin-right: 30px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg" width="300" height="500" style="margin-right: 30px;"></p>
+<ul>
+<li>可以看到掘金App主要分为四个大页面，底部有一个主要的tab切换，其中首页主要是新闻列表，顶部也带有一个tab切换，tab切换在Vue中可以用vue-router轻易的实现，这里主要的问题是有两个tab切换，可以配置嵌套路由。</li>
+</ul>
 <h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>这里基本的node、git、vue-cli脚手架的安装就不一一介绍了，网上有很多相关的教程。直接从构建项目开始。</p>
 <ul>
 <li>Vue创建项目命令：<blockquote>
-<p>Vue init webpack juejin<br>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
+<p>Vue init webpack juejin</p>
+</blockquote>
+</li>
+</ul>
+<p>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
 <h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -201,19 +209,16 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<p>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
-</blockquote>
-</li>
-</ul>
+<p>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
 <h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2><h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>###</p>
-<h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>--></p>
+<h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-23T02:52:36.451Z" itemprop="dateUpdated">2017-07-23 10:52:36</time>
+    最后更新时间：<time datetime="2017-07-23T03:28:03.260Z" itemprop="dateUpdated">2017-07-23 11:28:03</time>
 </span><br>
 
 
