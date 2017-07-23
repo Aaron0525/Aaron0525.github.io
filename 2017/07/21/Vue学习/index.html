@@ -20,22 +20,23 @@
     
     
     <meta name="keywords" content="Vue2.0,ES6">
-    <meta name="description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
+    <meta name="description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   通过观察分析，总结出以下几点：  首页，底部和顶部分别有">
 <meta name="keywords" content="Vue2.0,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习">
 <meta property="og:url" content="http://upyang.com/2017/07/21/Vue学习/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
+<meta property="og:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   通过观察分析，总结出以下几点：  首页，底部和顶部分别有">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/36869688.jpg">
-<meta property="og:updated_time" content="2017-07-23T03:28:03.260Z">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/77103498.jpg">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-23/4776956.jpg">
+<meta property="og:updated_time" content="2017-07-23T05:09:28.643Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习">
-<meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   可以看到掘金App主要分为四个大页面，底部有一个主要的t">
+<meta name="twitter:description" content="前言　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。 需求分析首先直观的看下掘金App的基本页面构成：   通过观察分析，总结出以下几点：  首页，底部和顶部分别有">
 <meta name="twitter:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
@@ -190,26 +191,45 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。</p>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：</p>
-<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg" width="300" height="500" style="float: left;margin-right: 30px;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg" width="300" height="500" style="margin-right: 30px;"></p>
+<p><img src="http://oszamq4pp.bkt.clouddn.com/17-7-22/81795026.jpg" width="300" height="500" style="float:left;margin-right: 30px;margin-bottom: 20px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/6318549.jpg" width="300" height="500" style="float:left;margin-right: 30px; margin-bottom: 20px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/79170730.jpg" width="300" height="500" style="float: left;margin-right: 30px;border: 1px solid #817777;"><img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/46672523.jpg" width="300" height="500" style="margin-right: 30px;border: 1px solid #817777;"></p>
+<p> 通过观察分析，总结出以下几点：</p>
 <ul>
-<li>可以看到掘金App主要分为四个大页面，底部有一个主要的tab切换，其中首页主要是新闻列表，顶部也带有一个tab切换，tab切换在Vue中可以用vue-router轻易的实现，这里主要的问题是有两个tab切换，可以配置嵌套路由。</li>
+<li>首页，底部和顶部分别有tab切换，在Vue中可以通过配置嵌套路由来实现。</li>
+<li>发现页，顶部有一个轮播图，数据要求实时跟新。因为之前有在做<a href="http://localhost:4000/categories/" target="_blank" rel="external">Vue-music</a>时有做过一个数据实时跟新的轮播图,这里直接引用过来，后面也会具体去讲怎么实现。沸点栏，有一个左右可以滑动的新闻栏。</li>
+<li>消息、我的信息页面基本上都是数据交互，其中我的信息里面会包含一个h5调用摄像头、相册的功能。</li>
+<li>项目中用到的字体图标采用阿里的iconfont,一些无法搜索到的图片，用FW切出来。</li>
 </ul>
-<h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>这里基本的node、git、vue-cli脚手架的安装就不一一介绍了，网上有很多相关的教程。直接从构建项目开始。</p>
+<h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>这里基本的node、git的安装就不一一介绍了，网上有很多相关的教程。选用webpack、vue-cli脚手架来快速搭建我们的项目骨架。</p>
 <ul>
 <li>Vue创建项目命令：<blockquote>
 <p>Vue init webpack juejin</p>
 </blockquote>
 </li>
 </ul>
-<p>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
-<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><figure class="image-bubble">
+<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/36869688.jpg" alt="" title="">
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/77103498.jpg" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<p>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
+<p>根据提示完成相应的项目基本信息，个人意愿选择是否使用ESlint、单元测试、端到端测试等等,建议新手不使用ESlint做代码格式检查，不然可能在写的过程中遇到非常多代码格式错误，当然选择使用的话也有好处，能很好的规范自己的代码风格。</p>
+<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><ul>
+<li>完成项目构建后，对目录进行修改，修改完成后如下：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/4776956.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></li>
+<li>api: 存放jsonp请求轮播图数据的js文件</li>
+<li>base: 存放项目的基础组件，例如：轮播图组件(slider)、新闻列表组件(newslist)、新闻详情listdetail)、搜索组件(search)、修改个人信息组件(modify)等.</li>
+<li>common: 存放基础image、js、stylus、字体图标等文件。</li>
+<li>components: 存放项目的主要组件</li>
+<li>router: 路由配置文件</li>
+<li>需要注意的是，根目录下多了一个data.json的文件，因为要模拟从后端获取数据并绑定到组件上</li>
+</ul>
+<p>，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
 <h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2><h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>###</p>
 <h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
         </div>
@@ -218,7 +238,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-23T03:28:03.260Z" itemprop="dateUpdated">2017-07-23 11:28:03</time>
+    最后更新时间：<time datetime="2017-07-23T05:09:28.643Z" itemprop="dateUpdated">2017-07-23 13:09:28</time>
 </span><br>
 
 
