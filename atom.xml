@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-07-22T15:38:38.479Z</updated>
+  <updated>2017-07-23T02:52:36.451Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
     <id>http://upyang.com/2017/07/21/Vue学习/</id>
     <published>2017-07-21T15:28:51.000Z</published>
-    <updated>2017-07-22T15:38:38.479Z</updated>
+    <updated>2017-07-23T02:52:36.451Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的新的体会。</p>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：<br><!-- <figure class="image-bubble">
@@ -34,11 +34,19 @@
 <ul>
 <li>Vue创建项目命令：<blockquote>
 <p>Vue init webpack juejin<br>根据提示完成相应的项目信息填写，根据个人喜好选择是否使用ESlint,个人介意新手可以忽略，</p>
-<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><p><img src="" alt=""><br>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
+<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-23/36869688.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>因为要模拟从后端获取数据并绑定到组件上，所以在根目录下新建了意见data.json文件，里面写了四个主页面所要用到的数据，数据结构如下：<br><img src="" alt=""><br>接下来配置Express路由，本项目只涉及到get数据，所以只进行了简单的路由配置，Express的详细使用可以查看<a href="http://www.expressjs.com.cn/">Express官网</a>,打开build.js文件下的dev-server.js文件，进行以下配置：<br><img src="" alt=""><br>npm run dev重启服务器，访问localhost:8080/api/infor,若能如下数据说明已经配置成功了。</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2><h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>--></p>]]></content>
+<h2 id="嵌套路由配置"><a href="#嵌套路由配置" class="headerlink" title="嵌套路由配置"></a>嵌套路由配置</h2><h2 id="发现页轮播图"><a href="#发现页轮播图" class="headerlink" title="发现页轮播图"></a>发现页轮播图</h2><h3 id="jsonp封装"><a href="#jsonp封装" class="headerlink" title="jsonp封装"></a>jsonp封装</h3><p>###</p>
+<h2 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h2><h2 id="父子组件数据双向绑定"><a href="#父子组件数据双向绑定" class="headerlink" title="父子组件数据双向绑定"></a>父子组件数据双向绑定</h2><h2 id="Vue中transition过度动画"><a href="#Vue中transition过度动画" class="headerlink" title="Vue中transition过度动画"></a>Vue中transition过度动画</h2><h2 id="h5调用摄像头"><a href="#h5调用摄像头" class="headerlink" title="h5调用摄像头"></a>h5调用摄像头</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>--></p>]]></content>
     
     <summary type="html">
     
