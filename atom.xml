@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-07-24T10:42:26.728Z</updated>
+  <updated>2017-07-24T11:11:30.641Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
     <id>http://upyang.com/2017/07/21/Vue学习/</id>
     <published>2017-07-21T15:28:51.000Z</published>
-    <updated>2017-07-24T10:42:26.728Z</updated>
+    <updated>2017-07-24T11:11:30.641Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。</p>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：</p>
@@ -164,7 +164,7 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
 
 </blockquote>
 <ul>
-<li>移动端实现图片上传并预览，需要用到h5标签input的file属性及filereader对象；<br>accept=”image/*” 表示接受的是图片(不限制格式），若想限制格式<br>capture=”camera” 直接打开摄像头，若不加会出现选择打开相机或打开相册<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>模仿掘金App是对Vue2.0知识的一种实践，整个做完还是很有收获的，巩固了自己的CSS布局方面的基本功，也对Vue2.0语法的具体应用场景更加清晰。</li>
+<li>移动端实现图片上传并预览，需要用到h5标签input的file属性及filereader对象；<br>accept=”image/*” 表示接受的是图片(不限制格式），若想限制格式需要这样写<br>capture=”camera” 直接打开摄像头，若不加会出现选择打开相机或打开相册<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>模仿掘金App是对Vue2.0知识的一种实践，整个做完还是很有收获的，巩固了自己的CSS布局方面的基本功，也对Vue2.0语法的具体应用场景更加清晰。</li>
 </ul>
 ]]></content>
     
