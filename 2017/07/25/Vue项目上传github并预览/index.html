@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/15749381.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/63452149.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/53441109.jpg">
-<meta property="og:updated_time" content="2017-07-25T10:18:26.292Z">
+<meta property="og:updated_time" content="2017-07-26T15:14:48.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue项目上传github并预览">
 <meta name="twitter:description" content="前言最近在初步完成自己的掘金移动端App后，想要上传到github，并且制作一个简单的预览功能，期间遇到了一些问题，分享在此，以便查阅。 打包Vue项目当Vue项目完成后，在根目录下打开命令行，输入命令：  npm run build  实际上此命令就是执行build.js文件，将项目打包成静态资源。此命令完成后，项目根目录下会多出一个dist文件夹，dist文件里面有：">
@@ -265,13 +265,13 @@
 </blockquote>
 <p>2、生成分支gh-pages并切换到此分支</p>
 <blockquote>
-<p>cd flexSupplement （进入到你克隆仓库的本地文件夹）<br>  git checkout –orphan gh-pages (创建分支并切换)</p>
+<p>cd flexSupplement （进入到你克隆仓库的本地文件夹）<br>  git checkout - -orphan gh-pages (创建分支并切换，两个横杆)</p>
 </blockquote>
 <p>3、将本地克隆文件(文件名为github仓库名)里面除.git文件以外的其他文件全部删除，再将根目录下dist文件夹里面的内容复制到克隆文件中。</p>
 <blockquote>
 <p>依次执行以下命令：<br>  git add . （将本地所有文件加到仓库里）<br>  git commit -m “message” （设置提交信息）<br>  git remote add origin <a href="https://github.com/Aaron0525/" target="_blank" rel="external">https://github.com/Aaron0525/</a>　Vue-juejin-App.git（本地仓库链接远程仓库）<br>  git push -u origin gh-pages （push文件到仓库中）</p>
 </blockquote>
-<p>完成以上步骤后，回到github里面，点击上面说到的GitHub Pages下面的地址，既能预览效果，同样这里面还是无法显示mock的数据。</p>
+<p>完成以上步骤后，回到github里面，点击上面说到的GitHub Pages下面的地址，既能预览效果，注意耐心等待一小会，跟新同步还是需要一个过程的，同样这里面还是无法显示mock的数据。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>   github，这个星球上最流行的开源托管服务的分布式网站，作为程序员，掌握基本的github使用方法，无论是对于分享、托管自己的项目，还是查阅其他优秀的开源项目，都是十分有帮助的。<br>   以下是我的一些项目演示：</p>
 <p>   <a href="https://github.com/Aaron0525/Vue-music" target="_blank" rel="external">Vue2.0移动端以音乐播放器</a><br>   <a href="https://github.com/Aaron0525/Vue-juejin-App" target="_blank" rel="external">Vue2.0模仿掘金App</a><br>   <a href="https://github.com/Aaron0525/Responsive-website" target="_blank" rel="external">响应式网站</a></p>
 <p>   觉得有用的，可以给个start哦！ 感谢！！！</p>
@@ -282,7 +282,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-25T10:18:26.292Z" itemprop="dateUpdated">2017-07-25 18:18:26</time>
+    最后更新时间：<time datetime="2017-07-26T15:14:48.353Z" itemprop="dateUpdated">2017-07-26 23:14:48</time>
 </span><br>
 
 
