@@ -287,9 +287,9 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     
       <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
     
-      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
-    
       <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
+      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
     
   </entry>
   
@@ -328,11 +328,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -408,11 +408,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
