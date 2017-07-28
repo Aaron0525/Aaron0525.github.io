@@ -125,11 +125,11 @@
   </entry>
   
   <entry>
-    <title>Vue2.0仿掘金App</title>
+    <title>Vue2.0仿掘金App(总结)</title>
     <link href="http://upyang.com/2017/07/21/Vue%E5%AD%A6%E4%B9%A0/"/>
     <id>http://upyang.com/2017/07/21/Vue学习/</id>
     <published>2017-07-21T15:28:51.000Z</published>
-    <updated>2017-07-26T15:30:01.136Z</updated>
+    <updated>2017-07-28T03:09:12.451Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　最近一段时间一直在学习Vue2.0的相关知识，之前只是看过相关的视频教学，但是一直没有动手去实践自己的项目，这次决定用Vue2.0去模仿一个移动端App,看了很多自己用过的App,最后决定模仿做掘金移动端App,恰好这款App也是用Vue做的。写下这篇博客，记录实践中的心得体会。</p>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>首先直观的看下掘金App的基本页面构成：</p>
@@ -291,6 +291,56 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     
       <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
+      <category term="webpack" scheme="http://upyang.com/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2.0掘金App</title>
+    <link href="http://upyang.com/2017/07/21/Vue-juejin-App/"/>
+    <id>http://upyang.com/2017/07/21/Vue-juejin-App/</id>
+    <published>2017-07-21T09:56:15.000Z</published>
+    <updated>2017-07-28T03:07:49.758Z</updated>
+    
+    <content type="html"><![CDATA[<div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">掘金移动端APP</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 <a href="https://github.com/Aaron0525/Vue-juejin-App" target="_blank" rel="external">https://github.com/Aaron0525/Vue-juejin-App</a><br><br>    👉 演示地址:  <a href="http://www.upyang.com/Vue-juejin-App/#/home/homepage" target="_blank" rel="external">http://www.upyang.com/Vue-juejin-App/#/home/homepage</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技术。</p><font color="#0D3EA8"><strong>技术栈</strong></font>：<p>&emsp;&emsp;MVVM框架：Vue.js（版本2.0）轻量组件化的热门前端框架。</p><p>&emsp;&emsp;状态管理：Vuex。 采用集中式存储管理应用的所有组件的状态。</p><p>&emsp;&emsp;前端路由：Vue Router。它是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。</p><p>&emsp;&emsp;滚动插件：better-scroll。实现了页面无滚动条形式的滚动，且在此基础上实现了首页的轮播图。</p><p>&emsp;&emsp;构建工具： webpack</p><p>&emsp;&emsp;服务端通信：axios、jsonp。从QQ音乐抓取数据显示到页面。</p><p>&emsp;&emsp;构建工具： webpack</p><br>    </div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div&gt;&lt;br&gt;    &lt;div style=&quot;color: #061CC9;font-size: 30px;text-align: center;&quot;&gt;掘金移动端APP&lt;/div&gt;&lt;br&gt;    &lt;div style=&quot;background: #FFFFFF;font-size
+    
+    </summary>
+    
+    
+      <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
+    
+      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2.0移动端音乐App</title>
+    <link href="http://upyang.com/2017/07/18/Vue-music/"/>
+    <id>http://upyang.com/2017/07/18/Vue-music/</id>
+    <published>2017-07-18T11:02:20.000Z</published>
+    <updated>2017-07-28T03:09:06.931Z</updated>
+    
+    <content type="html"><![CDATA[<div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">Vue2.0搭建移动端音乐APP</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 github: <a href="https://github.com/Aaron0525/Vue-music" target="_blank" rel="external">https://github.com/Aaron0525/Vue-music</a><br><br>    👉 演示地址: <a href="http://www.upyang.com/Vue-music/index.html#/recommend" target="_blank" rel="external">http://www.upyang.com/Vue-music/index.html#/recommend</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;这是一个用Vue.js写的移动端音乐App(SPA),使用了Vue2.0+ES6+webpack等前端热门技术。核心功能热门歌曲推荐、音乐播放、歌曲歌手搜索等。</p><font color="#0D3EA8"><strong>技术栈</strong></font>：<p>&emsp;&emsp;MVVM框架：Vue.js（版本2.0）轻量组件化的热门前端框架。</p><p>&emsp;&emsp;状态管理：Vuex。 采用集中式存储管理应用的所有组件的状态。</p><p>&emsp;&emsp;前端路由：Vue Router。它是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。</p><p>&emsp;&emsp;滚动插件：better-scroll。实现了页面无滚动条形式的滚动，且在此基础上实现了首页的轮播图。</p><p>&emsp;&emsp;构建工具： webpack</p><p>&emsp;&emsp;服务端通信：axios、jsonp。从QQ音乐抓取数据显示到页面。</p><p>&emsp;&emsp;构建工具： webpack</p><br>    </div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div&gt;&lt;br&gt;    &lt;div style=&quot;color: #061CC9;font-size: 30px;text-align: center;&quot;&gt;Vue2.0搭建移动端音乐APP&lt;/div&gt;&lt;br&gt;    &lt;div style=&quot;background: #FFFFFF;f
+    
+    </summary>
+    
+    
+      <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
+    
+      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
   </entry>
   
   <entry>
@@ -333,30 +383,6 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掘金移动端APP</title>
-    <link href="http://upyang.com/2017/07/12/Vue-music/"/>
-    <id>http://upyang.com/2017/07/12/Vue-music/</id>
-    <published>2017-07-12T02:02:20.000Z</published>
-    <updated>2017-07-28T02:52:07.026Z</updated>
-    
-    <content type="html"><![CDATA[<div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">掘金移动端APP</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 <a href="https://github.com/Aaron0525/Vue-juejin-App" target="_blank" rel="external">https://github.com/Aaron0525/Vue-juejin-App</a><br><br>    👉 演示地址:  <a href="http://www.upyang.com/Vue-juejin-App/#/home/homepage" target="_blank" rel="external">http://www.upyang.com/Vue-juejin-App/#/home/homepage</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技术。</p><font color="#0D3EA8"><strong>技术栈</strong></font>：<p>&emsp;&emsp;MVVM框架：Vue.js（版本2.0）轻量组件化的热门前端框架。</p><p>&emsp;&emsp;状态管理：Vuex。 采用集中式存储管理应用的所有组件的状态。</p><p>&emsp;&emsp;前端路由：Vue Router。它是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。</p><p>&emsp;&emsp;滚动插件：better-scroll。实现了页面无滚动条形式的滚动，且在此基础上实现了首页的轮播图。</p><p>&emsp;&emsp;构建工具： webpack</p><p>&emsp;&emsp;服务端通信：axios、jsonp。从QQ音乐抓取数据显示到页面。</p><p>&emsp;&emsp;构建工具： webpack</p><br>    </div><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div&gt;&lt;br&gt;    &lt;div style=&quot;color: #061CC9;font-size: 30px;text-align: center;&quot;&gt;掘金移动端APP&lt;/div&gt;&lt;br&gt;    &lt;div style=&quot;background: #FFFFFF;font-size
-    
-    </summary>
-    
-    
-      <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
-    
-      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
-    
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -441,6 +467,31 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
   </entry>
   
   <entry>
+    <title>响应式网站设计</title>
+    <link href="http://upyang.com/2017/07/09/Responsive-website/"/>
+    <id>http://upyang.com/2017/07/09/Responsive-website/</id>
+    <published>2017-07-09T06:35:42.000Z</published>
+    <updated>2017-07-28T03:01:53.577Z</updated>
+    
+    <content type="html"><![CDATA[<div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">响应式网站</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 github: <a href="https://github.com/Aaron0525/Responsive-website" target="_blank" rel="external">https://github.com/Aaron0525/Responsive-website</a><br><br>    👉 演示地址: <a href="http://www.upyang.com/Responsive-website/" target="_blank" rel="external">http://www.upyang.com/Responsive-website/</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;响应式网站设计(Responsive Web design)的理念是：集中创建页面的图片排版大小，可以智能地根据用户行为以及使用的设备环境（系统平台、屏幕尺寸、屏幕定向等）进行相对应的布局。</p><font color="#0D3EA8"><strong>响应式布局要点</strong></font>：<br>    <p>&emsp;&emsp;一、媒体查询（media query）。媒体查询是响应式网页的核心，它能检测当前设备的宽度来选用不同的CSS样式文件。在写CSS样式时，从最小的设备开始写为好。</p><p>&emsp;&emsp;二、流式布局。它的特点就是百分比布局，相比采用具体尺寸的布局，百分比布局在用户缩放浏览器窗口时，不会出现内容被隐藏和出现横向滚动条。</p><p>&emsp;&emsp;三、弹性图片。　要让图片自适应缩放，一般使用css将图片的宽度设置成100%，这样就能使图片在布局中保持特定的比例。但随着浏览器的缩放，当图片的实际大小超过图片本身的大小时，图片就会变的模糊。有效的解决方案，就是及时替换成一张尺寸更大的图片。</p><font color="#0D3EA8"><strong>响应式布局优缺点</strong></font>：<br>    <p>&emsp;&emsp;优点：在不同终端、不同分辨率下有很强的适配性；只需一套代码，一定程度上节省了开发和维护的成本。缺点：兼容各种设备工作量大，效率低下；代码累赘，会出现隐藏无用的元素，加载时间加长。</p><p>&emsp;&emsp;所以响应式布局不适合数据量大，操作复杂的网站，适用于博客、中小型企业网站等。</p><br>    </div><br></div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;div&gt;&lt;br&gt;    &lt;div style=&quot;color: #061CC9;font-size: 30px;text-align: center;&quot;&gt;响应式网站&lt;/div&gt;&lt;br&gt;    &lt;div style=&quot;background: #FFFFFF;font-size: 1
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
+    
+      <category term="CSS3" scheme="http://upyang.com/tags/CSS3/"/>
+    
+      <category term="media" scheme="http://upyang.com/tags/media/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jsonp跨域实现</title>
     <link href="http://upyang.com/2017/07/08/jsonp%E8%B7%A8%E5%9F%9F%E5%AE%9E%E7%8E%B0/"/>
     <id>http://upyang.com/2017/07/08/jsonp跨域实现/</id>
@@ -494,40 +545,13 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
+    
       <category term="JavaScript" scheme="http://upyang.com/tags/JavaScript/"/>
     
       <category term="Jsonp" scheme="http://upyang.com/tags/Jsonp/"/>
     
-      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
-    
       <category term="CORS" scheme="http://upyang.com/tags/CORS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://upyang.com/2017/07/07/hello-world/"/>
-    <id>http://upyang.com/2017/07/07/hello-world/</id>
-    <published>2017-07-07T08:00:29.363Z</published>
-    <updated>2017-07-07T08:00:29.363Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
