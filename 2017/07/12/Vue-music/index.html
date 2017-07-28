@@ -13,30 +13,24 @@
     
     
     
-    <title>原生js实现Ajax实例讲解(一) | 途中人的博客 | IT技术分享！</title>
+    <title>掘金移动端APP | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="jsonp,ajax,XMLHttpRequest">
-    <meta name="description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
-<meta name="keywords" content="jsonp,ajax,XMLHttpRequest">
+    <meta name="keywords" content="Vue2.0,ES6,jsonp">
+    <meta name="description" content="掘金移动端APP        👉 https://github.com/Aaron0525/Vue-juejin-App    👉 演示地址:  http://www.upyang.com/Vue-juejin-App/#/home/homepage    项目介绍：&amp;emsp;&amp;emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技">
+<meta name="keywords" content="Vue2.0,ES6,jsonp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生js实现Ajax实例讲解(一)">
-<meta property="og:url" content="http://upyang.com/2017/07/12/ajax/index.html">
+<meta property="og:title" content="掘金移动端APP">
+<meta property="og:url" content="http://upyang.com/2017/07/12/Vue-music/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
-<meta property="og:image" content="http://www.runoob.com/images/ajax.gif">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/37926292.jpg">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/4894833.jpg">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/22625927.jpg">
-<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-12/1123101.jpg">
-<meta property="og:updated_time" content="2017-07-16T14:44:18.440Z">
+<meta property="og:description" content="掘金移动端APP        👉 https://github.com/Aaron0525/Vue-juejin-App    👉 演示地址:  http://www.upyang.com/Vue-juejin-App/#/home/homepage    项目介绍：&amp;emsp;&amp;emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技">
+<meta property="og:updated_time" content="2017-07-28T02:52:07.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生js实现Ajax实例讲解(一)">
-<meta name="twitter:description" content="Ajax简介 ajax = 异步 JavaScript 和 XML。 ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。 注意：ajax本身不支持跨域请求，需要在服务器端处理。  工作原理 aj">
-<meta name="twitter:image" content="http://www.runoob.com/images/ajax.gif">
+<meta name="twitter:title" content="掘金移动端APP">
+<meta name="twitter:description" content="掘金移动端APP        👉 https://github.com/Aaron0525/Vue-juejin-App    👉 演示地址:  http://www.upyang.com/Vue-juejin-App/#/home/homepage    项目介绍：&amp;emsp;&amp;emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -120,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">原生js实现Ajax实例讲解(一)</div>
+        <div class="flex-col header-title ellipsis">掘金移动端APP</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,7 +136,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">原生js实现Ajax实例讲解(一)</h1>
+        <h1 class="title">掘金移动端APP</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-07-12T02:02:20.000Z" itemprop="datePublished" class="page-time">
@@ -162,18 +156,11 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Ajax简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ajax简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#工作原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">工作原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ajax与jsonp"><span class="post-toc-number">3.</span> <span class="post-toc-text">ajax与jsonp</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#区别"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jsonp产生原因"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">jsonp产生原因</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实例"><span class="post-toc-number">4.</span> <span class="post-toc-text">实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#html文档结构"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">html文档结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript代码"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">JavaScript代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">注意</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#效果图"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">效果图</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-    
-<article id="post-ajax"
+<article id="post-Vue-music"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">原生js实现Ajax实例讲解(一)</h1>
+        <h1 class="post-card-title">掘金移动端APP</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-07-12 10:02:20" datetime="2017-07-12T02:02:20.000Z"  itemprop="datePublished">2017-07-12</time>
 
@@ -188,73 +175,19 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="Ajax简介"><a href="#Ajax简介" class="headerlink" title="Ajax简介"></a>Ajax简介</h2><ul>
-<li>ajax = 异步 JavaScript 和 XML。</li>
-<li>ajax是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。我们知道，传统的网页（不使用ajax）如果需要更新内容，必须重新加载整个网页。Ajax的出现，使得使网可以实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</li>
-<li>注意：ajax本身不支持跨域请求，需要在服务器端处理。</li>
-</ul>
-<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ul>
-<li>ajax的技术核心是 XMLHttpRequest 对象。</li>
-<li>ajax请求过程：创建XMLHttpRequest、连接服务器、发送请求、服务器做出响应、接收响应数据</li>
-<li>图示：</li>
-</ul>
-<p><img src="http://www.runoob.com/images/ajax.gif"></p>
-<h2 id="ajax与jsonp"><a href="#ajax与jsonp" class="headerlink" title="ajax与jsonp"></a>ajax与jsonp</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>从实现方式上来讲，ajax是通过创建XMLHttpRequest来获取<a href="http://www.upyang.com/2017/07/08/jsonp%E8%B7%A8%E5%9F%9F%E5%AE%9E%E7%8E%B0/" target="_blank" rel="external">同源</a>的数据。而jsonp是通过<code>&lt;script&gt;</code>标签来调用服务器提供的js脚本。</p>
-<h3 id="jsonp产生原因"><a href="#jsonp产生原因" class="headerlink" title="jsonp产生原因"></a>jsonp产生原因</h3><p>　1. Ajax直接请求普通文件存在跨域无权限访问的问题（静态页、动态页、web服务、wcf只要是跨域请求一律不准）<br>　2. web的页面上调用js文件是不受跨域的影响（凡拥有src属性的标签都拥有跨域能力script img iframe）<br>　3. 可以判断 现在想通过纯web端(ActiveX控件、服务端代理、H5之Websocket等方式不算)跨域访问数据就只有一种可能，就是在远程服务器上设法把数据装进js格式的文件里，供客户度调用和进一步处理；<br>　4. json的纯字符数格式可以简洁的描述复杂数据还被js原生支持<br>　5. web客户端通过与调用脚本一样的方式来调用跨域服务器上动态生成的js格式文件(后缀.json)，服务器之所以要动态生成json文件目的把客户端需要的数据装入进去<br>　6. 客户端在对json文件调用成功后获得自己所需的数据剩下的就按照自己需求进行处理和展现，这种获取远程数据的方式非常像ajax其实并一样<br>　7. 为了方便客户端使用数据逐渐形成非正式传输协议jsonp</p>
-<ul>
-<li><p>其实，说到ajax就会面临两个不可避免的问题，<i style="color:red">一是以何种格式来减缓数据；二是如何解决跨域问题。</i>目前来说，所被推崇的方案是JSON作数据交换，JSONP来解决跨域问题。</p>
-</li>
-<li><p>JSON与JSONP虽然看上去只有一字之差，但是实际上根本不是一回事。JSON是一种key/value形式的数据格式，二JSONP则是一种跨域数据交互协议。</p>
-</li>
-</ul>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
-<li>题目：注册时，会要求输入用户名和密码，同时要验证用户名是否合法。</li>
-<li>实现功能，用户在输入用户名后，需要给出提醒该名称是否已经存在。<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-12/37926292.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-</li>
-</ul>
-<h3 id="html文档结构"><a href="#html文档结构" class="headerlink" title="html文档结构"></a>html文档结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;title&gt;Ajax实例详解&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class=&quot;reg&quot; style=&quot;margin-top: 50px;margin-left:100px;&quot;&gt;</div><div class="line">      &lt;p&gt;注册页(ajax检测用户名是否合法)&lt;/p&gt;</div><div class="line">      &lt;form name=&quot;Form&quot;&gt;</div><div class="line">      用户名: &lt;input type=&quot;text&quot; name=&quot;Name&quot; onblur=&quot;check()&quot;&gt;</div><div class="line">      &lt;span id=&quot;myDiv&quot;&gt;&lt;/span&gt;&lt;br&gt;</div><div class="line">      密　码: &lt;input type=&quot;text&quot; name=&quot;Password&quot;&gt;&lt;br&gt;</div><div class="line">      &lt;input type=&quot;button&quot; value=&quot; 提交&quot; name=&quot;Btn&quot; disabled=&quot;false&quot;&gt;</div><div class="line">    &lt;/form&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    //初始化一个存储XMLHttpRequest对象的变量</div><div class="line">    var xhr = null;</div><div class="line">    //定义一个函数用来创建XMLHttpRequest对象,兼容各个版本</div><div class="line">    function CreatXHR()</div><div class="line">    &#123;</div><div class="line">        //判断浏览器是否支持ActiveX控件，针对IE6及之前版本</div><div class="line">        if (window.ActiveXObject)</div><div class="line">        &#123;</div><div class="line">            //将所有可能出现的ActiveXObject版本都放在一个数组中</div><div class="line">            var arrXHR = [&apos;Microsoft.XMLHTTP&apos;, &apos;MSXML2.XMLHTTP.6.0&apos;, &apos;MSXML2.XMLHTTP.5.0&apos;, &apos;MSXML2.XMLHTTP.4.0&apos;, &apos;MSXML2.XMLHTTP.3.0&apos;, &apos;MSXML2.XMLHTTP&apos;];</div><div class="line">            //通过循环创建XMLHttpRequest对象</div><div class="line">            var temp = arrXHR.length;</div><div class="line">            for (var i=0;i&lt;temp;i++)</div><div class="line">            &#123;</div><div class="line">                try</div><div class="line">                &#123;</div><div class="line">                    //创建XMLHttpRequest对象</div><div class="line">                    xhr = new ActiveXObject(arrXHR[i]);</div><div class="line">                    //如果创建XMLHttpRequest对象成功，则跳出循环</div><div class="line">                    break;</div><div class="line">                &#125;</div><div class="line">                catch(ex)</div><div class="line">                &#123;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        //判断浏览器是否将XMLHttpRequest作为本地对象实现，针对IE7，Firefox，Opera等浏览器</div><div class="line">        else if(window.XMLHttpRequest)</div><div class="line">        &#123;</div><div class="line">            xhr = new XMLHttpRequest();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //响应XMLHttpRequest对象状态变化的函数</div><div class="line">    function httpStateChange()</div><div class="line">    &#123;</div><div class="line">        if (xhr.readyState==4)//异步调用完毕</div><div class="line">        &#123;</div><div class="line">            if (xhr.status==200 || xhr.status==0)//异步调用成功，在本机上调试</div><div class="line">            &#123;</div><div class="line">                //获得服务器返回的数据</div><div class="line">                var Names = xhr.responseText;</div><div class="line">                var arrName = Names.split(&quot;;&quot;);//把获取到的一个字符串分割成字符串数组。</div><div class="line"></div><div class="line">                //定义一个变量，用于判断用户名是否已经存在</div><div class="line">                var Flag = false;</div><div class="line"></div><div class="line">                for(i=0;i&lt;arrName.length;i++)</div><div class="line">                &#123;</div><div class="line">                    if (arrName[i]== Form.Name.value)</div><div class="line">                    &#123;</div><div class="line">                        Flag = true;//用户名存在</div><div class="line">                        break;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                //合法性验证提醒</div><div class="line">                var OWarn = document.getElementById(&quot;Warn&quot;);</div><div class="line">                if (Flag)</div><div class="line">                &#123;</div><div class="line">                    OWarn.innerHTML = &quot;您输入的用户名已存在，请重新输入！&quot;;</div><div class="line">                    Form.Btn.disabled = true;//提交按钮不可用</div><div class="line">                &#125;</div><div class="line">                else</div><div class="line">                &#123;</div><div class="line">                    OWarn.innerHTML = &quot;合法用户名&quot;;</div><div class="line">                    Form.Btn.disabled = false;//提交按钮可用</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //校验用户名是否有效</div><div class="line">    function check()</div><div class="line">    &#123;</div><div class="line">        //创建XMLHttpRequest对象，调用前面定义好的函数</div><div class="line">        CreatXHR();</div><div class="line"></div><div class="line">        if (xhr!=null)</div><div class="line">        &#123;</div><div class="line">            //创建响应XMLHttpRequest对象状态变化的函数</div><div class="line">            xhr.onreadystatechange = httpStateChange;</div><div class="line">            //创建http请求</div><div class="line">            xhr.open(&quot;get&quot;,&quot;Readme.txt&quot;, true);</div><div class="line">            //发送http请求</div><div class="line">            xhr.send(null);</div><div class="line">        &#125;</div><div class="line">        else</div><div class="line">        &#123;</div><div class="line">            alert(&quot;您的浏览器不支持XMLHTTP&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p> 注意：需要在html同级目录下创建一个Reademe.txt文件来存储已经存在的用户名，多个用户名之间用分好隔开。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-12/4894833.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-12/22625927.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://oszamq4pp.bkt.clouddn.com/17-7-12/1123101.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>可以复制代码亲自试看下效果哦！(建议Firefox下调试)<br>详细代码讲解请看下一章<a href="http://www.upyang.com/2017/07/12/ajax/" target="_blank" rel="external">通俗易懂Ajax实例讲解(二)</a></p>
-
+            <div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">掘金移动端APP</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 <a href="https://github.com/Aaron0525/Vue-juejin-App" target="_blank" rel="external">https://github.com/Aaron0525/Vue-juejin-App</a><br><br>    👉 演示地址:  <a href="http://www.upyang.com/Vue-juejin-App/#/home/homepage" target="_blank" rel="external">http://www.upyang.com/Vue-juejin-App/#/home/homepage</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技术。</p><font color="#0D3EA8"><strong>技术栈</strong></font>：<p>&emsp;&emsp;MVVM框架：Vue.js（版本2.0）轻量组件化的热门前端框架。</p><p>&emsp;&emsp;状态管理：Vuex。 采用集中式存储管理应用的所有组件的状态。</p><p>&emsp;&emsp;前端路由：Vue Router。它是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。</p><p>&emsp;&emsp;滚动插件：better-scroll。实现了页面无滚动条形式的滚动，且在此基础上实现了首页的轮播图。</p><p>&emsp;&emsp;构建工具： webpack</p><p>&emsp;&emsp;服务端通信：axios、jsonp。从QQ音乐抓取数据显示到页面。</p><p>&emsp;&emsp;构建工具： webpack</p><br>    </div><br></div>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-16T14:44:18.440Z" itemprop="dateUpdated">2017-07-16 22:44:18</time>
+    最后更新时间：<time datetime="2017-07-28T02:52:07.026Z" itemprop="dateUpdated">2017-07-28 10:52:07</time>
 </span><br>
 
 
         
-        原文链接：<a href="/2017/07/12/ajax/" target="_blank" rel="external">http://upyang.com/2017/07/12/ajax/</a>
+        原文链接：<a href="/2017/07/12/Vue-music/" target="_blank" rel="external">http://upyang.com/2017/07/12/Vue-music/</a>
         
     </div>
     <footer>
@@ -274,7 +207,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XMLHttpRequest/">XMLHttpRequest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
 
 
             
@@ -284,7 +217,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/Vue-music/&title=《掘金移动端APP》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -294,22 +227,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/Vue-music/&title=《掘金移动端APP》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/07/12/ajax/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/07/12/Vue-music/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《掘金移动端APP》 — 途中人的博客&url=http://upyang.com/2017/07/12/Vue-music/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/07/12/ajax/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/07/12/Vue-music/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -332,18 +265,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/07/12/Vue-music/" id="post-prev" class="post-nav-link">
+      <a href="/2017/07/12/ajax2/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">掘金移动端APP</h4>
+        <h4 class="title">原生js实现Ajax实例讲解(二)</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/07/08/jsonp跨域实现/" id="post-next" class="post-nav-link">
+      <a href="/2017/07/12/ajax/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">jsonp跨域实现</h4>
+        <h4 class="title">原生js实现Ajax实例讲解(一)</h4>
       </a>
     </div>
   
@@ -479,7 +412,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/07/12/Vue-music/&title=《掘金移动端APP》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -489,22 +422,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/ajax/&title=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/07/12/Vue-music/&title=《掘金移动端APP》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/07/12/ajax/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/07/12/Vue-music/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《原生js实现Ajax实例讲解(一)》 — 途中人的博客&url=http://upyang.com/2017/07/12/ajax/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《掘金移动端APP》 — 途中人的博客&url=http://upyang.com/2017/07/12/Vue-music/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/07/12/ajax/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/07/12/Vue-music/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -515,7 +448,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB0ElEQVR42u3aS47kIBAFQN//0m5pViO1yn4PCmy1gpVV/hDUIkVmchzxOP+Noxyf3jr/G8eKgYuLO809L8fvib919/r3j0vCxcXdyL0OQzefCCj59Y0NFxf3ZdxPz39axvUvuLi4f4N7na4k07fP4+LiPstNkp825OVhbkmuhouLO8FtS58rrhfWd3FxcUvuWY686Jm0T+rZcXFxt3CT4sUX0pW4RBKFOVxc3Ie4eYNkvrmSv4WLi7uTO9b2aLcyedCMAisuLu4y7ljD47oAmiws3yrdpD24uLiLuflGZOxYZ9JoufkLcHFxt3DHSplR0Ikp1zMe85VXXFzcktsWO5KPzhzhutly4eLibufOtFfb7ctgWwUXF/c13CQYtclSQsfFxX2W+61EaOZrUTEFFxd3C7dNV4pEJW6ctPPi4uKu5o4dpBhbXkvExcV9ljt2MGvscFUe/nBxcZ/ltmXTNsyNlV+nWim4uLgT3DagzDRr80BZN19xcXEXcPP2apvkjB3bulkqLi7uRm5Rnig3THlAjMIoLi7uy7jJdVsQqUuruLi4L+Ymd5OUpk2ZcHFxd3LzI1N5aTVPqJaURXBxcTcWTPMQ1rZJ8sXg4uIu4/4ATaO+VZx46nIAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzklEQVR42u3aQU7EMAwF0Ln/pcsWCRK+ndYD6GU16rTJaxdWbOf1isf1ZXy+vrozme31xMDFxT3mXtuxWiC5sieunl0ZcHFx57mrBZLfe/pq4X1AXF7HxcX9U9x8f4KLi/v/uMmmpLc9wsXF/W3cZMk8jTnfKt2Qq+Hi4h5w79qanPx+pL6Li4vb4l7FkRdA96/aG7i4uDPcPKBUX6MaEAvtWFxc3EFu0hytNlGqIW8/My4u7iS3F4buPU9V3WDh4uI+x00Sm7uSn+qc38yMi4s7wi2kHAG0lxpVPwouLu7T3H2KUk5F4u/RLJ3g4uKOcHN00hTpJT/5Kri4uPPc5OHk316aVCiw4uLijnCTm/LNUO+evDGDi4s7w83LH72ySLkAug+juLi449zeRHmRtHeQ64dcDRcX9zFuEpjuar3k250oV8PFxX2YmyQ/R+WM3ramekYDFxf3gHsVRx7mkg1QtRmDi4s7w60Gl+Y5r94xi5P5cXFxj7nVEme1GJrPE30IXFzcQW4v0FTDWTXklZusuLi4b+ImYSt/vWohBhcX93dyqy3SkxC2bKXg4uKOcHtF0t6zeUDExcV9F/fe4maSwOTt2KP6Li4ubof7AXv5e4oIuW1DAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

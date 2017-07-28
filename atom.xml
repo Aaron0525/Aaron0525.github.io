@@ -285,11 +285,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
     
       <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -328,9 +328,33 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>掘金移动端APP</title>
+    <link href="http://upyang.com/2017/07/12/Vue-music/"/>
+    <id>http://upyang.com/2017/07/12/Vue-music/</id>
+    <published>2017-07-12T02:02:20.000Z</published>
+    <updated>2017-07-28T02:52:07.026Z</updated>
+    
+    <content type="html"><![CDATA[<div><br>    <div style="color: #061CC9;font-size: 30px;text-align: center;">掘金移动端APP</div><br>    <div style="background: #FFFFFF;font-size: 17px;box-shadow: 0 15px 20px rgba(0,0,0,0.1);padding-left: 20px;padding-right: 20px;"><br>    👉 <a href="https://github.com/Aaron0525/Vue-juejin-App" target="_blank" rel="external">https://github.com/Aaron0525/Vue-juejin-App</a><br><br>    👉 演示地址:  <a href="http://www.upyang.com/Vue-juejin-App/#/home/homepage" target="_blank" rel="external">http://www.upyang.com/Vue-juejin-App/#/home/homepage</a><br><br>    <font color="#0D3EA8"><strong>项目介绍</strong></font>：<p>&emsp;&emsp;这是一个用Vue2.0模仿的掘金App,使用了Vue2.0+ES6+webpack等前端热门技术。</p><font color="#0D3EA8"><strong>技术栈</strong></font>：<p>&emsp;&emsp;MVVM框架：Vue.js（版本2.0）轻量组件化的热门前端框架。</p><p>&emsp;&emsp;状态管理：Vuex。 采用集中式存储管理应用的所有组件的状态。</p><p>&emsp;&emsp;前端路由：Vue Router。它是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。</p><p>&emsp;&emsp;滚动插件：better-scroll。实现了页面无滚动条形式的滚动，且在此基础上实现了首页的轮播图。</p><p>&emsp;&emsp;构建工具： webpack</p><p>&emsp;&emsp;服务端通信：axios、jsonp。从QQ音乐抓取数据显示到页面。</p><p>&emsp;&emsp;构建工具： webpack</p><br>    </div><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div&gt;&lt;br&gt;    &lt;div style=&quot;color: #061CC9;font-size: 30px;text-align: center;&quot;&gt;掘金移动端APP&lt;/div&gt;&lt;br&gt;    &lt;div style=&quot;background: #FFFFFF;font-size
+    
+    </summary>
+    
+    
+      <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
+    
+      <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
     
       <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
@@ -408,11 +432,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
-    
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
