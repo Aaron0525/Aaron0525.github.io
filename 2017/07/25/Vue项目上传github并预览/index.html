@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/15749381.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/63452149.jpg">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-7-25/53441109.jpg">
-<meta property="og:updated_time" content="2017-07-26T15:14:48.353Z">
+<meta property="og:updated_time" content="2017-07-31T04:14:11.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue项目上传github并预览">
 <meta name="twitter:description" content="前言最近在初步完成自己的掘金移动端App后，想要上传到github，并且制作一个简单的预览功能，期间遇到了一些问题，分享在此，以便查阅。 打包Vue项目当Vue项目完成后，在根目录下打开命令行，输入命令：  npm run build  实际上此命令就是执行build.js文件，将项目打包成静态资源。此命令完成后，项目根目录下会多出一个dist文件夹，dist文件里面有：">
@@ -225,7 +225,7 @@
                 </div>
                 <div class="image-caption"></div>
             </figure><br>保存后，依旧重新’npm run build’,打开dist目录下的index.js可以看到字体图标正常显示了。<br>这里为什么需要这样修改，可以参考<a href="https://github.com/vuejs-templates/webpack/issues/166。" target="_blank" rel="external">https://github.com/vuejs-templates/webpack/issues/166。</a></p>
-<h1 id="Mock数据无法正常加载"><a href="#Mock数据无法正常加载" class="headerlink" title="Mock数据无法正常加载"></a>Mock数据无法正常加载</h1><p>此项目的绝大部分页面内容是通过在跟目录下创建的data.json文件渲染到页面上的，是模拟从后端请求数据的，开发调试时用’npm run dev’命令，会借助node启动一个本地服务器，可以正常的渲染出相应的数据。而通过打包后的项目时属于静态资源的，点击index.html查看项目，是无法加载mock的数据的，浏览器也会报跨域的错误。若想正常的加载mock数据，最好的方式是讲打包后的资源丢到服务器中。</p>
+<h1 id="Mock数据无法正常加载"><a href="#Mock数据无法正常加载" class="headerlink" title="Mock数据无法正常加载"></a>Mock数据无法正常加载</h1><p>此项目的绝大部分页面内容是通过在跟目录下创建的data.json文件渲染到页面上的，是模拟从后端请求数据的，开发调试时用’npm run dev’命令，会借助node启动一个本地服务器，可以正常的渲染出相应的数据。而通过打包后的项目时属于静态资源的，点击index.html查看项目，是无法加载mock的数据的，浏览器也会报跨域的错误。若想正常的加载mock数据，最好的方式是讲打包后的资源丢到服务器中，或者使用jsonp请求线上真实数据，因为它的原理是利用script标签来获得数据，在github上是可以预览到的。</p>
 <h1 id="利用git命令将项目上传到github"><a href="#利用git命令将项目上传到github" class="headerlink" title="利用git命令将项目上传到github"></a>利用git命令将项目上传到github</h1><p>首先设置SSH key,网上的教程很多，推荐一个简书里面的<a href="http://www.jianshu.com/p/c70ca3a02087" target="_blank" rel="external">两种方法上传本地文件到github</a>,完成后在github里面新建一个一个存放项目的仓库(建议勾选上初始化)，git命令：</p>
 <p>1、先进入项目文件夹，通过命令 git init 把这个目录变成git可以管理的仓库</p>
 <blockquote>
@@ -282,7 +282,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-26T15:14:48.353Z" itemprop="dateUpdated">2017-07-26 23:14:48</time>
+    最后更新时间：<time datetime="2017-07-31T04:14:11.453Z" itemprop="dateUpdated">2017-07-31 12:14:11</time>
 </span><br>
 
 
