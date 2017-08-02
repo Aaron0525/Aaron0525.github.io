@@ -348,7 +348,7 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     <link href="http://upyang.com/2017/07/15/%E9%9B%85%E8%99%8E%E5%86%9B%E8%A7%84/"/>
     <id>http://upyang.com/2017/07/15/雅虎军规/</id>
     <published>2017-07-15T08:08:55.000Z</published>
-    <updated>2017-08-02T10:01:09.075Z</updated>
+    <updated>2017-08-02T10:07:42.919Z</updated>
     
     <content type="html"><![CDATA[<h2 id="尽量减少HTTP请求数"><a href="#尽量减少HTTP请求数" class="headerlink" title="尽量减少HTTP请求数"></a>尽量减少HTTP请求数</h2><p>　　80%的终端用户响应时间都花在了前端上，其中大部分时间都在下载页面上的各种组件：图片，样式表，脚本，Flash等等。减少组件数必然能够减少页面提交的HTTP请求数。这是让页面更快的关键。</p>
 <p>　　减少页面组件数的一种方式是简化页面设计。但有没有一种方法可以在构建复杂的页面同时加快响应时间呢？嗯，确实有鱼和熊掌兼得的办法。</p>
@@ -393,13 +393,12 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
 　　</p>
 <h2 id="跨域分离组件"><a href="#跨域分离组件" class="headerlink" title="跨域分离组件"></a>跨域分离组件</h2><p>　分离组件可以最大化并行下载，但要确保只用不超过2-4个域，因为存在DNS查找的代价。例如，可以把HTML和动态内容部署在www.example.org，而把静态组件分离到static1.example.org和static2.example.org。</p>
 <h2 id="尽量少用iframe"><a href="#尽量少用iframe" class="headerlink" title="尽量少用iframe"></a>尽量少用iframe</h2><p>　用iframe可以把一个HTML文档插入到父文档里，重要的是明白iframe是如何工作的并高效地使用它。</p>
-<p><iframe>的优点：</iframe></p>
-<p>引入缓慢的第三方内容，比如标志和广告<br>安全沙箱<br>并行下载脚本</p>
-<p><iframe>的缺点：</iframe></p>
+<p><code>&lt;iframe&gt;</code>的优点：</p>
+<p>引入缓慢的第三方内容，比如标志和广告<br>安全沙箱<br>并行下载脚本<br><code>&lt;iframe&gt;</code>的缺点：</p>
 <p>代价高昂，即使是空白的iframe<br>阻塞页面加载<br>非语义</p>
 <h2 id="杜绝404"><a href="#杜绝404" class="headerlink" title="杜绝404"></a>杜绝404</h2><p>　HTTP请求代价高昂，完全没有必要用一个HTTP请求去获取一个无用的响应（比如404 Not Found），只会拖慢用户体验而没有任何好处。</p>
 <p>　　有些站点用的是有帮助的404——“你的意思是xxx？”，这样做有利于用户体验，，但也浪费了服务器资源（比如数据库等等）。最糟糕的是链接到的外部JavaScript有错误而且结果是404。首先，这种下载将阻塞并行下载。其次，浏览器会试图解析404响应体，因为它是JavaScript代码，需要找出其中可用的部分。</p>
-<h1 id="css部分"><a href="#css部分" class="headerlink" title="css部分"></a>css部分</h1><h2 id="避免使用CSS表达式"><a href="#避免使用CSS表达式" class="headerlink" title="避免使用CSS表达式"></a>避免使用CSS表达式</h2><p>用CSS表达式动态设置CSS属性，是一种强大又危险的方式。从IE5开始支持，但从IE8起就不推荐使用了。例如，可以用CSS表达式把背景颜色设置成按小时交替的：</p>
+<h2 id="避免使用CSS表达式"><a href="#避免使用CSS表达式" class="headerlink" title="避免使用CSS表达式"></a>避免使用CSS表达式</h2><p>用CSS表达式动态设置CSS属性，是一种强大又危险的方式。从IE5开始支持，但从IE8起就不推荐使用了。例如，可以用CSS表达式把背景颜色设置成按小时交替的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background-color: expression( (new Date()).getHours()%2 ? &quot;#B8D4FF&quot; : &quot;#F08A00&quot; );</div></pre></td></tr></table></figure>
 <h2 id="选择舍弃-import"><a href="#选择舍弃-import" class="headerlink" title="选择舍弃@import"></a>选择<link>舍弃@import</h2><p>前面提到了一个最佳实践：为了实现逐步渲染，CSS应该放在顶部。</p>
 <p>  在IE中用@import与在底部用<link>效果一样，所以最好不要用它。</p>
@@ -407,7 +406,7 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
 <p>最好的方法是干脆不要用AlphaImageLoader，而优雅地降级到用在IE中支持性很好的PNG8图片来代替。如果非要用AlphaImageLoader，应该用下划线hack：_filter来避免影响IE7及更高版本的用户。</p>
 <h2 id="把样式表放在顶部"><a href="#把样式表放在顶部" class="headerlink" title="把样式表放在顶部"></a>把样式表放在顶部</h2><p>　　在Yahoo!研究性能的时候，我们发现把样式表放到文档的HEAD部分能让页面看起来加载地更快。这是因为把样式表放在head里能让页面逐步渲染。</p>
 <p>　　关注性能的前端工程师想让页面逐步渲染。也就是说，我们想让浏览器尽快显示已有内容，这在页面上有一大堆内容或者用户网速很慢时显得尤为重要。给用户显示反馈（比如进度指标）的重要性已经被广泛研究过，并且被记录下来了。在我们的例子中，HTML页面就是进度指标！当浏览器逐渐加载页面头部，导航条，顶部logo等等内容的时候，这些都被正在等待页面加载的用户当作反馈，能够提高整体用户体验。</p>
-<h1 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h1><h2 id="去除重复脚本"><a href="#去除重复脚本" class="headerlink" title="去除重复脚本"></a>去除重复脚本</h2><p>　　页面含有重复的脚本文件会影响性能，这可能和你想象的不一样。在对美国前10大web站点的评审中，发现只有2个站点含有重复脚本。两个主要原因增加了在单一页面中出现重复脚本的几率：团队大小和脚本数量。在这种情况下，重复脚本会创建不必要的HTTP请求，执行无用的JavaScript代码，而影响页面性能。</p>
+<h2 id="去除重复脚本"><a href="#去除重复脚本" class="headerlink" title="去除重复脚本"></a>去除重复脚本</h2><p>　　页面含有重复的脚本文件会影响性能，这可能和你想象的不一样。在对美国前10大web站点的评审中，发现只有2个站点含有重复脚本。两个主要原因增加了在单一页面中出现重复脚本的几率：团队大小和脚本数量。在这种情况下，重复脚本会创建不必要的HTTP请求，执行无用的JavaScript代码，而影响页面性能。</p>
 <p>　　IE会产生不必要的HTTP请求，而Firefox不会。在IE中，如果一个不可缓存的外部脚本被页面引入了两次，它会在页面加载时产生两个HTTP请求。即使脚本是可缓存的，在用户重新加载页面时也会产生额外的HTTP请求。</p>
 <p>　　除了产生没有意义的HTTP请求之外，多次对脚本求值也会浪费时间。因为无论脚本是否可缓存，在Firefox和IE中都会执行冗余的JavaScript代码。</p>
 <p>　　避免不小心把相同脚本引入两次的一种方法就是在模版系统中实现脚本管理模块。典型的脚本引入方法就是在HTML页面中用SCRIPT标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;menu_1.0.17.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
@@ -423,21 +422,21 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
 <h2 id="压缩JavaScript和CSS"><a href="#压缩JavaScript和CSS" class="headerlink" title="压缩JavaScript和CSS"></a>压缩JavaScript和CSS</h2><p>　　压缩具体来说就是从代码中去除不必要的字符以减少大小，从而提升加载速度。代码最小化就是去掉所有注释和不必要的空白字符（空格，换行和tab）。在JavaScript中这样做能够提高响应性能，因为要下载的文件变小了。两个最常用的JavaScript代码压缩工具是JSMin和YUI Compressor，YUI compressor还可以压缩CSS。</p>
 <p>　　混淆是一种可选的源码优化措施，要比压缩更复杂，所以混淆过程也更容易产生bug。在对美国前十的网站调查中，压缩可以缩小21%，而混淆能缩小25%。虽然混淆的缩小程度更高，但比压缩风险更大。</p>
 <p>　　除了压缩外部脚本和样式，行内的<code>&lt;script&gt;</code>和<code>&lt;style&gt;</code>块也可以压缩。即使启用了gzip模块，先进行压缩也能够缩小5%或者更多的大小。JavaScript和CSS的用处越来越多，所以压缩代码会有不错的效果。</p>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><h2 id="优化图片"><a href="#优化图片" class="headerlink" title="优化图片"></a>优化图片</h2><p>尝试把GIF格式转换成PNG格式，看看是否节省空间。在所有的PNG图片上运行pngcrush（或者其它PNG优化工具）</p>
+<h2 id="优化图片"><a href="#优化图片" class="headerlink" title="优化图片"></a>优化图片</h2><p>尝试把GIF格式转换成PNG格式，看看是否节省空间。在所有的PNG图片上运行pngcrush（或者其它PNG优化工具）</p>
 <h2 id="优化CSS-Sprite"><a href="#优化CSS-Sprite" class="headerlink" title="优化CSS Sprite"></a>优化CSS Sprite</h2><p>在Sprite图片中横向排列一般都比纵向排列的最终文件小<br>组合Sprite图片中的相似颜色可以保持低色数，最理想的是256色以下PNG8格式<br>“对移动端友好”，不要在Sprite图片中留下太大的空隙。虽然不会在很大程度上影响图片文件的大小，但这样做可以节省用户代理把图片解压成像素映射时消耗的内存。100×100的图片是1万个像素，而1000×1000的图片就是100万个像素了。</p>
-<h2 id="不要用HTML缩放图片"><a href="#不要用HTML缩放图片" class="headerlink" title="不要用HTML缩放图片"></a>不要用HTML缩放图片</h2><p>　　不要因为在HTML中可以设置宽高而使用本不需要的大图。如果需要</p>
-<p><img width="100" height="100" src="mycat.jpg" alt="My Cat"><br>　　那么图片本身（mycat.jpg）应该是100x100px的，而不是去缩小500x500px的图片。</p>
+<h2 id="不要用HTML缩放图片"><a href="#不要用HTML缩放图片" class="headerlink" title="不要用HTML缩放图片"></a>不要用HTML缩放图片</h2><p>　不要因为在HTML中可以设置宽高而使用本不需要的大图。如果需要<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img width=&quot;100&quot; height=&quot;100&quot; src=&quot;mycat.jpg&quot; alt=&quot;My Cat&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>　那么图片本身（mycat.jpg）应该是100x100px的，而不是去缩小500x500px的图片。</p>
 <h2 id="用小的可缓存的favicon-ico（P-S-收藏夹图标）"><a href="#用小的可缓存的favicon-ico（P-S-收藏夹图标）" class="headerlink" title="用小的可缓存的favicon.ico（P.S. 收藏夹图标）"></a>用小的可缓存的favicon.ico（P.S. 收藏夹图标）</h2><p>　　favicon.ico是放在服务器根目录的图片，它会带来一堆麻烦，因为即便你不管它，浏览器也会自动请求它，所以最好不要给一个404 Not Found响应。而且只要在同一个服务器上，每次请求它时都会发送cookie，此外这个图片还会干扰下载顺序，例如在IE中，当你在onload中请求额外组件时，将会先下载favicon。</p>
 <p>所以为了缓解favicon.ico的缺点，应该确保：</p>
 <p>足够小，最好在1K以下<br>设置合适的有效期HTTP头（以后如果想换的话就不能重命名了），把有效期设置为几个月后一般比较安全，可以通过检查当前favicon.ico的最后修改日期来确保变更能让浏览器知道。</p>
-<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><h2 id="给Cookie减肥"><a href="#给Cookie减肥" class="headerlink" title="给Cookie减肥"></a>给Cookie减肥</h2><p>　　使用cookie的原因有很多，比如授权和个性化。HTTP头中cookie信息在web服务器和浏览器之间交换。重要的是保证cookie尽可能的小，以最小化对用户响应时间的影响。</p>
+<h2 id="给Cookie减肥"><a href="#给Cookie减肥" class="headerlink" title="给Cookie减肥"></a>给Cookie减肥</h2><p>　　使用cookie的原因有很多，比如授权和个性化。HTTP头中cookie信息在web服务器和浏览器之间交换。重要的是保证cookie尽可能的小，以最小化对用户响应时间的影响。</p>
 <p>清除不必要的cookie<br>保证cookie尽可能小，以最小化对用户响应时间的影响<br>注意给cookie设置合适的域级别，以免影响其它子域<br>设置合适的有效期，更早的有效期或者none可以更快的删除cookie，提高用户响应时间</p>
 <h2 id="把组件放在不含cookie的域下"><a href="#把组件放在不含cookie的域下" class="headerlink" title="把组件放在不含cookie的域下"></a>把组件放在不含cookie的域下</h2><p>　　当浏览器发送对静态图像的请求时，cookie也会一起发送，而服务器根本不需要这些cookie。所以它们只会造成没有意义的网络通信量，应该确保对静态组件的请求不含cookie。可以创建一个子域，把所有的静态组件都部署在那儿。</p>
 <p>　　如果域名是www.example.org，可以把静态组件部署到static.example.org。然而，如果已经在顶级域example.org或者www.example.org设置了cookie，那么所有对static.example.org的请求都会含有这些cookie。这时候可以再买一个新域名，把所有的静态组件部署上去，并保持这个新域名不含cookie。Yahoo!用的是yimg.com，YouTube是ytimg.com，Amazon是images-amazon.com等等。</p>
 <p>　　把静态组件部署在不含cookie的域下还有一个好处是有些代理可能会拒绝缓存带cookie的组件。有一点需要注意：如果不知道应该用example.org还是www.example.org作为主页，可以考虑一下cookie的影响。省略www的话，就只能把cookie写到*.example.org，所以因为性能原因最好用www子域，并且把cookie写到这个子域下。</p>
-<h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><h2 id="保证所有组件都小于25K"><a href="#保证所有组件都小于25K" class="headerlink" title="保证所有组件都小于25K"></a>保证所有组件都小于25K</h2><p>　　这个限制是因为iPhone不能缓存大于25K的组件，注意这里指的是未压缩的大小。这就是为什么缩减内容本身也很重要，因为单纯的gzip可能不够。</p>
+<h2 id="保证所有组件都小于25K"><a href="#保证所有组件都小于25K" class="headerlink" title="保证所有组件都小于25K"></a>保证所有组件都小于25K</h2><p>　　这个限制是因为iPhone不能缓存大于25K的组件，注意这里指的是未压缩的大小。这就是为什么缩减内容本身也很重要，因为单纯的gzip可能不够。</p>
 <h2 id="把组件打包到一个复合文档里"><a href="#把组件打包到一个复合文档里" class="headerlink" title="把组件打包到一个复合文档里"></a>把组件打包到一个复合文档里</h2><p>　　把各个组件打包成一个像有附件的电子邮件一样的复合文档里，可以用一个HTTP请求获取多个组件（记住一点：HTTP请求是代价高昂的）。用这种方式的时候，要先检查用户代理是否支持（iPhone就不支持）。</p>
-<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="Gzip组件"><a href="#Gzip组件" class="headerlink" title="Gzip组件"></a>Gzip组件</h2><p>　　前端工程师可以想办法明显地缩短通过网络传输HTTP请求和响应的时间。毫无疑问，终端用户的带宽速度，网络服务商，对等交换点的距离等等，都是开发团队所无法控制的。但还有别的能够影响响应时间的因素，压缩可以通过减少HTTP响应的大小来缩短响应时间。</p>
+<h2 id="Gzip组件"><a href="#Gzip组件" class="headerlink" title="Gzip组件"></a>Gzip组件</h2><p>　　前端工程师可以想办法明显地缩短通过网络传输HTTP请求和响应的时间。毫无疑问，终端用户的带宽速度，网络服务商，对等交换点的距离等等，都是开发团队所无法控制的。但还有别的能够影响响应时间的因素，压缩可以通过减少HTTP响应的大小来缩短响应时间。</p>
 <p>从HTTP/1.1开始，web客户端就有了支持压缩的Accept-Encoding HTTP请求头。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Accept-Encoding: gzip, deflate</div></pre></td></tr></table></figure>
 <p>如果web服务器看到这个请求头，它就会用客户端列出的一种方式来压缩响应。web服务器通过Content-Encoding相应头来通知客户端。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Content-Encoding: gzip</div></pre></td></tr></table></figure></p>
