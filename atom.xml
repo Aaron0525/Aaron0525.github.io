@@ -344,11 +344,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
   </entry>
   
   <entry>
-    <title>性能优化（雅虎军规）</title>
+    <title>前端性能优化之雅虎军规</title>
     <link href="http://upyang.com/2017/07/15/%E9%9B%85%E8%99%8E%E5%86%9B%E8%A7%84/"/>
     <id>http://upyang.com/2017/07/15/雅虎军规/</id>
     <published>2017-07-15T08:08:55.000Z</published>
-    <updated>2017-08-02T10:07:42.919Z</updated>
+    <updated>2017-08-03T15:28:23.316Z</updated>
     
     <content type="html"><![CDATA[<h2 id="尽量减少HTTP请求数"><a href="#尽量减少HTTP请求数" class="headerlink" title="尽量减少HTTP请求数"></a>尽量减少HTTP请求数</h2><p>　　80%的终端用户响应时间都花在了前端上，其中大部分时间都在下载页面上的各种组件：图片，样式表，脚本，Flash等等。减少组件数必然能够减少页面提交的HTTP请求数。这是让页面更快的关键。</p>
 <p>　　减少页面组件数的一种方式是简化页面设计。但有没有一种方法可以在构建复杂的页面同时加快响应时间呢？嗯，确实有鱼和熊掌兼得的办法。</p>
@@ -472,6 +472,8 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     
     
       <category term="性能优化" scheme="http://upyang.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="SEO" scheme="http://upyang.com/tags/SEO/"/>
     
   </entry>
   
