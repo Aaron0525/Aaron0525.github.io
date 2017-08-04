@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-04T02:59:02.323Z</updated>
+  <updated>2017-08-04T03:18:52.587Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,28 +20,22 @@
     <link href="http://upyang.com/2017/08/04/javascript%E9%9D%A2%E8%AF%95/"/>
     <id>http://upyang.com/2017/08/04/javascript面试/</id>
     <published>2017-08-04T02:37:31.000Z</published>
-    <updated>2017-08-04T02:59:02.323Z</updated>
+    <updated>2017-08-04T03:18:52.587Z</updated>
     
     <content type="html"><![CDATA[<h2 id="javascript面试题"><a href="#javascript面试题" class="headerlink" title="javascript面试题"></a>javascript面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function Parent() &#123;</div><div class="line">    this.a = 1;</div><div class="line">    this.b = [1, 2, this.a];</div><div class="line">    this.c = &#123; demo: 5 &#125;;</div><div class="line">    this.show = function () &#123;</div><div class="line">        console.log(this.a , this.b , this.c.demo );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Child() &#123;</div><div class="line">    this.a = 2;</div><div class="line">    this.change = function () &#123;</div><div class="line">        this.b.push(this.a);</div><div class="line">        this.a = this.b.length;</div><div class="line">        this.c.demo = this.a++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Child.prototype = new Parent();</div><div class="line">var parent = new Parent();</div><div class="line">var child1 = new Child();</div><div class="line">var child2 = new Child();</div><div class="line">child1.a = 11;</div><div class="line">child2.a = 12;</div><div class="line">parent.show();</div><div class="line">child1.show();</div><div class="line">child2.show();</div><div class="line">child1.change();</div><div class="line">child2.change();</div><div class="line">parent.show();</div><div class="line">child1.show();</div><div class="line">child2.show();</div></pre></td></tr></table></figure>
 <ul>
-<li>考察知识点：<br>1，this的指向</li>
-</ul>
-<p>2，原型(prototype)以及原型链</p>
-<p>3，继承</p>
-<p>4，引用</p>
+<li><p>考察知识点：<br>  1，this的指向<br>  2，原型(prototype)以及原型链<br>  3，继承<br>  4，引用</p>
+</li>
+<li><p>要正确解出这道题，需要理解以下知识点：<br>  1，每一个构造函数，都有一个原型[[prototype]]属性 指向构造函数的原型对象<br>  2，每一个实例生成的时候，都会在内存中产生一块新的堆内存<br>  3，每一实例都有一个隐式原型<strong>proto</strong> 指向构造函数的原型对象<br>  4，this的指向 取决于this调用时的位置, 在这道题中， 也可以简单理解为， 谁调用方法， this就指向哪个对象<br>  5，数组和字面量对象 都是 引用<br>  6，原型链的查找规则：  就近原则</p>
 <ul>
-<li>要正确解出这道题，需要理解以下知识点：<br>1，每一个构造函数，都有一个原型[[prototype]]属性 指向构造函数的原型对象</li>
+<li>当实例上存在属性时， 用实例上的</li>
+<li>如果实例不存在，顺在原型链，往上查找，如果存在，就使用原型链的</li>
+<li>如果原型链都不存在，就用Object原型对象上的</li>
+<li>如果Object原型对象都不存在， 就是undefined</li>
 </ul>
-<p>2，每一个实例生成的时候，都会在内存中产生一块新的堆内存</p>
-<p>3，每一实例都有一个隐式原型<strong>proto</strong> 指向构造函数的原型对象</p>
-<p>4，this的指向 取决于this调用时的位置, 在这道题中， 也可以简单理解为， 谁调用方法， this就指向哪个对象</p>
-<p>5，数组和字面量对象 都是 引用</p>
-<p>6，原型链的查找规则：  就近原则</p>
-<pre><code>* 当实例上存在属性时， 用实例上的
-* 如果实例不存在，顺在原型链，往上查找，如果存在，就使用原型链的
-* 如果原型链都不存在，就用Object原型对象上的
-* 如果Object原型对象都不存在， 就是undefined
-</code></pre><p>图解：<br>[]{<a href="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png}" target="_blank" rel="external">http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png}</a></p>
+</li>
+</ul>
+<p>图解：<br>！[]{<a href="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png}" target="_blank" rel="external">http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png}</a></p>
 ]]></content>
     
     <summary type="html">
