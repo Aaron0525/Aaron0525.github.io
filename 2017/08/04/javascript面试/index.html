@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="javascript">
-    <meta name="description" content="javascript面试题123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function () &amp;#123;">
+    <meta name="description" content="javascript面试题###原型链123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function ()">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript面试">
 <meta property="og:url" content="http://upyang.com/2017/08/04/javascript面试/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="javascript面试题123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function () &amp;#123;">
+<meta property="og:description" content="javascript面试题###原型链123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function ()">
 <meta property="og:image" content="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png">
-<meta property="og:updated_time" content="2017-08-04T04:28:51.486Z">
+<meta property="og:updated_time" content="2017-08-04T07:58:11.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript面试">
-<meta name="twitter:description" content="javascript面试题123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function () &amp;#123;">
+<meta name="twitter:description" content="javascript面试题###原型链123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function ()">
 <meta name="twitter:image" content="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
@@ -184,7 +184,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="javascript面试题"><a href="#javascript面试题" class="headerlink" title="javascript面试题"></a>javascript面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function Parent() &#123;</div><div class="line">    this.a = 1;</div><div class="line">    this.b = [1, 2, this.a];</div><div class="line">    this.c = &#123; demo: 5 &#125;;</div><div class="line">    this.show = function () &#123;</div><div class="line">        console.log(this.a , this.b , this.c.demo );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Child() &#123;</div><div class="line">    this.a = 2;</div><div class="line">    this.change = function () &#123;</div><div class="line">        this.b.push(this.a);</div><div class="line">        this.a = this.b.length;</div><div class="line">        this.c.demo = this.a++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Child.prototype = new Parent();</div><div class="line">var parent = new Parent();</div><div class="line">var child1 = new Child();</div><div class="line">var child2 = new Child();</div><div class="line">child1.a = 11;</div><div class="line">child2.a = 12;</div><div class="line">parent.show();</div><div class="line">child1.show();</div><div class="line">child2.show();</div><div class="line">child1.change();</div><div class="line">child2.change();</div><div class="line">parent.show();</div><div class="line">child1.show();</div><div class="line">child2.show();</div></pre></td></tr></table></figure>
+            <h2 id="javascript面试题"><a href="#javascript面试题" class="headerlink" title="javascript面试题"></a>javascript面试题</h2><p>###原型链<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function Parent() &#123;</div><div class="line">    this.a = 1;</div><div class="line">    this.b = [1, 2, this.a];</div><div class="line">    this.c = &#123; demo: 5 &#125;;</div><div class="line">    this.show = function () &#123;</div><div class="line">        console.log(this.a , this.b , this.c.demo );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Child() &#123;</div><div class="line">    this.a = 2;</div><div class="line">    this.change = function () &#123;</div><div class="line">        this.b.push(this.a);</div><div class="line">        this.a = this.b.length;</div><div class="line">        this.c.demo = this.a++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Child.prototype = new Parent();</div><div class="line">var parent = new Parent();</div><div class="line">var child1 = new Child();</div><div class="line">var child2 = new Child();</div><div class="line">child1.a = 11;</div><div class="line">child2.a = 12;</div><div class="line">parent.show();  &lt;!-- 输出 1 [1,2,1] 5 --&gt;</div><div class="line">child1.show();  &lt;!-- 输出 11 [1,2,1] 5 --&gt;</div><div class="line">child2.show();  &lt;!-- 输出 12 [1,2,1] 5 --&gt;</div><div class="line">child1.change();</div><div class="line">child2.change();</div><div class="line">parent.show();  &lt;!-- 输出  1 [1,2,1] 5 --&gt;</div><div class="line">child1.show();  &lt;!-- 输出  5 [1,2,1,11,12] 5 --&gt;</div><div class="line">child2.show();  &lt;!-- 输出  6 [1,2,1,11,12] 5 --&gt;</div></pre></td></tr></table></figure></p>
 <ul>
 <li><p>考察知识点：<br>  1，this的指向<br>  2，原型(prototype)以及原型链<br>  3，继承<br>  4，引用</p>
 </li>
@@ -211,7 +211,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-04T04:28:51.486Z" itemprop="dateUpdated">2017-08-04 12:28:51</time>
+    最后更新时间：<time datetime="2017-08-04T07:58:11.964Z" itemprop="dateUpdated">2017-08-04 15:58:11</time>
 </span><br>
 
 
