@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-07T01:01:35.471Z</updated>
+  <updated>2017-08-07T01:02:39.402Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/08/04/javascript%E9%9D%A2%E8%AF%95/"/>
     <id>http://upyang.com/2017/08/04/javascript面试/</id>
     <published>2017-08-04T02:37:31.000Z</published>
-    <updated>2017-08-07T01:01:35.471Z</updated>
+    <updated>2017-08-07T01:02:39.402Z</updated>
     
     <content type="html"><![CDATA[<h2 id="javascript面试题"><a href="#javascript面试题" class="headerlink" title="javascript面试题"></a>javascript面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function Parent() &#123;</div><div class="line">    this.a = 1;</div><div class="line">    this.b = [1, 2, this.a];</div><div class="line">    this.c = &#123; demo: 5 &#125;;</div><div class="line">    this.show = function () &#123;</div><div class="line">        console.log(this.a , this.b , this.c.demo );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Child() &#123;</div><div class="line">    this.a = 2;</div><div class="line">    this.change = function () &#123;</div><div class="line">        this.b.push(this.a);</div><div class="line">        this.a = this.b.length;</div><div class="line">        this.c.demo = this.a++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Child.prototype = new Parent();</div><div class="line">var parent = new Parent();</div><div class="line">var child1 = new Child();</div><div class="line">var child2 = new Child();</div><div class="line">child1.a = 11;</div><div class="line">child2.a = 12;</div><div class="line">parent.show();  &lt;!-- 输出 1 [1,2,1] 5 --&gt;</div><div class="line">child1.show();  &lt;!-- 输出 11 [1,2,1] 5 --&gt;</div><div class="line">child2.show();  &lt;!-- 输出 12 [1,2,1] 5 --&gt;</div><div class="line">child1.change();</div><div class="line">child2.change();</div><div class="line">parent.show();  &lt;!-- 输出  1 [1,2,1] 5 --&gt;</div><div class="line">child1.show();  &lt;!-- 输出  5 [1,2,1,11,12] 5 --&gt;</div><div class="line">child2.show();  &lt;!-- 输出  6 [1,2,1,11,12] 5 --&gt;</div></pre></td></tr></table></figure>
 <ul>
@@ -35,7 +35,13 @@
 </ul>
 </li>
 </ul>
-<p>图解：<br><a href="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png" target="_blank" rel="external"></a></p>
+<p>图解：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/253192/201708/253192-20170802092919349-775627592.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
 ]]></content>
     
     <summary type="html">
