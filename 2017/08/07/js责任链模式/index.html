@@ -13,19 +13,24 @@
     
     
     
-    <title>Tags: ES6 | 途中人的博客 | IT技术分享！</title>
+    <title>js责任链模式 | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="undefined">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="途中人的博客">
-<meta property="og:url" content="http://upyang.com/tags/ES6/index.html">
+    <meta name="keywords" content="javascript">
+    <meta name="description" content="实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。 例如： A：100 ， B：1400 ，C：500">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js责任链模式">
+<meta property="og:url" content="http://upyang.com/2017/08/07/js责任链模式/index.html">
 <meta property="og:site_name" content="途中人的博客">
+<meta property="og:description" content="实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。 例如： A：100 ， B：1400 ，C：500">
+<meta property="og:updated_time" content="2017-08-07T02:26:55.541Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="途中人的博客">
+<meta name="twitter:title" content="js责任链模式">
+<meta name="twitter:description" content="实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。 例如： A：100 ， B：1400 ，C：500">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -63,7 +68,7 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
@@ -109,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Tags: ES6</div>
+        <div class="flex-col header-title ellipsis">js责任链模式</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -128,201 +133,212 @@
         
     </div>
 </header>
-<header class="content-header tags-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Tags: ES6</h1>
+        <h1 class="title">js责任链模式</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2017-08-07T01:13:37.000Z" itemprop="datePublished" class="page-time">
+  2017-08-07
+</time>
+
+
             
         </h5>
     </div>
 
     
-<div class="tabs-bar container">
-    <nav class="tags-list">
-        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-            ">全部</a>
-        
-
-            <a href="/tags/Vue2-0/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Vue2.0</a>
-
-        
-
-            <a href="/tags/ES6/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">ES6</a>
-
-        
-
-            <a href="/tags/jsonp/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">jsonp</a>
-
-        
-
-            <a href="/tags/javascript/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
-
-        
-
-            <a href="/tags/ajax/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">ajax</a>
-
-        
-
-            <a href="/tags/XMLHttpRequest/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">XMLHttpRequest</a>
-
-        
-
-            <a href="/tags/github/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">github</a>
-
-        
-
-            <a href="/tags/HTML5/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">HTML5</a>
-
-        
-
-            <a href="/tags/CSS3/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">CSS3</a>
-
-        
-
-            <a href="/tags/media/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">media</a>
-
-        
-
-            <a href="/tags/webpack/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
-
-        
-
-            <a href="/tags/JavaScript/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">JavaScript</a>
-
-        
-
-            <a href="/tags/Jsonp/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">Jsonp</a>
-
-        
-
-            <a href="/tags/CORS/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">CORS</a>
-
-        
-
-            <a href="/tags/性能优化/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">性能优化</a>
-
-        
-
-            <a href="/tags/SEO/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">SEO</a>
-
-        
-    </nav>
-    <!-- PC show more-->
-    <div class="tags-list-more">
-        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
-    </div>
-</div>
-
 
 
 </header>
 
-<div class="container body-wrap fade">
+
+<div class="container body-wrap">
     
-            <div class="waterfall">
-          
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-21 23:28:51" datetime="2017-07-21T15:28:51.000Z"  itemprop="datePublished">2017-07-21</time>
-
-      
-
-
-    </div>
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实际需求"><span class="post-toc-number">1.</span> <span class="post-toc-text">实际需求</span></a></li></ol>
+        </nav>
+    </aside>
     
+<article id="post-js责任链模式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">js责任链模式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-07 09:13:37" datetime="2017-08-07T01:13:37.000Z"  itemprop="datePublished">2017-08-07</time>
+
+            
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/21/Vue学习/">Vue2.0仿掘金App(总结)</a>
-    </h3>
-  
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h2><p>现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。</p>
+<p>例如： A：100 ， B：1400 ，C：500 ， D：100<br>托运安排：<br>        第一辆车： A：100 ， B：250<br>        第二辆车： A：0 ，   B：350<br>        第三辆车： A：0 ，   B：350<br>        第四辆车： A：0 ，   B：350<br>        第五辆车： A：0 ，   B：100 ，C：250<br>        第六辆车： A：0 ，   B：0 ，  C：250 ，D：100</p>
 
-    
-    <div class="post-footer">
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+<span class="post-time">
+    最后更新时间：<time datetime="2017-08-07T02:26:55.541Z" itemprop="dateUpdated">2017-08-07 10:26:55</time>
+</span><br>
 
+
+        
+        原文链接：<a href="/2017/08/07/js责任链模式/" target="_blank" rel="external">http://upyang.com/2017/08/07/js责任链模式/</a>
+        
     </div>
-    
-  </article>
+    <footer>
+        <a href="http://upyang.com">
+            <img src="/img/me.jpg" alt="途中人">
+            途中人
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
-        
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-21 17:56:15" datetime="2017-07-21T09:56:15.000Z"  itemprop="datePublished">2017-07-21</time>
-
-      
 
 
-    </div>
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/08/07/js责任链模式/&title=《js责任链模式》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/08/07/js责任链模式/&title=《js责任链模式》 — 途中人的博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/08/07/js责任链模式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js责任链模式》 — 途中人的博客&url=http://upyang.com/2017/08/07/js责任链模式/&via=http://upyang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/08/07/js责任链模式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/21/Vue-juejin-App/">Vue2.0掘金App</a>
-    </h3>
-  
 
 
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
-
-    </div>
-    
-  </article>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
-        
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-18 19:02:20" datetime="2017-07-18T11:02:20.000Z"  itemprop="datePublished">2017-07-18</time>
-
-      
 
 
+        </div>
     </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/04/javascript面试/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">javascript面试</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
     
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/18/Vue-music/">Vue2.0移动端音乐App</a>
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2138244"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
     </h3>
-  
-
-
-
-    
-    <div class="post-footer">
+    <div class="reward-content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
         
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
             </div>
+        </label>
         
-    
+    </div>
 </div>
 
+
+
+</div>
 
         <!-- <footer class="footer">
     <div class="top">
@@ -398,7 +414,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/tags/ES6/&title=途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/08/07/js责任链模式/&title=《js责任链模式》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -408,22 +424,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/tags/ES6/&title=途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/08/07/js责任链模式/&title=《js责任链模式》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/tags/ES6/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/08/07/js责任链模式/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=途中人的博客&url=http://upyang.com/tags/ES6/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js责任链模式》 — 途中人的博客&url=http://upyang.com/2017/08/07/js责任链模式/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/tags/ES6/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/08/07/js责任链模式/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -434,7 +450,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvklEQVR42u3aS27DMAwFwNz/0i7QbRH5kfrYBUarIm6c0YaQHvn5xOv6Xd8+uf6s5G3JfzYXLi7uNPcarjEu2VKyscSAi4t7njsuXmPi+A05NymguLi4b+POnDeS4oiLi/sfucnhpndIwsXFfSd3bTFKgpLtdzVcXNwJbjUw3fH3xnwXFxe3yL2Ka/zdXlxS+HVcXNwj3KSBWi1n+dPedQgXF/cMdxW9V9SSMoeLi3uSmzdHqzFKb7Dj5hNcXNxHudWRi+q2m9/FxcV9lLsq5kgQheMRLi7uEW612ZlcYFahoxQHFxf3CDc/3OTjWTPBKy4u7lPc5BU7nuZb/TpNhouLu4FbPcQk0Wd1nKIQu+Di4h7nVstKHpFURy5uWim4uLibueVIong1KlPyhgouLu42bg+3KlTNEw9cXNzz3GazMxir6m0m6gnj4uJu5vaCjGoMmmymYMfFxd3GrRaUaixSbZ/kT3FxcXdzZxoe+VEmH+a4+XVcXNyD3Lx49a5My44yuLi4L+OuOrIkgctNkxUXF/dl3F4UUh2/+LoNXFzcg9w8JJ2/Gh2KRXBxcQ8Gpvkm85GL3qEKFxd3A/cHPPbdRDLS2SAAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIElEQVR42u3a0W6DMAwF0P3/T3fSXrfCvTFMajh5QnQlOUxybSdfX/F4/Yx3939/+vv+uzvH1xcPDAyMj2W8Dsfao4+/e4w8vv/uxWFgYDyB0S4lD7hJ8E2C8smaMTAwMJaWlaeAbaDHwMDAaKdvy908DcXAwMBoi9iTMrIsWdtQflktjoGB8YGMSfvs7usb9zcwMDA+hPEaj2Ti180DAwNjb0bSLGsj3qSFt/ZMDAyMvRlXhder8tO1II6BgfEcxvyhSbttLShjYGA8mbHWuG+bcXmjP180BgbGcxhtwjdJExNevvQ//g8YGBibMupycXCnfXL+M4CBgbE3ow2C0Vspi9ukw39SEmNgYGzNaFtpk2NedarXhnIMDIytGW3jbC0FzJeeH+w4OX6BgYGxNaNthF27zXnBMQ4MDIztGPOlr72zdoPzJG3FwMB4ACNJwiZbnkmjPw/fUbWNgYGxEaNt8c+/26aAowQRAwNjO0YScNu/zFO9eaqKgYGxK6Nt0197LCy/HiWFGBgYWzDyInZSmrYtvKKdh4GBsTVjbYL8EMak9Z/zMDAwdmXcUXYmB8smr+aPnwoMDIytGf+5zTk/CraYIGJgYGzBuO9gxHxDtJgXAwPjAYy8cZ+H4MUDEyUPAwMDo00Nk5QuPyhWbI5iYGBgxOljjk9mKQ6FYGBgPICRLzHnHU/cbgZgYGA8mdFuDNShMCh052AMDIxNGd97wfoI/YDzkwAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
@@ -442,7 +458,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 </script>

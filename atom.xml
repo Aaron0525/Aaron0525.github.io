@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-07T01:02:39.402Z</updated>
+  <updated>2017-08-07T02:26:55.541Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js责任链模式</title>
+    <link href="http://upyang.com/2017/08/07/js%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://upyang.com/2017/08/07/js责任链模式/</id>
+    <published>2017-08-07T01:13:37.000Z</published>
+    <updated>2017-08-07T02:26:55.541Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h2><p>现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。</p>
+<p>例如： A：100 ， B：1400 ，C：500 ， D：100<br>托运安排：<br>        第一辆车： A：100 ， B：250<br>        第二辆车： A：0 ，   B：350<br>        第三辆车： A：0 ，   B：350<br>        第四辆车： A：0 ，   B：350<br>        第五辆车： A：0 ，   B：100 ，C：250<br>        第六辆车： A：0 ，   B：0 ，  C：250 ，D：100</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;实际需求&quot;&gt;&lt;a href=&quot;#实际需求&quot; class=&quot;headerlink&quot; title=&quot;实际需求&quot;&gt;&lt;/a&gt;实际需求&lt;/h2&gt;&lt;p&gt;现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为210
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://upyang.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript面试</title>
