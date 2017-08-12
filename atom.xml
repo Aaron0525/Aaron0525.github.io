@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-12T03:04:37.578Z</updated>
+  <updated>2017-08-12T04:27:29.714Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://upyang.com/2017/08/07/js%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
     <id>http://upyang.com/2017/08/07/js责任链模式/</id>
     <published>2017-08-07T01:13:37.000Z</published>
-    <updated>2017-08-12T03:04:37.578Z</updated>
+    <updated>2017-08-12T04:27:29.714Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。
-</code></pre><h2 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h2><p>现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。</p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。</p>
+<h2 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h2><p>现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。</p>
 <p>例如： A：100 ， B：1400 ，C：500 ， D：100<br>托运安排：<br>        第一辆车： A：100 ， B：250<br>        第二辆车： A：0 ，   B：350<br>        第三辆车： A：0 ，   B：350<br>        第四辆车： A：0 ，   B：350<br>        第五辆车： A：0 ，   B：100 ，C：250<br>        第六辆车： A：0 ，   B：0 ，  C：250 ，D：100</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>看了这个需求，脑袋里第一时间想到的是if判断，但是实际写代码的时候发现，条件太多了，算下来一共有81种情况了，感觉已经不适合用if了，这时查找各种资料以及请问大神后发现了责任链这种设计模式。</p>
 <h2 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h2><p>顾名思义，责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链<br>。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。</p>
@@ -51,8 +51,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。&lt;/p&gt;
+&lt;h2 id=&quot;实际需求&quot;&gt;&lt;a href=&quot;#
     
     </summary>
     
