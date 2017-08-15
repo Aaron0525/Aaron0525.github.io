@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="javascript">
-    <meta name="description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产">
+    <meta name="description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，问题不是很大，但是觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js责任链">
 <meta property="og:url" content="http://upyang.com/2017/08/07/js责任链模式/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产">
-<meta property="og:updated_time" content="2017-08-12T04:27:29.714Z">
+<meta property="og:description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，问题不是很大，但是觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西">
+<meta property="og:updated_time" content="2017-08-15T12:58:00.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js责任链">
-<meta name="twitter:description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产">
+<meta name="twitter:description" content="前言最近同学问到了一个他实际工作中关于生产托运方面的一个问题，问题不是很大，但是觉得挺有意思，分享在此。 实际需求现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -182,7 +182,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近同学问到了一个他实际工作中关于生产托运方面的一个问题，觉得挺有意思，分享在此。</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近同学问到了一个他实际工作中关于生产托运方面的一个问题，问题不是很大，但是觉得挺有意思，分享在此。</p>
 <h2 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h2><p>现有A、B、C、D四个生产线，生产总量为2100，每个生产线的生产量未知且在0~2100(包括0和2100，保证总量为2100即可)，生产完毕后，6台车辆进行托运，规定每台车辆只能运350，且装满后才能够出发，装车顺序为ABCD,即上一个生产线生产的东西装完后才能够装下一个生产线的东西，要求根据每条生产线的生产量，给出每台车辆的托运安排。</p>
 <p>例如： A：100 ， B：1400 ，C：500 ， D：100<br>托运安排：<br>        第一辆车： A：100 ， B：250<br>        第二辆车： A：0 ，   B：350<br>        第三辆车： A：0 ，   B：350<br>        第四辆车： A：0 ，   B：350<br>        第五辆车： A：0 ，   B：100 ，C：250<br>        第六辆车： A：0 ，   B：0 ，  C：250 ，D：100</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>看了这个需求，脑袋里第一时间想到的是if判断，但是实际写代码的时候发现，条件太多了，算下来一共有81种情况了，感觉已经不适合用if了，这时查找各种资料以及请问大神后发现了责任链这种设计模式。</p>
@@ -206,6 +206,7 @@
 </ul>
 <p>责任链的详细讲解可以参阅<a href="http://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html" target="_blank" rel="external">菜鸟教程</a>中的说明。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line">class WearHouse&#123;</div><div class="line">        constructor(volume,wearHouse)&#123;</div><div class="line">            this.volume=volume;</div><div class="line">            this.wearHouse=wearHouse;</div><div class="line">            this.outString=[];</div><div class="line">        &#125;</div><div class="line">        next(take)&#123;</div><div class="line">            if(this.wearHouse!=undefined)</div><div class="line">            &#123;</div><div class="line">                this.wearHouse.takeOut(take).forEach((subT) =&gt; &#123;</div><div class="line">                    this.outString.push(subT)</div><div class="line">                &#125;)</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        takeOut(num)&#123;</div><div class="line">            if(num&gt;this.volume)&#123;</div><div class="line">                num-=this.volume;</div><div class="line">                var temp=this.volume;</div><div class="line">                this.volume=0;</div><div class="line">                this.outString.push(this.print(0,temp));</div><div class="line">                this.next(num);</div><div class="line">            &#125;else&#123;</div><div class="line">                this.volume-=num;</div><div class="line">                this.outString.push(this.print(this.volume,num));</div><div class="line">            &#125;</div><div class="line">            var temOut=this.outString;</div><div class="line">            this.outString=[];</div><div class="line">            return temOut;</div><div class="line">        &#125;</div><div class="line">        print(volumn,takeNum)&#123;&#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    class WearHouseA extends WearHouse&#123;</div><div class="line">        print(volumn,takeNum)&#123;</div><div class="line">            return [&apos;A&apos;,takeNum];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    class WearHouseB extends WearHouse&#123;</div><div class="line">        print(volumn,takeNum)&#123;</div><div class="line">            return [&apos;B&apos;,takeNum];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    class WearHouseC extends WearHouse&#123;</div><div class="line">        print(volumn,takeNum)&#123;</div><div class="line">            return [&apos;C&apos;,takeNum];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    class WearHouseD extends WearHouse&#123;</div><div class="line">        print(volumn,takeNum)&#123;</div><div class="line">            return [&apos;D&apos;,takeNum];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    var D=new WearHouseD(100,undefined);</div><div class="line"></div><div class="line">    var C=new WearHouseC(500,D);</div><div class="line"></div><div class="line">    var B=new WearHouseB(1400,C);</div><div class="line"></div><div class="line">    var A=new WearHouseA(100,B);</div><div class="line"></div><div class="line">    var strSet=[];</div><div class="line"></div><div class="line">    for(var a=0;a&lt;6;a++)&#123;</div><div class="line"></div><div class="line">        strSet.push(...A.takeOut(350));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    console.log(strSet);</div></pre></td></tr></table></figure>
+<p>*</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>责任链模式，对于解决按照优先级顺序依次执行的问题也挺有效的，不用写很多的判断语句。责任链模式在java中应用尤其广泛，尝试用js来实现责任链也是挺有意思的。</p>
 
         </div>
@@ -214,7 +215,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-12T04:27:29.714Z" itemprop="dateUpdated">2017-08-12 12:27:29</time>
+    最后更新时间：<time datetime="2017-08-15T12:58:00.279Z" itemprop="dateUpdated">2017-08-15 20:58:00</time>
 </span><br>
 
 
