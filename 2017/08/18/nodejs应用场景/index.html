@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-8-18/77817316.jpg">
-<meta property="og:updated_time" content="2017-08-18T08:00:22.216Z">
+<meta property="og:updated_time" content="2017-08-18T08:51:55.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从原理上理解NodeJS的适用场景">
 <meta name="twitter:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
@@ -204,8 +204,9 @@
 <p>因此，虽说进程可以支持多个线程，它们看似同时执行，但互相之间并不同步。一个进程中的多个线程共享相同的内存地址空间，这就意味着它们可以访问相同的变量和对象，而且它们从同一堆中分配对象。尽管这让线程之间共享信息变得更容易，因为程序设计者必须小心，确保它们不会妨碍同一进程里的其它线程。</p>
 <p>了解了多线程并行的缺陷后，我们就可以更好地理解NodeJS的强大所在了。因为NodeJS是异步单线程的！</p>
 <h2 id="NodeJS的异步I-O原理"><a href="#NodeJS的异步I-O原理" class="headerlink" title="NodeJS的异步I/O原理"></a>NodeJS的异步I/O原理</h2><p>我们先来看一段Apache请求数据库的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">res = db.query(&apos;select * from user&apos;);</div><div class="line">res.output();</div></pre></td></tr></table></figure></p>
-<p>代码执行到第一行的时候线程会阻塞，等待query返回结果，然后继续处理。由于数据库查询、磁盘读写、网络通信等原因（所谓的I/O）阻塞时间会非常大（相对于CPU始终频率）。对于高并发的访问，一方面线程长期阻塞等待，另一方面为了应付新情求而不断添加新线程，会浪费大量系统资源，同时线程的增加也会也会占用大量的CPU时间来处理内存上下文切换。看看node.js怎么处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">res = db.query(&apos;select * from user&apos;,function(res) &#123;</div><div class="line">    res.output();</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>代码执行到第一行的时候线程会阻塞，等待query返回结果，然后继续处理，举个例子，银行排队办理业务时，服务端只有一个线程，用户请求到达只能处理一个，其余的要先等待。由于数据库查询、磁盘读写、网络通信等原因（所谓的I/O）阻塞时间会非常大（相对于CPU始终频率）。对于高并发的访问，一方面线程长期阻塞等待，另一方面为了应付新情求而不断添加新线程，会浪费大量系统资源，并发量高的时候，请求仍然需要等待，同时线程的增加也会也会占用大量的CPU时间来处理内存上下文切换。看看node.js怎么处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">res = db.query(&apos;select * from user&apos;,function(res) &#123;</div><div class="line">    res.output();</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>看到没，就四个字：异步回调。query的第二个参数是一个回调函数，进程执行到db.query的时候不会等待结果返回，而是直接继续执行下面的语句，直到进入事件循环。当数据库执行结果返回的时候会将事件发送到事件队列，等到线程进入事件循环后才会调用之前的回调函数。更专业的说法是异步I/O。只要单线程就可以。</p>
+<p>举个例子，在像麦当劳这样的快餐店点餐，我们点完餐后拿到了一个号码，拿到号码后，我们往往会在位置上等待，而在我们后面的请求会继续得到处理，同样是拿了一个号码然后到一旁等待，接待员能一直进行处理。等到饭菜做号了，会喊号码，我们拿到了自己的饭菜，进行后续的处理（吃饭）。这个喊号码的动作在NodeJS中叫做回调（Callback），能在事件（烧菜，I/O）处理完成后继续执行后面的逻辑（吃饭），这体现了NodeJS的显著特点，异步机制、事件驱动整个过程没有阻塞新用户的连接（点餐），也不需要维护已经点餐的用户与厨师的连接。</p>
 <p>那为什么NodeJS做到单线程，却可以实现异步呢？在这里我们先上一幅图，直戳图中的Event queue<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -224,7 +225,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-18T08:00:22.216Z" itemprop="dateUpdated">2017-08-18 16:00:22</time>
+    最后更新时间：<time datetime="2017-08-18T08:51:55.738Z" itemprop="dateUpdated">2017-08-18 16:51:55</time>
 </span><br>
 
 
