@@ -13,19 +13,26 @@
     
     
     
-    <title>Tags: Vue2.0 | 途中人的博客 | IT技术分享！</title>
+    <title>从原理上理解NodeJS的适用场景 | 途中人的博客 | IT技术分享！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="undefined">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="途中人的博客">
-<meta property="og:url" content="http://upyang.com/tags/Vue2-0/index.html">
+    <meta name="keywords" content="nodejs">
+    <meta name="description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
+<meta name="keywords" content="nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从原理上理解NodeJS的适用场景">
+<meta property="og:url" content="http://upyang.com/2017/08/18/nodejs应用场景/index.html">
 <meta property="og:site_name" content="途中人的博客">
+<meta property="og:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
+<meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-8-18/77817316.jpg">
+<meta property="og:updated_time" content="2017-08-18T08:00:22.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="途中人的博客">
+<meta name="twitter:title" content="从原理上理解NodeJS的适用场景">
+<meta name="twitter:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
+<meta name="twitter:image" content="http://oszamq4pp.bkt.clouddn.com/17-8-18/77817316.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -63,7 +70,7 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
@@ -109,7 +116,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Tags: Vue2.0</div>
+        <div class="flex-col header-title ellipsis">从原理上理解NodeJS的适用场景</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -128,237 +135,243 @@
         
     </div>
 </header>
-<header class="content-header tags-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Tags: Vue2.0</h1>
+        <h1 class="title">从原理上理解NodeJS的适用场景</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2017-08-18T07:35:29.000Z" itemprop="datePublished" class="page-time">
+  2017-08-18
+</time>
+
+
             
         </h5>
     </div>
 
     
-<div class="tabs-bar container">
-    <nav class="tags-list">
-        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-            ">全部</a>
-        
-
-            <a href="/tags/HTML5/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">HTML5</a>
-
-        
-
-            <a href="/tags/CSS3/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">CSS3</a>
-
-        
-
-            <a href="/tags/media/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">media</a>
-
-        
-
-            <a href="/tags/Vue2-0/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">Vue2.0</a>
-
-        
-
-            <a href="/tags/ES6/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
-
-        
-
-            <a href="/tags/jsonp/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">jsonp</a>
-
-        
-
-            <a href="/tags/github/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">github</a>
-
-        
-
-            <a href="/tags/ajax/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">ajax</a>
-
-        
-
-            <a href="/tags/XMLHttpRequest/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">XMLHttpRequest</a>
-
-        
-
-            <a href="/tags/nodejs/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">nodejs</a>
-
-        
-
-            <a href="/tags/JavaScript/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">JavaScript</a>
-
-        
-
-            <a href="/tags/Jsonp/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Jsonp</a>
-
-        
-
-            <a href="/tags/CORS/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">CORS</a>
-
-        
-
-            <a href="/tags/javascript/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
-
-        
-
-            <a href="/tags/性能优化/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">性能优化</a>
-
-        
-
-            <a href="/tags/SEO/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">SEO</a>
-
-        
-
-            <a href="/tags/webpack/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
-
-        
-    </nav>
-    <!-- PC show more-->
-    <div class="tags-list-more">
-        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
-    </div>
-</div>
-
 
 
 </header>
 
-<div class="container body-wrap fade">
+
+<div class="container body-wrap">
     
-            <div class="waterfall">
-          
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-25 16:05:27" datetime="2017-07-25T08:05:27.000Z"  itemprop="datePublished">2017-07-25</time>
-
-      
-
-
-    </div>
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NodeJS的特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">NodeJS的特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Apache的多线程高并发模式"><span class="post-toc-number">3.</span> <span class="post-toc-text">Apache的多线程高并发模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是线程？"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">什么是线程？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NodeJS的异步I-O原理"><span class="post-toc-number">4.</span> <span class="post-toc-text">NodeJS的异步I/O原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NodeJS的应用场景"><span class="post-toc-number">5.</span> <span class="post-toc-text">NodeJS的应用场景</span></a></li></ol>
+        </nav>
+    </aside>
     
+<article id="post-nodejs应用场景"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">从原理上理解NodeJS的适用场景</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-18 15:35:29" datetime="2017-08-18T07:35:29.000Z"  itemprop="datePublished">2017-08-18</time>
+
+            
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/25/Vue项目上传github并预览/">Vue项目上传github并预览</a>
-    </h3>
-  
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？</p>
+<h2 id="NodeJS的特点"><a href="#NodeJS的特点" class="headerlink" title="NodeJS的特点"></a>NodeJS的特点</h2><pre><code>1. 它是一个Javascript运行环境
 
-    
-    <div class="post-footer">
+2. 依赖于Chrome V8引擎进行代码解释
+
+3. 事件驱动
+
+4. 非阻塞I/O
+
+5. 轻量、可伸缩，适于实时数据交互应用
+
+6. 单进程，单线程
+</code></pre><h2 id="Apache的多线程高并发模式"><a href="#Apache的多线程高并发模式" class="headerlink" title="Apache的多线程高并发模式"></a>Apache的多线程高并发模式</h2><p>Apache是当前世界排名第一的Web服务端软件，它由于支持多线程并发而受到广大服务器技术选型者的欢迎。但发展到后来，Apache在一些WEB的大型应用中也渐渐暴露出它的缺点：阻塞。</p>
+<p>那有的同学会奇怪，Apache不是多线程处理并发吗，为什么还会出现阻塞呢？</p>
+<p>要明白这一点我们首先需要了解线程这个概念</p>
+<h3 id="什么是线程？"><a href="#什么是线程？" class="headerlink" title="什么是线程？"></a>什么是线程？</h3><p>我们引用官方的解释：线程可以独立运行的最小的CPU单位，可以在同一个进程里并发运行，共享该进程下的内存地址空间（注意这个特点）。</p>
+<p>我们可以看到同一个进程下的线程是会共享相同的文件和内存的（内存地址空间），所以大家可以想象，当不同的线程需要占用同一个变量时，根据先到先得的原则，先到的线程在运作时，后来的线程只能在旁边等待，也就是加入到了阻塞排队序列。所以这就是造成线程阻塞的原因。</p>
+<p>因此，虽说进程可以支持多个线程，它们看似同时执行，但互相之间并不同步。一个进程中的多个线程共享相同的内存地址空间，这就意味着它们可以访问相同的变量和对象，而且它们从同一堆中分配对象。尽管这让线程之间共享信息变得更容易，因为程序设计者必须小心，确保它们不会妨碍同一进程里的其它线程。</p>
+<p>了解了多线程并行的缺陷后，我们就可以更好地理解NodeJS的强大所在了。因为NodeJS是异步单线程的！</p>
+<h2 id="NodeJS的异步I-O原理"><a href="#NodeJS的异步I-O原理" class="headerlink" title="NodeJS的异步I/O原理"></a>NodeJS的异步I/O原理</h2><p>我们先来看一段Apache请求数据库的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">res = db.query(&apos;select * from user&apos;);</div><div class="line">res.output();</div></pre></td></tr></table></figure></p>
+<p>代码执行到第一行的时候线程会阻塞，等待query返回结果，然后继续处理。由于数据库查询、磁盘读写、网络通信等原因（所谓的I/O）阻塞时间会非常大（相对于CPU始终频率）。对于高并发的访问，一方面线程长期阻塞等待，另一方面为了应付新情求而不断添加新线程，会浪费大量系统资源，同时线程的增加也会也会占用大量的CPU时间来处理内存上下文切换。看看node.js怎么处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">res = db.query(&apos;select * from user&apos;,function(res) &#123;</div><div class="line">    res.output();</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>看到没，就四个字：异步回调。query的第二个参数是一个回调函数，进程执行到db.query的时候不会等待结果返回，而是直接继续执行下面的语句，直到进入事件循环。当数据库执行结果返回的时候会将事件发送到事件队列，等到线程进入事件循环后才会调用之前的回调函数。更专业的说法是异步I/O。只要单线程就可以。</p>
+<p>那为什么NodeJS做到单线程，却可以实现异步呢？在这里我们先上一幅图，直戳图中的Event queue<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-8-18/77817316.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>NodeJS的工作原理其实就是事件循环。可以说每一条NodeJS的逻辑都是写在回调函数里面的，而回调函数都是有返回之后才异步执行的！</p>
+<p>看到这里，你不禁会惊叹，NodeJS如果所有处理都异步，岂不是晓得飞了？错错错！当然不是，不要忘记，NodeJS实现这些的基础是单线程。没错，单线程！一条线程扛起所有操作！</p>
+<p>你可以想象一下，NodeJS在寒风中面对着10万并发大军，OK，没问题，上来敌人一个扔到城里，上来一个又扔到城里。城里全民皆兵，可以很好地消化这些敌人。但如果上来一个类似于张飞赵云这样的人物，老Node心里一惨，和张飞大战300回合，把他打残了，再扔到城里。那后面的10万大军就得等这300回合。<br>所以这说明什么？说明NodeJS不是没有阻塞，而是阻塞不发生在后续回调的流程，而会发生在NodeJS本身对逻辑的计算和处理。我们已经知道，NodeJS的分发能力无比强大，可以循环事件进行异步回调。但如果在循环事件时遇到复杂的逻辑运算，那么单薄的单线程怎么支撑得起上百万的逻辑+并发呢？NodeJS它的所有I/O、网络通信等比较耗时的操作，都可以交给worker threads执行再回调，所以很快。但CPU的正常操作，它就只能自己抗了。</p>
+<h2 id="NodeJS的应用场景"><a href="#NodeJS的应用场景" class="headerlink" title="NodeJS的应用场景"></a>NodeJS的应用场景</h2><p>既然NodeJS处理并发的能力强，但处理计算和逻辑的能力反而很弱，因此，如果我们把复杂的逻辑运算都搬到前端（客户端）完成，而NodeJS只需要提供异步I/O，这样就可以实现对高并发的高性能处理。情况就很多啦，比如：RESTFUL API、实时聊天、客户端逻辑强大的单页APP，具体的例子比如说：本地化的在线音乐应用，本地化的在线搜索应用，本地化的在线APP等。</p>
+<p>顺便提一下Apache，打压了这么多，给颗甜枣。Apache由于其多线程高并发共享内存地址空间的特性，那就意味着如果服务器足够强大，处理器足够高核，Apache的运作将会非常良好，所以适用于（并发）异步处理相对较少，后台计算量大，后台业务逻辑复杂的应用程序。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
+<span class="post-time">
+    最后更新时间：<time datetime="2017-08-18T08:00:22.216Z" itemprop="dateUpdated">2017-08-18 16:00:22</time>
+</span><br>
 
+
+        
+        原文链接：<a href="/2017/08/18/nodejs应用场景/" target="_blank" rel="external">http://upyang.com/2017/08/18/nodejs应用场景/</a>
+        
     </div>
-    
-  </article>
+    <footer>
+        <a href="http://upyang.com">
+            <img src="/img/me.jpg" alt="途中人">
+            途中人
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
-        
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-21 23:28:51" datetime="2017-07-21T15:28:51.000Z"  itemprop="datePublished">2017-07-21</time>
-
-      
 
 
-    </div>
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/08/18/nodejs应用场景/&title=《从原理上理解NodeJS的适用场景》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/08/18/nodejs应用场景/&title=《从原理上理解NodeJS的适用场景》 — 途中人的博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/08/18/nodejs应用场景/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《从原理上理解NodeJS的适用场景》 — 途中人的博客&url=http://upyang.com/2017/08/18/nodejs应用场景/&via=http://upyang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/08/18/nodejs应用场景/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/21/Vue学习/">Vue2.0仿掘金App(总结)</a>
-    </h3>
-  
 
 
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
-
-    </div>
-    
-  </article>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
-        
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-21 17:56:15" datetime="2017-07-21T09:56:15.000Z"  itemprop="datePublished">2017-07-21</time>
-
-      
 
 
+        </div>
     </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/07/js责任链模式/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">js责任链</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
     
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/21/Vue-juejin-App/">Vue2.0掘金App</a>
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2138244"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
     </h3>
-  
-
-
-
-    
-    <div class="post-footer">
+    <div class="reward-content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
         
-
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-07-18 19:02:20" datetime="2017-07-18T11:02:20.000Z"  itemprop="datePublished">2017-07-18</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/07/18/Vue-music/">Vue2.0移动端音乐App</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue2-0/">Vue2.0</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
             </div>
+        </label>
         
-    
+    </div>
 </div>
 
+
+
+</div>
 
         <!-- <footer class="footer">
     <div class="top">
@@ -434,7 +447,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/tags/Vue2-0/&title=途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://upyang.com/2017/08/18/nodejs应用场景/&title=《从原理上理解NodeJS的适用场景》 — 途中人的博客&pic=http://upyang.com/img/me.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -444,22 +457,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/tags/Vue2-0/&title=途中人的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://upyang.com/2017/08/18/nodejs应用场景/&title=《从原理上理解NodeJS的适用场景》 — 途中人的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/tags/Vue2-0/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://upyang.com/2017/08/18/nodejs应用场景/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=途中人的博客&url=http://upyang.com/tags/Vue2-0/&via=http://upyang.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《从原理上理解NodeJS的适用场景》 — 途中人的博客&url=http://upyang.com/2017/08/18/nodejs应用场景/&via=http://upyang.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/tags/Vue2-0/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://upyang.com/2017/08/18/nodejs应用场景/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -470,7 +483,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3awa7CMAwEQP7/p3nSu6Km3iR1QJqeqhJgelnFdl6v8vX+vz7v69/6fF7/nfjCxcVd5r6H15h7tbKyfvz88pVwcXEbuZXw+lw596rjNTc2XFzcL+Oma+bCERcX97e443KlXiAdy11cXNyQWwmdFJ22WjbXari4uAvclYbprvum/i4uLu7yVGKuuZlumIJ/x8XFbeGO2xnp0DRtdtQHMDcIXFzcrdx68yJ4++EvzO1kcHFxO7lpDKUHKeZapTdPcHFxH+aujD9XIm9uG4SLi3uKO1fejI9t1YNvfIADFxe3k5vOLCqFSp0eZBQuLm4jd+/MNq29gn/ExcU9yq1saHZtg+oxh4uL28NNWxtp6bLSNMHFxT3FnYuVtPipx+JNewUXF7eFu3IM67nSqDRQwcXFfYy7UpYEI5Cw/XEZbbi4uI3cenitH65K4w8XF/cUt37VR6RpSJVeAxcXt4U7V7TUQyql1z/FxcV9mlsPr2Ays9xsvYw5XFzcRu7cQCU9djlX/AR9XFxc3HZupSWaljRpyYSLi/ud3PRw1Up7ZUOQ4eLiLnDTI5v1gie939YWwcXFbWyY1gchc9sdXFzco9w/0TbnHgBLevQAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aQW4DIQwF0N7/0qnUbZSZb5tUGnisolELPBYWtvn5icfrb1x/f//9aeTzLB4YGBiPZSRLvk+dbDrf6PW60XFgYGAcwOgF0+Q4rmPj9fdkbxgYGBjXATHZRDWgY2BgYMwDbi/FrSa9GBgYGL0ktpri5sntgrIdBgbG1oxqY+A/f3+xv4GBgfEQxmvRyGeuFt2i1TEwMLZmXE/Xi3ir/itPaDEwMM5hVFPKURG/eAGNjgADA2NTRrVwn29i8qV8BBgYGMczqoX7vFVw/T1PdzEwME5jVK+ANwsUL4LVRmb01gMDA+PhjLwQX12+F8rzw71pDGBgYGzEmBfC8qS31/7EwMDAyMthvWdbeeJabYLe3HAxMDC2Y+Rb7yWZq44met2GgYFxAGNtWMw3nae+UcDFwMDYlJFvsRpq52H95gqLgYGxNaNaGsuvdKMA2hsYGBhbM6qT9gJotRVafV6GgYFxGiMPvpOWZ/W6mbAxMDB2ZeRPwaop7qSpmQd6DAyMcxjVa2J+7cuP7NUaGBgYJzCqjcY8EU3Cd68huqBfioGB8RDGKLSNw2u1SPfxEDEwMLZmTDqD+TLfaHP2gjUGBsZzGb1HFdW/6T0XKwRcDAyMAxjVF1ajIn7rencDw8DAwChe16rJcBJ2o3ohBgbG8Yz8S3W7k7YoBgbGOYz5M4h5qa7XEMXAwDiBMX+pMXkWNmkJjPobGBgYz2D8AkVg+gjVjpI2AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -478,7 +491,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 </script>
