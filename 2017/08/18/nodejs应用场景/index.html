@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
 <meta property="og:image" content="http://oszamq4pp.bkt.clouddn.com/17-8-18/77817316.jpg">
-<meta property="og:updated_time" content="2017-08-18T08:51:55.738Z">
+<meta property="og:updated_time" content="2017-08-18T12:35:10.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从原理上理解NodeJS的适用场景">
 <meta name="twitter:description" content="概述NodeJS宣称其目标是“旨在提供一种简单的构建可伸缩网络程序的方法”，那么它的出现是为了解决什么问题呢，它有什么优缺点以及它适用于什么场景呢？ NodeJS的特点1. 它是一个Javascript运行环境  2. 依赖于Chrome V8引擎进行代码解释  3. 事件驱动  4. 非阻塞I/O  5. 轻量、可伸缩，适于实时数据交互应用  6. 单进程，单线程 Apache的多线程高并发模式">
@@ -217,7 +217,6 @@
 <p>看到这里，你不禁会惊叹，NodeJS如果所有处理都异步，岂不是晓得飞了？错错错！当然不是，不要忘记，NodeJS实现这些的基础是单线程。没错，单线程！一条线程扛起所有操作！</p>
 <p>你可以想象一下，NodeJS在寒风中面对着10万并发大军，OK，没问题，上来敌人一个扔到城里，上来一个又扔到城里。城里全民皆兵，可以很好地消化这些敌人。但如果上来一个类似于张飞赵云这样的人物，老Node心里一惨，和张飞大战300回合，把他打残了，再扔到城里。那后面的10万大军就得等这300回合。<br>所以这说明什么？说明NodeJS不是没有阻塞，而是阻塞不发生在后续回调的流程，而会发生在NodeJS本身对逻辑的计算和处理。我们已经知道，NodeJS的分发能力无比强大，可以循环事件进行异步回调。但如果在循环事件时遇到复杂的逻辑运算，那么单薄的单线程怎么支撑得起上百万的逻辑+并发呢？NodeJS它的所有I/O、网络通信等比较耗时的操作，都可以交给worker threads执行再回调，所以很快。但CPU的正常操作，它就只能自己抗了。</p>
 <h2 id="NodeJS的应用场景"><a href="#NodeJS的应用场景" class="headerlink" title="NodeJS的应用场景"></a>NodeJS的应用场景</h2><p>既然NodeJS处理并发的能力强，但处理计算和逻辑的能力反而很弱，因此，如果我们把复杂的逻辑运算都搬到前端（客户端）完成，而NodeJS只需要提供异步I/O，这样就可以实现对高并发的高性能处理。情况就很多啦，比如：RESTFUL API、实时聊天、客户端逻辑强大的单页APP，具体的例子比如说：本地化的在线音乐应用，本地化的在线搜索应用，本地化的在线APP等。</p>
-<p>顺便提一下Apache，打压了这么多，给颗甜枣。Apache由于其多线程高并发共享内存地址空间的特性，那就意味着如果服务器足够强大，处理器足够高核，Apache的运作将会非常良好，所以适用于（并发）异步处理相对较少，后台计算量大，后台业务逻辑复杂的应用程序。</p>
 
         </div>
 
@@ -225,7 +224,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-18T08:51:55.738Z" itemprop="dateUpdated">2017-08-18 16:51:55</time>
+    最后更新时间：<time datetime="2017-08-18T12:35:10.780Z" itemprop="dateUpdated">2017-08-18 20:35:10</time>
 </span><br>
 
 
