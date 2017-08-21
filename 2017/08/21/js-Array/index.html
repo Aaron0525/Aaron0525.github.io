@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="javascript">
-    <meta name="description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=0;i&amp;lt">
+    <meta name="description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789101112var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js数组操作练习">
 <meta property="og:url" content="http://upyang.com/2017/08/21/js-Array/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=0;i&amp;lt">
-<meta property="og:updated_time" content="2017-08-21T14:38:39.048Z">
+<meta property="og:description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789101112var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=">
+<meta property="og:updated_time" content="2017-08-21T15:17:30.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js数组操作练习">
-<meta name="twitter:description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=0;i&amp;lt">
+<meta name="twitter:description" content="用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。 123456789101112var Array = [];function getRandom(start,end) &amp;#123;    var temp = end - start + 1;    return Math.floor(Math.Random()*temp + start);&amp;#125;for(let i=">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -177,7 +177,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <ul>
 <li><p>用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var Array = [];</div><div class="line">function getRandom(start,end) &#123;</div><div class="line">    var temp = end - start + 1;</div><div class="line">    return Math.floor(Math.Random()*temp + start);</div><div class="line">&#125;</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    Array.push(getRandom(10,100));</div><div class="line">&#125;</div><div class="line">Array.sort();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Array = [];</div><div class="line">function getRandom(start,end) &#123;</div><div class="line">    var temp = end - start + 1;</div><div class="line">    return Math.floor(Math.Random()*temp + start);</div><div class="line">&#125;</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    Array.push(getRandom(10,100));</div><div class="line">&#125;</div><div class="line">Array.sort(); //正序</div><div class="line">Array.sort(function(a,b) &#123;</div><div class="line">    return b-a</div><div class="line">&#125;)  //倒序，重写下sort函数</div></pre></td></tr></table></figure>
 </li>
 <li><p>把两个数组合并，并删除第二个元素。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var temp1 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">var temp2 = [&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</div><div class="line">var Array = temp1.concat(temp2);</div><div class="line">Array.splice(1,1);</div><div class="line">console.log(Array);</div></pre></td></tr></table></figure>
@@ -195,7 +195,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-21T14:38:39.048Z" itemprop="dateUpdated">2017-08-21 22:38:39</time>
+    最后更新时间：<time datetime="2017-08-21T15:17:30.296Z" itemprop="dateUpdated">2017-08-21 23:17:30</time>
 </span><br>
 
 
