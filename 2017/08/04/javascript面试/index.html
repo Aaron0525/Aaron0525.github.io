@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://upyang.com/2017/08/04/javascript面试/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="原型、继承123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function () &amp;#123;">
-<meta property="og:updated_time" content="2017-08-21T09:29:29.346Z">
+<meta property="og:updated_time" content="2017-08-21T14:27:11.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript面试">
 <meta name="twitter:description" content="原型、继承123456789101112131415161718192021222324252627282930function Parent() &amp;#123;    this.a = 1;    this.b = [1, 2, this.a];    this.c = &amp;#123; demo: 5 &amp;#125;;    this.show = function () &amp;#123;">
@@ -159,7 +159,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原型、继承"><span class="post-toc-number">1.</span> <span class="post-toc-text">原型、继承</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组"><span class="post-toc-number">2.</span> <span class="post-toc-text">数组</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原型、继承"><span class="post-toc-number">1.</span> <span class="post-toc-text">原型、继承</span></a></li></ol>
         </nav>
     </aside>
     
@@ -195,16 +195,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
-<li><p>用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var Array = [];</div><div class="line"></div><div class="line">function getRandom(start,end) &#123;</div><div class="line">    var temp = end - start + 1;</div><div class="line">    return Math.floor(Math.Random()*temp + start);</div><div class="line">&#125;</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    Array.push(getRandom(10,100));</div><div class="line">&#125;</div><div class="line">Array.sort();</div></pre></td></tr></table></figure>
-</li>
-<li><p>把两个数组合并，并删除第二个元素。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var temp1 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</div><div class="line">var temp2 = [&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</div><div class="line"></div><div class="line">var Array = temp1.concat(temp2);</div><div class="line"></div><div class="line">Array.splice(1,1);</div><div class="line">console.log(Array);</div></pre></td></tr></table></figure>
-</li>
-<li><p>有这样一个URL：<a href="http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′" target="_blank" rel="external">http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′</a>, b:’2′, c:”, d:’xxx’, e:undefined}。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function serilizeUrl(url) &#123;</div><div class="line">     var result = &#123;&#125;;</div><div class="line">     url = url.split(&quot;?&quot;)[1]; //问号处分割字符串并得到后半部分(前半部分索引为0，后半部分索引为1)</div><div class="line"></div><div class="line">     var map = url.split(&quot;&amp;&quot;); //&amp;前后分割开并返回一个数组</div><div class="line"></div><div class="line">     for(var i = 0, len = map.length; i &lt; len; i++) &#123;</div><div class="line">         result[map[i].split(&quot;=&quot;)[0]] = map[i].split(&quot;=&quot;)[1];</div><div class="line">     &#125;</div><div class="line">     return result;</div><div class="line">     console.log(result);</div><div class="line">&#125;</div><div class="line"></div><div class="line">serilizeUrl(&apos;http://item.taobao.com/item.htm?a=1&amp;b=2&amp;c=&amp;d=xxx&amp;e&apos;);</div></pre></td></tr></table></figure></li>
-</ul>
 
         </div>
 
@@ -212,7 +202,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-21T09:29:29.346Z" itemprop="dateUpdated">2017-08-21 17:29:29</time>
+    最后更新时间：<time datetime="2017-08-21T14:27:11.546Z" itemprop="dateUpdated">2017-08-21 22:27:11</time>
 </span><br>
 
 
