@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-21T15:17:30.296Z</updated>
+  <updated>2017-08-22T01:38:16.223Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -16,13 +16,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>js数组操作练习</title>
+    <title>js数组操作</title>
     <link href="http://upyang.com/2017/08/21/js-Array/"/>
     <id>http://upyang.com/2017/08/21/js-Array/</id>
     <published>2017-08-21T14:22:37.000Z</published>
-    <updated>2017-08-21T15:17:30.296Z</updated>
+    <updated>2017-08-22T01:38:16.223Z</updated>
     
-    <content type="html"><![CDATA[<ul>
+    <content type="html"><![CDATA[<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><p>用于在单个的 版两种存储多个值。</p>
+<h2 id="创建Array对象的语法"><a href="#创建Array对象的语法" class="headerlink" title="创建Array对象的语法"></a>创建Array对象的语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Array();</div><div class="line">new Array(size);</div><div class="line">new Array(element0, element1,....., elementn);</div></pre></td></tr></table></figure>
+<h2 id="Array对象方法"><a href="#Array对象方法" class="headerlink" title="Array对象方法"></a>Array对象方法</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-8-22/80555687.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="操作练习"><a href="#操作练习" class="headerlink" title="操作练习"></a>操作练习</h2><ul>
 <li><p>用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Array = [];</div><div class="line">function getRandom(start,end) &#123;</div><div class="line">    var temp = end - start + 1;</div><div class="line">    return Math.floor(Math.Random()*temp + start);</div><div class="line">&#125;</div><div class="line">for(let i=0;i&lt;10;i++) &#123;</div><div class="line">    Array.push(getRandom(10,100));</div><div class="line">&#125;</div><div class="line">Array.sort(); //正序</div><div class="line">Array.sort(function(a,b) &#123;</div><div class="line">    return b-a</div><div class="line">&#125;)  //倒序，重写下sort函数</div></pre></td></tr></table></figure>
 </li>
@@ -39,9 +48,8 @@
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;用js实现随机选取10–100之间的10个数字，存入一个数组，并排序。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/
+      &lt;h2 id=&quot;Array对象&quot;&gt;&lt;a href=&quot;#Array对象&quot; class=&quot;headerlink&quot; title=&quot;Array对象&quot;&gt;&lt;/a&gt;Array对象&lt;/h2&gt;&lt;p&gt;用于在单个的 版两种存储多个值。&lt;/p&gt;
+&lt;h2 id=&quot;创建Array对象的语法&quot;&gt;&lt;a href
     
     </summary>
     
