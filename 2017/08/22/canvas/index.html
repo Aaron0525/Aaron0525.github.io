@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="canvas">
-    <meta name="description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas  👉 演示地址:  http://www.upyang.com/canvas/">
+    <meta name="description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个网页元素。123&amp;lt;canv">
 <meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas倒计时效果">
 <meta property="og:url" content="http://upyang.com/2017/08/22/canvas/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas  👉 演示地址:  http://www.upyang.com/canvas/">
-<meta property="og:updated_time" content="2017-08-22T14:37:29.051Z">
+<meta property="og:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个网页元素。123&amp;lt;canv">
+<meta property="og:updated_time" content="2017-08-22T15:06:36.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas倒计时效果">
-<meta name="twitter:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas  👉 演示地址:  http://www.upyang.com/canvas/">
+<meta name="twitter:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个网页元素。123&amp;lt;canv">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -159,7 +159,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas-倒计时效果"><span class="post-toc-number">1.</span> <span class="post-toc-text">Canvas-倒计时效果</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas-倒计时效果"><span class="post-toc-number">1.</span> <span class="post-toc-text">Canvas-倒计时效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas概述"><span class="post-toc-number">2.</span> <span class="post-toc-text">Canvas概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绘图方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">绘图方法</span></a></li></ol>
         </nav>
     </aside>
     
@@ -182,17 +182,21 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><pre><code>👉 github：  https://github.com/Aaron0525/canvas
-
-👉 演示地址:  http://www.upyang.com/canvas/
-</code></pre>
+            <h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><p>👉 github：  <a href="https://github.com/Aaron0525/canvas" target="_blank" rel="external">https://github.com/Aaron0525/canvas</a></p>
+<p>👉 演示地址:  <a href="http://www.upyang.com/canvas/" target="_blank" rel="external">http://www.upyang.com/canvas/</a></p>
+<h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。</p>
+<p>使用前，首先需要新建一个<canvas>网页元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</div><div class="line">  您的浏览器不支持canvas！</div><div class="line">&lt;/canvas&gt;</div></pre></td></tr></table></figure></canvas></p>
+<p>上面代码中，如果浏览器不支持这个API，则就会显示<canvas>标签中间的文字——“您的浏览器不支持canvas！”。</canvas></p>
+<p>每个canvas节点都有一个对应的context对象（上下文对象），Canvas API定义在这个context对象上面，所以需要获取这个对象，方法是使用getContext方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&apos;myCanvas&apos;);</div><div class="line"></div><div class="line">if (canvas.getContext) &#123;</div><div class="line">  var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面代码中，getContext方法指定参数2d，表示该canvas节点用于生成2D图案（即平面图案）。如果参数是webgl，就表示用于生成3D图像（即立体图案），这部分实际上单独叫做WebGL API（本文不涉及）。</p>
+<h2 id="绘图方法"><a href="#绘图方法" class="headerlink" title="绘图方法"></a>绘图方法</h2>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-22T14:37:29.051Z" itemprop="dateUpdated">2017-08-22 22:37:29</time>
+    最后更新时间：<time datetime="2017-08-22T15:06:36.795Z" itemprop="dateUpdated">2017-08-22 23:06:36</time>
 </span><br>
 
 
