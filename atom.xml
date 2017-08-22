@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-22T15:06:36.795Z</updated>
+  <updated>2017-08-22T15:12:09.477Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://upyang.com/2017/08/22/canvas/"/>
     <id>http://upyang.com/2017/08/22/canvas/</id>
     <published>2017-08-22T09:49:26.000Z</published>
-    <updated>2017-08-22T15:06:36.795Z</updated>
+    <updated>2017-08-22T15:12:09.477Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><p>👉 github：  <a href="https://github.com/Aaron0525/canvas" target="_blank" rel="external">https://github.com/Aaron0525/canvas</a></p>
 <p>👉 演示地址:  <a href="http://www.upyang.com/canvas/" target="_blank" rel="external">http://www.upyang.com/canvas/</a></p>
 <h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。</p>
-<p>使用前，首先需要新建一个<canvas>网页元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</div><div class="line">  您的浏览器不支持canvas！</div><div class="line">&lt;/canvas&gt;</div></pre></td></tr></table></figure></canvas></p>
-<p>上面代码中，如果浏览器不支持这个API，则就会显示<canvas>标签中间的文字——“您的浏览器不支持canvas！”。</canvas></p>
+<p>使用前，首先需要新建一个<code>&lt;canvas&gt;</code>网页元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</div><div class="line">  您的浏览器不支持canvas！</div><div class="line">&lt;/canvas&gt;</div></pre></td></tr></table></figure></p>
+<p>上面代码中，如果浏览器不支持这个API，则就会显示<code>&lt;canvas&gt;</code>标签中间的文字——“您的浏览器不支持canvas！”。</p>
 <p>每个canvas节点都有一个对应的context对象（上下文对象），Canvas API定义在这个context对象上面，所以需要获取这个对象，方法是使用getContext方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&apos;myCanvas&apos;);</div><div class="line"></div><div class="line">if (canvas.getContext) &#123;</div><div class="line">  var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>上面代码中，getContext方法指定参数2d，表示该canvas节点用于生成2D图案（即平面图案）。如果参数是webgl，就表示用于生成3D图像（即立体图案），这部分实际上单独叫做WebGL API（本文不涉及）。</p>
 <h2 id="绘图方法"><a href="#绘图方法" class="headerlink" title="绘图方法"></a>绘图方法</h2>]]></content>
