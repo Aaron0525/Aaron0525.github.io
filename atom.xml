@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-24T02:48:57.288Z</updated>
+  <updated>2017-08-24T03:03:10.728Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/08/22/canvas/"/>
     <id>http://upyang.com/2017/08/22/canvas/</id>
     <published>2017-08-22T09:49:26.000Z</published>
-    <updated>2017-08-24T02:48:57.288Z</updated>
+    <updated>2017-08-24T03:03:10.728Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><p>👉 github：  <a href="https://github.com/Aaron0525/canvas" target="_blank" rel="external">https://github.com/Aaron0525/canvas</a></p>
 <p>👉 演示地址:  <a href="http://www.upyang.com/canvas/" target="_blank" rel="external">http://www.upyang.com/canvas/</a></p>
@@ -902,11 +902,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
+    
       <category term="JavaScript" scheme="http://upyang.com/tags/JavaScript/"/>
     
       <category term="Jsonp" scheme="http://upyang.com/tags/Jsonp/"/>
-    
-      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
     
       <category term="CORS" scheme="http://upyang.com/tags/CORS/"/>
     
