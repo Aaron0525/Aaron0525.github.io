@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-23T02:10:16.641Z</updated>
+  <updated>2017-08-24T02:48:57.288Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://upyang.com/2017/08/22/canvas/"/>
     <id>http://upyang.com/2017/08/22/canvas/</id>
     <published>2017-08-22T09:49:26.000Z</published>
-    <updated>2017-08-23T02:10:16.641Z</updated>
+    <updated>2017-08-24T02:48:57.288Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><p>👉 github：  <a href="https://github.com/Aaron0525/canvas" target="_blank" rel="external">https://github.com/Aaron0525/canvas</a></p>
 <p>👉 演示地址:  <a href="http://www.upyang.com/canvas/" target="_blank" rel="external">http://www.upyang.com/canvas/</a></p>
-<h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。</p>
+<h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，canvas本身没有绘图能力，需要javascript脚本来执行绘图。</p>
 <p>使用前，首先需要新建一个<code>&lt;canvas&gt;</code>网页元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</div><div class="line">  您的浏览器不支持canvas！</div><div class="line">&lt;/canvas&gt;</div></pre></td></tr></table></figure></p>
 <p>上面代码中，如果浏览器不支持这个API，则就会显示<code>&lt;canvas&gt;</code>标签中间的文字——“您的浏览器不支持canvas！”。</p>
 <p>每个canvas节点都有一个对应的context对象（上下文对象），Canvas API定义在这个context对象上面，所以需要获取这个对象，方法是使用getContext方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&apos;myCanvas&apos;);</div><div class="line"></div><div class="line">if (canvas.getContext) &#123;</div><div class="line">  var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -36,7 +36,8 @@
 <p>strokeRect方法与fillRect类似，用来绘制空心矩形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.strokeRect(10,10,200,100);</div></pre></td></tr></table></figure></p>
 <p>clearRect方法用来清除某个矩形区域的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.clearRect(100,50,50,50);</div></pre></td></tr></table></figure></p>
 <h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><p>illText(string, x, y) 用来绘制文本，它的三个参数分别为文本内容、起点的x坐标、y坐标。使用之前，需用font设置字体、大小、样式（写法类似与CSS的font属性）。与此类似的还有strokeText方法，用来添加空心字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// 设置字体</div><div class="line">ctx.font = &quot;Bold 20px Arial&quot;;</div><div class="line">// 设置对齐方式</div><div class="line">ctx.textAlign = &quot;left&quot;;</div><div class="line">// 设置填充颜色</div><div class="line">ctx.fillStyle = &quot;#008600&quot;;</div><div class="line">// 设置字体内容，以及在画布上的位置</div><div class="line">ctx.fillText(&quot;Hello!&quot;, 10, 50);</div><div class="line">// 绘制空心字</div><div class="line">ctx.strokeText(&quot;Hello!&quot;, 10, 100);</div></pre></td></tr></table></figure></p>
-<h3 id="fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。"><a href="#fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。" class="headerlink" title="fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。"></a>fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。</h3><p>arc方法用来绘制扇形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);</div></pre></td></tr></table></figure></p>
+<p>fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。</p>
+<h3 id="绘制圆形和扇形"><a href="#绘制圆形和扇形" class="headerlink" title="绘制圆形和扇形"></a>绘制圆形和扇形</h3><p>arc方法用来绘制扇形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);</div></pre></td></tr></table></figure></p>
 <p>arc方法的x和y参数是圆心坐标，radius是半径，startAngle和endAngle则是扇形的起始角度和终止角度（以弧度表示），anticlockwise表示做图时应该逆时针画（true）还是顺时针画（false）。</p>
 <p>下面是如何绘制实心的圆形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(60, 60, 50, 0, Math.PI*2, true);</div><div class="line">ctx.fillStyle = &quot;#000000&quot;;</div><div class="line">ctx.fill();</div></pre></td></tr></table></figure></p>
 <p>绘制空心圆形的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(60, 60, 50, 0, Math.PI*2, true);</div><div class="line">ctx.lineWidth = 1.0;</div><div class="line">ctx.strokeStyle = &quot;#000&quot;;</div><div class="line">ctx.stroke();</div></pre></td></tr></table></figure></p>
@@ -901,11 +902,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
-    
       <category term="JavaScript" scheme="http://upyang.com/tags/JavaScript/"/>
     
       <category term="Jsonp" scheme="http://upyang.com/tags/Jsonp/"/>
+    
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
     
       <category term="CORS" scheme="http://upyang.com/tags/CORS/"/>
     

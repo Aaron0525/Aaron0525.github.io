@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="canvas">
-    <meta name="description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个&amp;lt;canvas&amp;gt;网页">
+    <meta name="description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，canvas本身没有绘图能力，需要javascript脚本来执行绘图。 使用前，首先需要新建一个&amp;lt;can">
 <meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas倒计时效果">
 <meta property="og:url" content="http://upyang.com/2017/08/22/canvas/index.html">
 <meta property="og:site_name" content="途中人的博客">
-<meta property="og:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个&amp;lt;canvas&amp;gt;网页">
-<meta property="og:updated_time" content="2017-08-23T02:10:16.641Z">
+<meta property="og:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，canvas本身没有绘图能力，需要javascript脚本来执行绘图。 使用前，首先需要新建一个&amp;lt;can">
+<meta property="og:updated_time" content="2017-08-24T02:48:57.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas倒计时效果">
-<meta name="twitter:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。 使用前，首先需要新建一个&amp;lt;canvas&amp;gt;网页">
+<meta name="twitter:description" content="Canvas-倒计时效果👉 github：  https://github.com/Aaron0525/canvas 👉 演示地址:  http://www.upyang.com/canvas/ Canvas概述Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，canvas本身没有绘图能力，需要javascript脚本来执行绘图。 使用前，首先需要新建一个&amp;lt;can">
     
         <link rel="alternate" type="application/atom+xml" title="途中人的博客" href="/atom.xml">
     
@@ -159,7 +159,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas-倒计时效果"><span class="post-toc-number">1.</span> <span class="post-toc-text">Canvas-倒计时效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas概述"><span class="post-toc-number">2.</span> <span class="post-toc-text">Canvas概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绘图方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">绘图方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制路径"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">绘制路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制矩形"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">绘制矩形</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制文本"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">绘制文本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置渐变色"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">设置渐变色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置阴影"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">设置阴影</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas-倒计时效果"><span class="post-toc-number">1.</span> <span class="post-toc-text">Canvas-倒计时效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Canvas概述"><span class="post-toc-number">2.</span> <span class="post-toc-text">Canvas概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绘图方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">绘图方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制路径"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">绘制路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制矩形"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">绘制矩形</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制文本"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">绘制文本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制圆形和扇形"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">绘制圆形和扇形</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置渐变色"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">设置渐变色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置阴影"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">设置阴影</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -184,7 +184,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="Canvas-倒计时效果"><a href="#Canvas-倒计时效果" class="headerlink" title="Canvas-倒计时效果"></a>Canvas-倒计时效果</h2><p>👉 github：  <a href="https://github.com/Aaron0525/canvas" target="_blank" rel="external">https://github.com/Aaron0525/canvas</a></p>
 <p>👉 演示地址:  <a href="http://www.upyang.com/canvas/" target="_blank" rel="external">http://www.upyang.com/canvas/</a></p>
-<h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，基本上它是一个可以用JavaScript操作的位图。</p>
+<h2 id="Canvas概述"><a href="#Canvas概述" class="headerlink" title="Canvas概述"></a>Canvas概述</h2><p>Canvas API（画布）用于在网页实时生成图像，并且可以操作图像内容，canvas本身没有绘图能力，需要javascript脚本来执行绘图。</p>
 <p>使用前，首先需要新建一个<code>&lt;canvas&gt;</code>网页元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;myCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</div><div class="line">  您的浏览器不支持canvas！</div><div class="line">&lt;/canvas&gt;</div></pre></td></tr></table></figure></p>
 <p>上面代码中，如果浏览器不支持这个API，则就会显示<code>&lt;canvas&gt;</code>标签中间的文字——“您的浏览器不支持canvas！”。</p>
 <p>每个canvas节点都有一个对应的context对象（上下文对象），Canvas API定义在这个context对象上面，所以需要获取这个对象，方法是使用getContext方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&apos;myCanvas&apos;);</div><div class="line"></div><div class="line">if (canvas.getContext) &#123;</div><div class="line">  var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -196,7 +196,8 @@
 <p>strokeRect方法与fillRect类似，用来绘制空心矩形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.strokeRect(10,10,200,100);</div></pre></td></tr></table></figure></p>
 <p>clearRect方法用来清除某个矩形区域的内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.clearRect(100,50,50,50);</div></pre></td></tr></table></figure></p>
 <h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><p>illText(string, x, y) 用来绘制文本，它的三个参数分别为文本内容、起点的x坐标、y坐标。使用之前，需用font设置字体、大小、样式（写法类似与CSS的font属性）。与此类似的还有strokeText方法，用来添加空心字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// 设置字体</div><div class="line">ctx.font = &quot;Bold 20px Arial&quot;;</div><div class="line">// 设置对齐方式</div><div class="line">ctx.textAlign = &quot;left&quot;;</div><div class="line">// 设置填充颜色</div><div class="line">ctx.fillStyle = &quot;#008600&quot;;</div><div class="line">// 设置字体内容，以及在画布上的位置</div><div class="line">ctx.fillText(&quot;Hello!&quot;, 10, 50);</div><div class="line">// 绘制空心字</div><div class="line">ctx.strokeText(&quot;Hello!&quot;, 10, 100);</div></pre></td></tr></table></figure></p>
-<h3 id="fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。"><a href="#fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。" class="headerlink" title="fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。"></a>fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。</h3><p>arc方法用来绘制扇形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);</div></pre></td></tr></table></figure></p>
+<p>fillText方法不支持文本断行，即所有文本出现在一行内。所以，如果要生成多行文本，只有调用多次fillText方法。</p>
+<h3 id="绘制圆形和扇形"><a href="#绘制圆形和扇形" class="headerlink" title="绘制圆形和扇形"></a>绘制圆形和扇形</h3><p>arc方法用来绘制扇形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);</div></pre></td></tr></table></figure></p>
 <p>arc方法的x和y参数是圆心坐标，radius是半径，startAngle和endAngle则是扇形的起始角度和终止角度（以弧度表示），anticlockwise表示做图时应该逆时针画（true）还是顺时针画（false）。</p>
 <p>下面是如何绘制实心的圆形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(60, 60, 50, 0, Math.PI*2, true);</div><div class="line">ctx.fillStyle = &quot;#000000&quot;;</div><div class="line">ctx.fill();</div></pre></td></tr></table></figure></p>
 <p>绘制空心圆形的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(60, 60, 50, 0, Math.PI*2, true);</div><div class="line">ctx.lineWidth = 1.0;</div><div class="line">ctx.strokeStyle = &quot;#000&quot;;</div><div class="line">ctx.stroke();</div></pre></td></tr></table></figure></p>
@@ -211,7 +212,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-23T02:10:16.641Z" itemprop="dateUpdated">2017-08-23 10:10:16</time>
+    最后更新时间：<time datetime="2017-08-24T02:48:57.288Z" itemprop="dateUpdated">2017-08-24 10:48:57</time>
 </span><br>
 
 
