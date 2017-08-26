@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://upyang.com/2017/08/26/算法与数据结构/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="js排序算法插入排序 原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。 平均时间复杂度：O(n^2) 最好情况： O(n),数组从小到大已经排好 最坏情况： O(n^2),数组是从大到小的顺序 稳定性： 稳定123456789101112131415function InsertSort(arr) &amp;#123;        var result = arr.sli">
-<meta property="og:updated_time" content="2017-08-26T13:29:50.547Z">
+<meta property="og:updated_time" content="2017-08-26T14:18:49.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法与数据结构">
 <meta name="twitter:description" content="js排序算法插入排序 原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。 平均时间复杂度：O(n^2) 最好情况： O(n),数组从小到大已经排好 最坏情况： O(n^2),数组是从大到小的顺序 稳定性： 稳定123456789101112131415function InsertSort(arr) &amp;#123;        var result = arr.sli">
@@ -211,7 +211,7 @@
 <li>平均时间复杂度：O(n^2)</li>
 <li>最好情况： O(n^2)</li>
 <li>最坏情况： O(n^2)</li>
-<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function SelectSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    for(let i=0;i&lt;len;i++) &#123; //遍历数组的每一个值，并于其后的值比较找出最小值之后互换</div><div class="line">        let k=i;</div><div class="line">        for(let j=i+1;j&lt;len;j++) &#123;</div><div class="line">            if(arr[j]&lt;arr[k]) &#123;</div><div class="line">                k=j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if(k!=i) &#123;  //如果arr[i]已经是最小的则不需要互换</div><div class="line">            var temp=arr[k];</div><div class="line">            arr[k]=arr[i];</div><div class="line">            arr[i]=temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">        return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ul>
 
         </div>
@@ -220,7 +220,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-26T13:29:50.547Z" itemprop="dateUpdated">2017-08-26 21:29:50</time>
+    最后更新时间：<time datetime="2017-08-26T14:18:49.331Z" itemprop="dateUpdated">2017-08-26 22:18:49</time>
 </span><br>
 
 
