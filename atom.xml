@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-26T13:16:33.114Z</updated>
+  <updated>2017-08-26T13:29:50.547Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/08/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://upyang.com/2017/08/26/算法与数据结构/</id>
     <published>2017-08-26T12:01:51.000Z</published>
-    <updated>2017-08-26T13:16:33.114Z</updated>
+    <updated>2017-08-26T13:29:50.547Z</updated>
     
     <content type="html"><![CDATA[<h2 id="js排序算法"><a href="#js排序算法" class="headerlink" title="js排序算法"></a>js排序算法</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
 <li>原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。</li>
@@ -63,8 +63,6 @@
     
     
       <category term="javascript" scheme="http://upyang.com/tags/javascript/"/>
-    
-      <category term="算法" scheme="http://upyang.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
