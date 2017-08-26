@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://upyang.com/2017/08/26/算法与数据结构/index.html">
 <meta property="og:site_name" content="途中人的博客">
 <meta property="og:description" content="js排序算法插入排序 原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。 平均时间复杂度：O(n^2) 最好情况： O(n),数组从小到大已经排好 最坏情况： O(n^2),数组是从大到小的顺序 稳定性： 稳定123456789101112131415function InsertSort(arr) &amp;#123;        var result = arr.sli">
-<meta property="og:updated_time" content="2017-08-26T14:28:15.756Z">
+<meta property="og:updated_time" content="2017-08-26T15:23:25.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法与数据结构">
 <meta name="twitter:description" content="js排序算法插入排序 原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。 平均时间复杂度：O(n^2) 最好情况： O(n),数组从小到大已经排好 最坏情况： O(n^2),数组是从大到小的顺序 稳定性： 稳定123456789101112131415function InsertSort(arr) &amp;#123;        var result = arr.sli">
@@ -159,7 +159,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#js排序算法"><span class="post-toc-number">1.</span> <span class="post-toc-text">js排序算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入排序"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">插入排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#快速排序"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">快速排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">冒泡排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">选择排序</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#js排序算法"><span class="post-toc-number">1.</span> <span class="post-toc-text">js排序算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入排序"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">插入排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#快速排序"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">快速排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">冒泡排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">选择排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#归并排序"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">归并排序</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -211,7 +211,15 @@
 <li>平均时间复杂度：O(n^2)</li>
 <li>最好情况： O(n^2)</li>
 <li>最坏情况： O(n^2)</li>
-<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function SelectSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    for(let i=0;i&lt;len;i++) &#123; //遍历数组的每一个值，并于其后的值比较找出最小值之后互换</div><div class="line">        let k=i;</div><div class="line">        for(let j=i+1;j&lt;len;j++) &#123;</div><div class="line">            if(arr[j]&lt;arr[k]) &#123;</div><div class="line">                k=j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if(k!=i) &#123;  //如果arr[i]已经是最小的则不需要互换</div><div class="line">            var temp=arr[k];</div><div class="line">            arr[k]=arr[i];</div><div class="line">            arr[i]=temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function SelectSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    for(let i=0;i&lt;len;i++) &#123; //遍历数组的每一个值，并于其后的值比较找出最小值之后互换</div><div class="line">        let k=i;</div><div class="line">        for(let j=i+1;j&lt;len;j++) &#123;</div><div class="line">            if(arr[j]&lt;arr[k]) &#123;</div><div class="line">                k=j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if(k!=i) &#123;  //如果arr[i]已经是最小的则不需要互换</div><div class="line">            var temp=arr[k];</div><div class="line">            arr[k]=arr[i];</div><div class="line">            arr[i]=temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
+<li>原理：基本思想是分治策略，先进行划分再进行合并，归并的含义是将两个或两个以上的有序表组合成一个新的有序表。</li>
+<li>平均时间复杂度：O(nlogn)</li>
+<li>最好情况： O(nlogn)</li>
+<li>最坏情况： O(nlogn)</li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function MergeSort(arr) &#123;</div><div class="line">        var len = arr.length;</div><div class="line">        if(len &gt; 1) &#123;</div><div class="line">            var index = Math.floor(len / 2);</div><div class="line">            left = arr.slice(0,index); //得到下标从0~index-1的数组</div><div class="line">            right = arr.slice(index);  //得到下标从index开始到末尾的数组</div><div class="line">            return merge(mergeSort(left) , mergeSort(right));  里面采用递归</div><div class="line">        &#125;else &#123;</div><div class="line">            return arr;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    function merge(left , right) &#123;   //该函数与快排类似，但是仔细发现，每次left或者right都是要shift掉第一个元素，表示left或者right是会变化的，最后arr.concat，因为不知道left或者right其中一个哪个剩下元素，所以要将剩下的元素给加上</div><div class="line">        var arr = [];</div><div class="line">        while(left.length &amp;&amp; right.length) &#123;</div><div class="line">            if(left[0] &lt; right[0]) &#123;</div><div class="line">                arr.push(left.shift());</div><div class="line">            &#125;else &#123;</div><div class="line">                arr.push(right.shift())</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return arr.concat(left , right);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></li>
 </ul>
 
         </div>
@@ -220,7 +228,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-26T14:28:15.756Z" itemprop="dateUpdated">2017-08-26 22:28:15</time>
+    最后更新时间：<time datetime="2017-08-26T15:23:25.157Z" itemprop="dateUpdated">2017-08-26 23:23:25</time>
 </span><br>
 
 
