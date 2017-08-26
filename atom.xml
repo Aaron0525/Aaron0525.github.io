@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-24T03:33:11.377Z</updated>
+  <updated>2017-08-26T13:09:19.374Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法与数据结构</title>
+    <link href="http://upyang.com/2017/08/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://upyang.com/2017/08/26/算法与数据结构/</id>
+    <published>2017-08-26T12:01:51.000Z</published>
+    <updated>2017-08-26T13:09:19.374Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="js排序算法"><a href="#js排序算法" class="headerlink" title="js排序算法"></a>js排序算法</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li>原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。</li>
+<li>平均时间复杂度：O(n^2)</li>
+<li>最好情况： O(n),数组从小到大已经排好</li>
+<li>最坏情况： O(n^2),数组是从大到小的顺序</li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function InsertSort(arr) &#123;</div><div class="line">        var result = arr.slice(0); //复制一个arr数组的副本</div><div class="line"></div><div class="line">        //从数组的第二个元素开始比较，所以从i=1开始</div><div class="line">        for(let i=1;i&lt;=arr.length;i++) &#123;</div><div class="line">            var temp = result[i];</div><div class="line">            var j = i-1;</div><div class="line">            while(j &gt;= 0 &amp;&amp; temp&lt;result[j]) &#123;</div><div class="line">                result[j+1] =result[j];</div><div class="line">                j--;</div><div class="line">            &#125;</div><div class="line">            result[j+1]=temp;</div><div class="line">        &#125;</div><div class="line">        return result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
+<li>原理：从数组中取一个值为基准值，并将剩下的值与之比较，小于基准值的放到左边，大于基准值的放到右边，并再次对左右两边进行快速排序，直至左右两边只剩一个元素。</li>
+<li>平均时间复杂度：O(nlogn)</li>
+<li>最好情况： O(nlogn)</li>
+<li>最坏情况： O(n^2) 当选择的基准值为最大值或最小值时</li>
+<li>稳定性： 不稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function QuickSort(arr) &#123;</div><div class="line">        var len = arr.length;</div><div class="line">        if(len&lt;+1) &#123;</div><div class="line">            return arr;</div><div class="line">        &#125;</div><div class="line">        //向下取整，取出数组中间的值作为比较的对象</div><div class="line">        var index = Math.floor(len/2);</div><div class="line">        var temp = arr.splice(index,1)[0]; //删除刚得到的比较对象，取到新数组的第一个元素</div><div class="line">        var left=[];</div><div class="line">        var right=[];</div><div class="line">        for(let i=0;i&lt;len-1;i++) &#123;</div><div class="line">            if(arr[i]&gt;=temp) &#123;</div><div class="line">                right.push(arr[i]);</div><div class="line">            &#125;else&#123;</div><div class="line">                left.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return QuickSort(left).concat([temp],QuickSort(right)); //递归并合并数组</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><ul>
+<li>原理：对数组进行遍历，相邻元素根据大小进行交换，每次遍历将最小值推至最前方，然后对剩下的值再次进行比较。</li>
+<li>平均时间复杂度：O(n^2)</li>
+<li>最好情况： O(n)</li>
+<li>最坏情况： O(n^2)</li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function PopSort(arr) &#123;</div><div class="line">        var len = arr.length;</div><div class="line">        var result = arr.slice(0);//复制一个arr数组的副本</div><div class="line">        for(let i=0;i&lt;len;i++) &#123;</div><div class="line">            for(let j=len-1;j&gt;i;j--) &#123;</div><div class="line">                if(result[j] &lt; result[j-1]) &#123;</div><div class="line">                    let temp =result[j-1];</div><div class="line">                    result[j-1]=result[j];</div><div class="line">                    result[j]=temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
+<li>原理：与冒泡排序类似，只不过选择排序不是通过相邻元素交换而将最小值“冒泡”到顶端，而是从数组第一个元素开始，与后面的的元素进行比较，如果后面的元素都比他大，则不需要交换，如果有比其小的，则两个值相互交换。</li>
+<li>平均时间复杂度：O(n^2)</li>
+<li>最好情况： O(n^2)</li>
+<li>最坏情况： O(n^2)</li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;js排序算法&quot;&gt;&lt;a href=&quot;#js排序算法&quot; class=&quot;headerlink&quot; title=&quot;js排序算法&quot;&gt;&lt;/a&gt;js排序算法&lt;/h2&gt;&lt;h3 id=&quot;插入排序&quot;&gt;&lt;a href=&quot;#插入排序&quot; class=&quot;headerlink&quot; title=&quot;插
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://upyang.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="javascript" scheme="http://upyang.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>canvas倒计时效果</title>
