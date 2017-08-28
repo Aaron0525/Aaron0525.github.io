@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-08-27T13:59:36.740Z</updated>
+  <updated>2017-08-28T15:17:00.833Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/08/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://upyang.com/2017/08/26/算法与数据结构/</id>
     <published>2017-08-26T12:01:51.000Z</published>
-    <updated>2017-08-27T13:59:36.740Z</updated>
+    <updated>2017-08-28T15:17:00.833Z</updated>
     
     <content type="html"><![CDATA[<h2 id="js排序算法"><a href="#js排序算法" class="headerlink" title="js排序算法"></a>js排序算法</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
 <li>原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。</li>
@@ -67,9 +67,10 @@
 <li>平均时间复杂度：O(n*k)</li>
 <li>最好情况： O(n*k)</li>
 <li>最坏情况： O(n*k)</li>
-<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function RadixSort(arr,maxDigit) &#123; //maxDigit位数组元素的最大位数</div><div class="line">    var mod = 10;</div><div class="line">    var dev = 1;</div><div class="line">    var counter = [];</div><div class="line">    for(let i=0;i&lt;maxDigit;i++,dev *= 10,mod *=10) &#123;</div><div class="line">        for(let j=0;j&lt;arr.length;j++) &#123;</div><div class="line">            var bucket = parseInt((arr[j]%mod)/dev);</div><div class="line">            if(counter[bucket]==null) &#123;</div><div class="line">                counter[bucket] = [];</div><div class="line">            &#125;</div><div class="line">            counter[bucket].push(arr[j]);</div><div class="line">        &#125;</div><div class="line">        var pos = 0;</div><div class="line">        for(let j=0;j&lt;counter.length;j++) &#123;</div><div class="line">            var value = null;</div><div class="line">            if(counter[j]!=null) &#123;</div><div class="line">                while((value=counter[j].shift()) != null) &#123;</div><div class="line">                    arr[pos++] = value;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+<li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function RadixSort(arr,maxDigit) &#123; //maxDigit位数组元素的最大位数</div><div class="line">    var mod = 10;</div><div class="line">    var dev = 1;</div><div class="line">    var counter = [];</div><div class="line">    for(let i=0;i&lt;maxDigit;i++,dev *= 10,mod *=10) &#123;</div><div class="line">        for(let j=0;j&lt;arr.length;j++) &#123;</div><div class="line">            var bucket = parseInt((arr[j]%mod)/dev);</div><div class="line">            if(counter[bucket]==null) &#123;</div><div class="line">                counter[bucket] = [];</div><div class="line">            &#125;</div><div class="line">            counter[bucket].push(arr[j]);</div><div class="line">        &#125;</div><div class="line">        var pos = 0;</div><div class="line">        for(let j=0;j&lt;counter.length;j++) &#123;</div><div class="line">            var value = null;</div><div class="line">            if(counter[j]!=null) &#123;</div><div class="line">                while((value=counter[j].shift()) != null) &#123;</div><div class="line">                    arr[pos++] = value;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-]]></content>
+<h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2>]]></content>
     
     <summary type="html">
     
@@ -985,11 +986,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
-    
       <category term="JavaScript" scheme="http://upyang.com/tags/JavaScript/"/>
     
       <category term="Jsonp" scheme="http://upyang.com/tags/Jsonp/"/>
+    
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
     
       <category term="CORS" scheme="http://upyang.com/tags/CORS/"/>
     
