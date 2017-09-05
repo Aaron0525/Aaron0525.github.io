@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-04T09:05:10.472Z</updated>
+  <updated>2017-09-05T13:39:00.348Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/08/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://upyang.com/2017/08/26/算法与数据结构/</id>
     <published>2017-08-26T12:01:51.000Z</published>
-    <updated>2017-09-04T09:05:10.472Z</updated>
+    <updated>2017-09-05T13:39:00.348Z</updated>
     
     <content type="html"><![CDATA[<h2 id="js排序算法"><a href="#js排序算法" class="headerlink" title="js排序算法"></a>js排序算法</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
 <li>原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。</li>
@@ -68,6 +68,14 @@
 <li>最好情况： O(n*k)</li>
 <li>最坏情况： O(n*k)</li>
 <li>稳定性： 稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function RadixSort(arr,maxDigit) &#123; //maxDigit位数组元素的最大位数</div><div class="line">    var mod = 10;</div><div class="line">    var dev = 1;</div><div class="line">    var counter = [];</div><div class="line">    for(let i=0;i&lt;maxDigit;i++,dev *= 10,mod *=10) &#123;</div><div class="line">        for(let j=0;j&lt;arr.length;j++) &#123;</div><div class="line">            var bucket = parseInt((arr[j]%mod)/dev);</div><div class="line">            if(counter[bucket]==null) &#123;</div><div class="line">                counter[bucket] = [];</div><div class="line">            &#125;</div><div class="line">            counter[bucket].push(arr[j]);</div><div class="line">        &#125;</div><div class="line">        var pos = 0;</div><div class="line">        for(let j=0;j&lt;counter.length;j++) &#123;</div><div class="line">            var value = null;</div><div class="line">            if(counter[j]!=null) &#123;</div><div class="line">                while((value=counter[j].shift()) != null) &#123;</div><div class="line">                    arr[pos++] = value;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><ul>
+<li>原理：1.建堆。堆实质上是完全二叉树，必须满足：树中任一非叶子结点的关键字均不大于（或不小于）其左右孩子（若存在）结点的关键字。堆分为：大根堆和小根堆，升序排序采用大根堆，降序排序采用小根堆。如果是大根堆，则通过调整函数将值最大的节点调整至堆根。2.将堆根保存于尾部，并对剩余序列调用调整函数，调整完成后，再将最大跟保存于尾部-1（-1，-2，…，-i），再对剩余序列进行调整，反复进行该过程，直至排序完成。</li>
+<li>平均时间复杂度：O(n*log2n)</li>
+<li>最好情况： O(n*log2n)</li>
+<li>最坏情况： O(n*log2n)</li>
+<li>稳定性： 不稳定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">function headAdjust(elements, pos, len)&#123;</div><div class="line">  //将当前节点值进行保存</div><div class="line">  var swap = elements[pos];</div><div class="line"></div><div class="line">  //定位到当前节点的左边的子节点</div><div class="line">  var child = pos * 2 + 1;</div><div class="line"></div><div class="line">  //递归，直至没有子节点为止</div><div class="line">  while(child &lt; len)&#123;</div><div class="line">    //如果当前节点有右边的子节点，并且右子节点较大的场合，采用右子节点</div><div class="line">    //和当前节点进行比较</div><div class="line">    if(child + 1 &lt; len &amp;&amp; elements[child] &lt; elements[child + 1])&#123;</div><div class="line">      child += 1;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //比较当前节点和最大的子节点，小于则进行值交换，交换后将当前节点定位</div><div class="line">    //于子节点上</div><div class="line">    if(elements[pos] &lt; elements[child])&#123;</div><div class="line">      elements[pos] = elements[child];</div><div class="line">      pos = child;</div><div class="line">      child = pos * 2 + 1;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">      break;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    elements[pos] = swap;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//构建堆</div><div class="line">function buildHeap(elements)&#123;</div><div class="line">  //从最后一个拥有子节点的节点开始，将该节点连同其子节点进行比较，</div><div class="line">  //将最大的数交换与该节点,交换后，再依次向前节点进行相同交换处理，</div><div class="line">  //直至构建出大顶堆（升序为大顶，降序为小顶）</div><div class="line">  for(var i=elements.length/2; i&gt;=0; i--)&#123;</div><div class="line">    headAdjust(elements, i, elements.length);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sort(elements)&#123;</div><div class="line">  //构建堆</div><div class="line">  buildHeap(elements);</div><div class="line"></div><div class="line">  //从数列的尾部开始进行调整</div><div class="line">  for(var i=elements.length-1; i&gt;0; i--)&#123;</div><div class="line">    //堆顶永远是最大元素，故，将堆顶和尾部元素交换，将</div><div class="line">    //最大元素保存于尾部，并且不参与后面的调整</div><div class="line">    var swap = elements[i];</div><div class="line">    elements[i] = elements[0];</div><div class="line">    elements[0] = swap;</div><div class="line"></div><div class="line">    //进行调整，将最大）元素调整至堆顶</div><div class="line">    headAdjust(elements, 0, i);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var elements = [3, 1, 5, 7, 2, 4, 9, 6, 10, 8];</div><div class="line">console.log(&apos;before: &apos; + elements);</div><div class="line">sort(elements);</div><div class="line">console.log(&apos; after: &apos; + elements);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>原理：findInArr函数，查找一个数在当前数组中是否存在，若存在返回true,找完所有没有找到，返回false，这个数就是我们要操作的那个数组。select，循环数组，并调用findInArr方法 查找当前arr[i]在arr2中是否存在，如果返回false 那么就把当前这个数 arr[i] ，push到新的数组 arr2中，最后return arr2。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function findInArr(n,arr) &#123;</div><div class="line">    for(let i=0;i&lt;arr.length;i++) &#123;</div><div class="line">        if(n == arr[i]) &#123;</div><div class="line">            return true;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div><div class="line">function select(arr) &#123;</div><div class="line">    var arr2 = [];</div><div class="line">    for(let i=0;i&lt;arr.length;i++) &#123;</div><div class="line">        if(!findInArr(arr[i],arr2)) &#123;</div><div class="line">            arr2.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr2;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -599,11 +607,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
     
       <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
       <category term="webpack" scheme="http://upyang.com/tags/webpack/"/>
     
@@ -625,11 +633,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
     
       <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -649,11 +657,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
-    
       <category term="Vue2.0" scheme="http://upyang.com/tags/Vue2-0/"/>
     
       <category term="ES6" scheme="http://upyang.com/tags/ES6/"/>
+    
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -826,11 +834,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
-    
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
@@ -906,11 +914,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
+      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
+    
       <category term="ajax" scheme="http://upyang.com/tags/ajax/"/>
     
       <category term="XMLHttpRequest" scheme="http://upyang.com/tags/XMLHttpRequest/"/>
-    
-      <category term="jsonp" scheme="http://upyang.com/tags/jsonp/"/>
     
   </entry>
   
