@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-07T12:58:58.317Z</updated>
+  <updated>2017-09-07T14:42:35.173Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,9 +20,20 @@
     <link href="http://upyang.com/2017/09/07/%E5%89%8D%E7%AB%AF%E8%8A%82%E6%B5%81/"/>
     <id>http://upyang.com/2017/09/07/前端节流/</id>
     <published>2017-09-07T12:19:17.000Z</published>
-    <updated>2017-09-07T12:58:58.317Z</updated>
+    <updated>2017-09-07T14:42:35.173Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="什么是函数节流？"><a href="#什么是函数节流？" class="headerlink" title="什么是函数节流？"></a>什么是函数节流？</h2><p>介绍前，先说下背景。前端开发中，浏览器某些计算和处理比其他的昂贵很多。例如，DOM操作比起非DOM交互需要更多的内存和CPU时间。连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时甚至崩溃。尤其在IE中使用onresize事件处理程序的时候容易发生，当调整浏览器大小的时候，该shij9ian会连续触发。在onresize事件处理程序内部如果尝试进行DOM操作，其高频率的更改可能会让浏览器崩溃。为了绕开这个问题，可以使用定时器对该函数进行节流。<br>函数节流背后的基本思想是指，某些代码不可以在没有间断的情况连续重复执行。第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码。当第二次调用该函数时，它会清除前一次的定时器并设置另一个。如果前一个定时器已经执行过了，这个操作就没有任何意义。然而，如果前一个定时器尚未执行，其实就是将其替换为一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
+    <content type="html"><![CDATA[<h2 id="什么是函数节流？"><a href="#什么是函数节流？" class="headerlink" title="什么是函数节流？"></a>什么是函数节流？</h2><p>介绍前，先说下背景。前端开发中，浏览器某些计算和处理比其他的昂贵很多。例如，DOM操作比起非DOM交互需要更多的内存和CPU时间。连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时甚至崩溃。尤其在IE中使用onresize事件处理程序的时候容易发生，当调整浏览器大小的时候，该shij9ian会连续触发。在onresize事件处理程序内部如果尝试进行DOM操作，其高频率的更改可能会让浏览器崩溃。为了绕开这个问题，可以使用定时器对该函数进行节流。</p>
+<h2 id="函数节流的原理"><a href="#函数节流的原理" class="headerlink" title="函数节流的原理"></a>函数节流的原理</h2><p>函数节流背后的基本思想是指，某些代码不可以在没有间断的情况连续重复执行。第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码。当第二次调用该函数时，它会清除前一次的定时器并设置另一个。如果前一个定时器已经执行过了，这个操作就没有任何意义。然而，如果前一个定时器尚未执行，其实就是将其替换为一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。<br>以下是该模式的基本形式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var processor = &#123;</div><div class="line">    timeoutId: null,</div><div class="line"></div><div class="line">    //实际进行处理的方法</div><div class="line">    performProcessing: function() &#123;</div><div class="line">        //实际执行的代码</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    //初始处理调用的方法</div><div class="line">    process: function() &#123;</div><div class="line">        clearTimeout(this.timeoutId);</div><div class="line"></div><div class="line">        var that = this;</div><div class="line">        this.timeoutId = setTimeout(function() &#123;</div><div class="line">                that.performProcessing();</div><div class="line">            &#125;,100);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">//尝试开始执行</div><div class="line">processor.process();</div></pre></td></tr></table></figure></p>
+<p>在这段代码中，创建了一个叫做processor对象。这个对象还有2个方法：process()和performProcessing()。前者是初始化任何处理所必须调用的，后者则实际进行应完成的处理。当调用了process()，第一步是清除存好的timeoutId,来组织之前的调用被执行。然后，创建一个新的定时器调用performProcessing()。由于setTimeout()中用到的函数的环境总是window,所以有必要保存this的引用一方便以后使用。<br>时间间隔设为了100ms，折表示最后一次调用process()之后至少100ms后才会调用performProcessing()。所以如果100ms之内调用了process()共20次，performProcessing()仍只会被调用一次。</p>
+<h2 id="模式简化"><a href="#模式简化" class="headerlink" title="模式简化"></a>模式简化</h2><p>这个模式可以使用throttle()函数来简化，这个函数可以自动进行定时器的设置和清除，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function throttle(method,context) &#123;</div><div class="line">    clearTimeout(method.tId);</div><div class="line">    method.tId = setTimeout(function() &#123;</div><div class="line">        method.call(context);</div><div class="line">    &#125;,100)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>throttle()函数接受两个参数：要执行的函数以及在哪个作用域中执行。定时器ID是存储在函数的tId属性中的，第一次把方法传递给throttle()的时候，这个属性可能并不存在。接下来，创建一个新的定时器，并将其ID存储在方法的tId属性中。<br>定时器代码使用call()来确保方法在适当的环境中执行。如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>前面提到过，节流在resize事件中是最常用的。例如，假设有一个<code>&lt;div&gt;</code>元素需要保持它的高度适中等同于宽度，实现这一功能的javascript代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">window.onload = function() &#123;</div><div class="line">    var oBox = document.getElementById(&quot;mydiv&quot;);</div><div class="line">    oBox.style.height = oBox.offsetWidth+&apos;px&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段简短的代码可能就会造成浏览器运行缓慢。首先，需要计算offsetWidth属性，如果这个元素或者页面上有非常复杂的CSS样式，那么这个过程会很复杂。其次，设置某个元素的高度需要对页面进行回流来令改动生效，如果页面有很多元素同时应用了相当数量的CSS的话，这又需要很多计算。</p>
+<ul>
+<li>使用throttle()函数，如下所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function resizeDiv() &#123;</div><div class="line">    var oBox = document.getElementById(&quot;mydiv&quot;);</div><div class="line">    oBox.style.height = oBox.offsetWidth+&apos;px&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">window.onresize = function () &#123;</div><div class="line">    throttle(resizeDiv);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只要代码是周期性执行的，都应该使用节流，但是</p>
 ]]></content>
     
     <summary type="html">
