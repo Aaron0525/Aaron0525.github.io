@@ -191,7 +191,7 @@
     <link href="http://upyang.com/2017/08/21/js-Array/"/>
     <id>http://upyang.com/2017/08/21/js-Array/</id>
     <published>2017-08-21T14:22:37.000Z</published>
-    <updated>2017-09-10T12:06:49.372Z</updated>
+    <updated>2017-09-11T08:59:43.881Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><p>用于在单个的 版两种存储多个值。</p>
 <h2 id="创建Array对象的语法"><a href="#创建Array对象的语法" class="headerlink" title="创建Array对象的语法"></a>创建Array对象的语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Array();</div><div class="line">new Array(size);</div><div class="line">new Array(element0, element1,....., elementn);</div></pre></td></tr></table></figure>
@@ -228,6 +228,11 @@
 <p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">functionsum(x)&#123;</div><div class="line">    if(arguments.length == 2) &#123;</div><div class="line">        returnarguments[0] + arguments[1];</div><div class="line">    &#125;else&#123;</div><div class="line">        returnfunction(y)&#123;return x+y;&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在JavaScript中，函数可以提供到 arguments 对象的访问，arguments 对象提供传递到函数的实际参数的访问。这使我们能够使用 length 属性来确定在运行时传递给函数的参数数量。<br>如果传递两个参数，那么只需加在一起，并返回。否则，我们假设它被以 sum(2)(3)这样的形式调用，所以我们返回一个匿名函数，这个匿名函数合并了传递到 sum()的参数和传递给匿名函数的参数。</p>
 <p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">functionsum(x,y)&#123;</div><div class="line">    if(y !== undefined)&#123;</div><div class="line">        return x+y;</div><div class="line">    &#125;else&#123;</div><div class="line">        returnfunction(y)&#123;return x+y;&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>实现一个flatten函数，将一个嵌套多层的数组 array（数组） (嵌套可以是任何层数)转换为只有一层的数组，数组中元素仅基本类型的元素或数组，不存在循环引用的情况。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flatten([1,[2],[5,[6,9]]]);    //输出[1,2,5,6,9]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>实现方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function flatten(arr) &#123;</div><div class="line">    var result =[];</div><div class="line">    function _change(arr) &#123;</div><div class="line">        for(var i=0;i&lt;arr.length;i++) &#123;</div><div class="line">            if(Array.isArray(arr[i])) &#123;</div><div class="line">                _change(arr[i]);</div><div class="line">            &#125; else &#123;</div><div class="line">                result.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    _change(arr);</div><div class="line">    return result;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
