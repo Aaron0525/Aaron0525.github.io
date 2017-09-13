@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-13T08:37:34.607Z</updated>
+  <updated>2017-09-13T08:58:06.734Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://upyang.com/2017/09/13/BFC/"/>
     <id>http://upyang.com/2017/09/13/BFC/</id>
     <published>2017-09-13T07:40:45.000Z</published>
-    <updated>2017-09-13T08:37:34.607Z</updated>
+    <updated>2017-09-13T08:58:06.734Z</updated>
     
     <content type="html"><![CDATA[<h2 id="BFC是什么？"><a href="#BFC是什么？" class="headerlink" title="BFC是什么？"></a>BFC是什么？</h2><p>在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。</p>
 <h3 id="Box-CSS布局的基本单位"><a href="#Box-CSS布局的基本单位" class="headerlink" title="Box: CSS布局的基本单位"></a>Box: CSS布局的基本单位</h3><p>　　Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），因此Box内的元素会以不同的方式渲染。</p>
@@ -38,14 +38,19 @@
 <li>display的值为inline-block、table-cell、table-caption、flex、inline-flex;</li>
 <li>position的值为absolute或fixed;</li>
 </ul>
-<h2 id="BFC布局的应用"><a href="#BFC布局的应用" class="headerlink" title="BFC布局的应用"></a>BFC布局的应用</h2><h3 id="多栏布局的一种实现"><a href="#多栏布局的一种实现" class="headerlink" title="多栏布局的一种实现"></a>多栏布局的一种实现</h3><p>上文提到的一条规则：与浮动元素相邻的已生成BFC的元素不能与浮动元素互相覆盖。利用该特性可以作为多栏布局的一种实现方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">.left &#123;</div><div class="line">    float: left;</div><div class="line">    width: 200px;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line">.center &#123;</div><div class="line">    height: 150px;</div><div class="line">    overflow: hidden;</div><div class="line">    background: pink;</div><div class="line">&#125;</div><div class="line">.right &#123;</div><div class="line">    width: 200px;</div><div class="line">    float: right;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="BFC布局的应用"><a href="#BFC布局的应用" class="headerlink" title="BFC布局的应用"></a>BFC布局的应用</h2><h3 id="多栏布局的一种实现"><a href="#多栏布局的一种实现" class="headerlink" title="多栏布局的一种实现"></a>多栏布局的一种实现</h3><p>上文提到的一条规则：与浮动元素相邻的已生成BFC的元素不能与浮动元素互相覆盖。利用该特性可以作为多栏布局的一种实现方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">.left &#123;</div><div class="line">    float: left;</div><div class="line">    width: 200px;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line">.center &#123;</div><div class="line">    height: 150px;</div><div class="line">    overflow: hidden;</div><div class="line">    background: pink;</div><div class="line">&#125;</div><div class="line">.right &#123;</div><div class="line">    width: 200px;</div><div class="line">    float: right;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;  //center需要放在最后</div></pre></td></tr></table></figure></p>
 <h3 id="防止margin重叠"><a href="#防止margin重叠" class="headerlink" title="防止margin重叠"></a>防止margin重叠</h3><ul>
 <li>同一个BFC中俩个相邻的box才会发生重叠与方向无关，不过由于上文提到的第一条限制，我们甚少看到水平方向的margin重叠。这在IE这中是个特例，IE可以设置write-mode。</li>
 <li>要阻止margin重叠，只要将俩个元素别放在一个BFC中即可（可以用上文提到的方式让相邻元素其中一个生成BFC）。阻止俩个相邻元素的重叠看起来没有意义，主要用于嵌套元素。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="清除内部浮动"><a href="#清除内部浮动" class="headerlink" title="清除内部浮动"></a>清除内部浮动</h3><ul>
-<li>使得父元素包含子元素，常见的方式是为父元素设置overflow：hidden或者浮动父元素。根本原因在于创建BFC的元素，子浮动元素也会参与其高度计算，即不会产生高度塌陷问题。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></li>
+<li>使得父元素包含子元素，常见的方式是为父元素设置overflow：hidden或者浮动父元素。根本原因在于创建BFC的元素，子浮动元素也会参与其高度计算，即不会产生高度塌陷问题。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.parent &#123;</div><div class="line">    border: 5px solid #red;</div><div class="line">    width: 300px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.child &#123;</div><div class="line">    float: left;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    border: 5px solid yellow;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;div class=&quot;parent&quot;&gt;</div><div class="line">    &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>有经验的一眼看去就会知道父元素会出现高度塌陷的问题，这是由于子元素浮动后脱离文档流，父元素无法被子元素撑开而造成的。</p>
+<ul>
+<li>根据BEC规则第五条：计算BFC的高度时，浮动子元素也参与计算。<br>我们可以让parent父元素去触发BFC，那么parent在计算高度的时候，child也会参与计算,而解决问题。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.parent &#123;overflow: hidden;&#125;</div></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
     
