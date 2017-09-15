@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-15T14:27:00.433Z</updated>
+  <updated>2017-09-15T15:00:50.490Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,10 +20,27 @@
     <link href="http://upyang.com/2017/09/15/Vue%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/"/>
     <id>http://upyang.com/2017/09/15/Vue双向绑定原理/</id>
     <published>2017-09-15T13:19:10.000Z</published>
-    <updated>2017-09-15T14:27:00.433Z</updated>
+    <updated>2017-09-15T15:00:50.490Z</updated>
     
     <content type="html"><![CDATA[<p>　　Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的。相比于Angular.js，Vue.js提供了更加简洁、更易于理解的API，使得我们能够快速地上手并使用Vue.js。<br>　　在学习并实践Vue.js的过程中也深刻的体会到了数据驱动和组件化思想的特点，之前习惯了用jQuery或者原生js来操作Dom，所以在Vue项目中也尝试着这样去写，但是发现有时会报错，原因是因为实例还没有挂载，应该在mounted之后再获取元素进行操作，这就需要理解Vue的生命周期。但是不推荐这样做，既然用了数据驱动的Vue，就应该少用原生操作Dom的方式。<br>　　Vue.js通过一些特殊的HTML语法，将DOM和数据绑定起来。一旦你创建了绑定，DOM将和数据保持同步，每当变更了数据，DOM也会相应地更新。</p>
-<h2 id="访问器属性"><a href="#访问器属性" class="headerlink" title="访问器属性"></a>访问器属性</h2><p>　　访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过 defineProperty() 方法单独定义。<br>Object.defineProperty（）方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。<br>语法： <code>Object.defineProperty(obj, prop, descriptor)</code><br>obj： 需要被操作的目标对象。<br>prop：目标对象需要定义或修改的属性的名称。<br>descriptor： 将被定义或修改的属性的描述符。<br>返回值： 被传递给函数的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Obj = &#123;&#125;;</div><div class="line">Object.defineProperty(Obj, &apos;binding&apos;, &#123;</div><div class="line">    get: function() &#123;</div><div class="line">        console.log(&quot;get方法被调用了!&quot;);</div><div class="line">    &#125;,</div><div class="line">    set: function(val) &#123;</div><div class="line">        console.log(&quot;set方法被调用了，参数是&quot; + val);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Obj.binding;             //get方法被调用了!</div><div class="line">Obj.binding = &apos;hello&apos;;   //set方法被调用了，参数是hello</div></pre></td></tr></table></figure></p>
+<h2 id="访问器属性"><a href="#访问器属性" class="headerlink" title="访问器属性"></a>访问器属性</h2><p>　　访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过 defineProperty() 方法单独定义。Object.defineProperty（）方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。<br>语法： <code>Object.defineProperty(obj, prop, descriptor)</code></p>
+<ul>
+<li>obj： 需要被操作的目标对象。</li>
+<li>prop：目标对象需要定义或修改的属性的名称。</li>
+<li>descriptor： 将被定义或修改的属性的描述符。</li>
+<li>返回值： 被传递给函数的对象。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Obj = &#123;&#125;;</div><div class="line">Object.defineProperty(Obj, &apos;binding&apos;, &#123;</div><div class="line">    get: function() &#123;</div><div class="line">        console.log(&quot;get方法被调用了!&quot;);</div><div class="line">    &#125;,</div><div class="line">    set: function(val) &#123;</div><div class="line">        console.log(&quot;set方法被调用了，参数是&quot; + val);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Obj.binding;             //get方法被调用了!</div><div class="line">Obj.binding = &apos;hello&apos;;   //set方法被调用了，参数是hello</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以看到：<br>Obj.binding            //读取属性，就是调用get函数并返回get函数的返回值。<br>Obj.binding = “hello”  //为属性赋值，就是调用set函数，赋值其实是传参。</p>
+<p>get 和 set 方法内部的 this 都指向 obj，这意味着 get 和 set 函数可以操作对象内部的值。另外，访问器属性的会”覆盖”同名的普通属性，因为访问器属性会被优先访问，与其同名的普通属性则会被忽略。</p>
+<h2 id="原生js简单双向绑定实现"><a href="#原生js简单双向绑定实现" class="headerlink" title="原生js简单双向绑定实现"></a>原生js简单双向绑定实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;input type=&quot;text&quot; id=&quot;text-input&quot;&gt;</div><div class="line">    &lt;p id=&quot;show&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">        var Obj = &#123;&#125;;</div><div class="line">        Object.defineProperty(Obj, &apos;binding&apos;, &#123;</div><div class="line">            set: function(val) &#123;</div><div class="line">                document.getElementById(&apos;text-input&apos;).value = val;</div><div class="line">                document.getElementById(&apos;show&apos;).innerHTML = val;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        document.addEventListener(&apos;keyup&apos;, function(e) &#123;</div><div class="line">            Obj.binding = e.target.value;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<p>实现效果：随文本框输入文字的变化，p标签中会同步显示相同的文字内容；在js或控制台显式的修改 Obj.binding 的值，视图会相应更新。这样就实现了 model =&gt; view 以及 view =&gt; model 的双向绑定。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oszamq4pp.bkt.clouddn.com/17-9-15/38903212.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
 ]]></content>
     
     <summary type="html">
@@ -32,6 +49,8 @@
     
     </summary>
     
+    
+      <category term="Vue.js" scheme="http://upyang.com/tags/Vue-js/"/>
     
   </entry>
   
