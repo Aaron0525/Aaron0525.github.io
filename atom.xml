@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-15T13:24:21.672Z</updated>
+  <updated>2017-09-15T14:27:00.433Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="http://upyang.com/2017/09/15/Vue%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/"/>
     <id>http://upyang.com/2017/09/15/Vue双向绑定原理/</id>
     <published>2017-09-15T13:19:10.000Z</published>
-    <updated>2017-09-15T13:24:21.672Z</updated>
+    <updated>2017-09-15T14:27:00.433Z</updated>
     
-    <content type="html"><![CDATA[<p> 　　Vue.js 最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究双向绑定是怎样实现的。</p>
+    <content type="html"><![CDATA[<p>　　Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的。相比于Angular.js，Vue.js提供了更加简洁、更易于理解的API，使得我们能够快速地上手并使用Vue.js。<br>　　在学习并实践Vue.js的过程中也深刻的体会到了数据驱动和组件化思想的特点，之前习惯了用jQuery或者原生js来操作Dom，所以在Vue项目中也尝试着这样去写，但是发现有时会报错，原因是因为实例还没有挂载，应该在mounted之后再获取元素进行操作，这就需要理解Vue的生命周期。但是不推荐这样做，既然用了数据驱动的Vue，就应该少用原生操作Dom的方式。<br>　　Vue.js通过一些特殊的HTML语法，将DOM和数据绑定起来。一旦你创建了绑定，DOM将和数据保持同步，每当变更了数据，DOM也会相应地更新。</p>
+<h2 id="访问器属性"><a href="#访问器属性" class="headerlink" title="访问器属性"></a>访问器属性</h2><p>　　访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过 defineProperty() 方法单独定义。<br>Object.defineProperty（）方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。<br>语法： <code>Object.defineProperty(obj, prop, descriptor)</code><br>obj： 需要被操作的目标对象。<br>prop：目标对象需要定义或修改的属性的名称。<br>descriptor： 将被定义或修改的属性的描述符。<br>返回值： 被传递给函数的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var Obj = &#123;&#125;;</div><div class="line">Object.defineProperty(Obj, &apos;binding&apos;, &#123;</div><div class="line">    get: function() &#123;</div><div class="line">        console.log(&quot;get方法被调用了!&quot;);</div><div class="line">    &#125;,</div><div class="line">    set: function(val) &#123;</div><div class="line">        console.log(&quot;set方法被调用了，参数是&quot; + val);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Obj.binding;             //get方法被调用了!</div><div class="line">Obj.binding = &apos;hello&apos;;   //set方法被调用了，参数是hello</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt; 　　Vue.js 最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究双向绑定是怎样实现的。&lt;/p&gt;
-
+      &lt;p&gt;　　Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的。相比于Angular.js，Vue.js提供了更加简洁、更易于理解的API，使得我们能够快速地上手并使用Vue.js。&lt;br&gt;　　在学习并实践Vue.js的过程中也深刻的体
     
     </summary>
     
