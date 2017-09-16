@@ -1145,11 +1145,11 @@ npm run dev重启服务器，浏览器访问<code>localhost:8080/api/infor</code
     </summary>
     
     
-      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
-    
       <category term="JavaScript" scheme="http://upyang.com/tags/JavaScript/"/>
     
       <category term="Jsonp" scheme="http://upyang.com/tags/Jsonp/"/>
+    
+      <category term="HTML5" scheme="http://upyang.com/tags/HTML5/"/>
     
       <category term="CORS" scheme="http://upyang.com/tags/CORS/"/>
     
