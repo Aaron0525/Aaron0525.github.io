@@ -164,7 +164,7 @@
     <link href="http://upyang.com/2017/08/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://upyang.com/2017/08/26/算法与数据结构/</id>
     <published>2017-08-26T12:01:51.000Z</published>
-    <updated>2017-09-21T12:28:08.684Z</updated>
+    <updated>2017-09-21T12:33:14.201Z</updated>
     
     <content type="html"><![CDATA[<h2 id="js排序算法"><a href="#js排序算法" class="headerlink" title="js排序算法"></a>js排序算法</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
 <li>原理：从数组第二个值开始，依次将后续的数值经过比较插入带前面已排好序的有序表中。</li>
@@ -322,7 +322,7 @@
     <link href="http://upyang.com/2017/08/21/js-Array/"/>
     <id>http://upyang.com/2017/08/21/js-Array/</id>
     <published>2017-08-21T14:22:37.000Z</published>
-    <updated>2017-09-11T08:59:43.881Z</updated>
+    <updated>2017-10-03T13:42:03.413Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><p>用于在单个的 版两种存储多个值。</p>
 <h2 id="创建Array对象的语法"><a href="#创建Array对象的语法" class="headerlink" title="创建Array对象的语法"></a>创建Array对象的语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Array();</div><div class="line">new Array(size);</div><div class="line">new Array(element0, element1,....., elementn);</div></pre></td></tr></table></figure>
@@ -363,7 +363,8 @@
 <li>实现一个flatten函数，将一个嵌套多层的数组 array（数组） (嵌套可以是任何层数)转换为只有一层的数组，数组中元素仅基本类型的元素或数组，不存在循环引用的情况。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flatten([1,[2],[5,[6,9]]]);    //输出[1,2,5,6,9]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>实现方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function flatten(arr) &#123;</div><div class="line">    var result =[];</div><div class="line">    function _change(arr) &#123;</div><div class="line">        for(var i=0;i&lt;arr.length;i++) &#123;</div><div class="line">            if(Array.isArray(arr[i])) &#123;</div><div class="line">                _change(arr[i]);</div><div class="line">            &#125; else &#123;</div><div class="line">                result.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    _change(arr);</div><div class="line">    return result;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>实现方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function flatten(arr) &#123;</div><div class="line">    var result =[];</div><div class="line">    function _change(arr) &#123;</div><div class="line">        for(var i=0;i&lt;arr.length;i++) &#123;</div><div class="line">            if(Array.isArray(arr[i])) &#123;</div><div class="line">                _change(arr[i]);</div><div class="line">            &#125; else &#123;</div><div class="line">                result.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    _change(arr);</div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">* 请将以下数组按age的大小排序 `arr = [&#123;name: &quot;杨一&quot;,age: 30&#125;,&#123;name: &quot;杨二&quot;,age: 28&#125;,&#123;name: &quot;杨三&quot;,age： 23&#125;]`</div><div class="line">实现方法：</div></pre></td></tr></table></figure></p>
+<p>console.log(arr.sort(function(a,b) {<br>    return a.age - b.age;<br>}))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
