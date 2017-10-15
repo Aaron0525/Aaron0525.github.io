@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://upyang.com/"/>
-  <updated>2017-09-17T08:03:30.459Z</updated>
+  <updated>2017-10-15T15:18:46.465Z</updated>
   <id>http://upyang.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>setTimeout与setInterval</title>
+    <link href="http://upyang.com/2017/10/15/setTimeout%E4%B8%8EsetInterval/"/>
+    <id>http://upyang.com/2017/10/15/setTimeout与setInterval/</id>
+    <published>2017-10-15T15:17:19.000Z</published>
+    <updated>2017-10-15T15:18:46.465Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="setTimeout与setInterval的区别"><a href="#setTimeout与setInterval的区别" class="headerlink" title="setTimeout与setInterval的区别"></a>setTimeout与setInterval的区别</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;setTimeout与setInterval的区别&quot;&gt;&lt;a href=&quot;#setTimeout与setInterval的区别&quot; class=&quot;headerlink&quot; title=&quot;setTimeout与setInterval的区别&quot;&gt;&lt;/a&gt;setTimeout与
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Vue双向绑定实现原理</title>
